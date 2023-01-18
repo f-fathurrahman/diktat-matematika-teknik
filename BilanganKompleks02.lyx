@@ -1,0 +1,686 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "libertine-ntxm" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Fungsi elementer
+\end_layout
+
+\begin_layout Standard
+Polinomial:
+\begin_inset Formula 
+\[
+P_{n}(z)=a_{n}z^{n}+a_{n-1}z^{n-1}+\cdots+a_{1}z+a_{0}
+\]
+
+\end_inset
+
+dengan koefisien 
+\begin_inset Formula $a_{n},a_{n-1},\ldots,a_{1},a_{0}$
+\end_inset
+
+ adalah bilangan kompleks dan 
+\begin_inset Formula $n$
+\end_inset
+
+ adalah bilangan bulat positif.
+\end_layout
+
+\begin_layout Standard
+Fungsi rasional, atau hasil bagi antara dua polinomial:
+\begin_inset Formula 
+\[
+Q(z)=\frac{a_{n}z^{n}+a_{n-1}z^{n-1}+\cdots+a_{1}z+a_{0}}{b_{m}z^{m}+b_{m-1}z^{m-1}+\cdots+b_{1}z+b_{0}}
+\]
+
+\end_inset
+
+Suku penyebut dari 
+\begin_inset Formula $Q(z)$
+\end_inset
+
+ diasumsikan memiliki derajat 
+\begin_inset Formula $\geq1$
+\end_inset
+
+ sehingga 
+\begin_inset Formula $Q(z)$
+\end_inset
+
+ tidak tereduksi menjadi polinomial.
+\end_layout
+
+\begin_layout Standard
+Deret pangkat:
+\begin_inset Formula 
+\[
+f(z)=\sum_{n=0}^{\infty}a_{n}z^{n}
+\]
+
+\end_inset
+
+di mana deret diasumsikan konvergen untuk semua 
+\begin_inset Formula $z$
+\end_inset
+
+, 
+\begin_inset Formula $|z|<R$
+\end_inset
+
+, dan 
+\begin_inset Formula $R>0$
+\end_inset
+
+.
+ Jika
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}\left|\frac{a_{n+1}}{a_{n}}\right|=\frac{1}{R}
+\]
+
+\end_inset
+
+ada, maka deret XXX konvergen untuk semua 
+\begin_inset Formula $z$
+\end_inset
+
+ dalam 
+\begin_inset Formula $|z|<R$
+\end_inset
+
+, dan divergen untuk semua 
+\begin_inset Formula $z$
+\end_inset
+
+, 
+\begin_inset Formula $|z|>R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Fungsi eksponensial:
+\begin_inset Formula 
+\[
+e^{z}=1+z+\frac{z^{2}}{2!}+\frac{z^{3}}{3!}+\cdots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fungsi sinus:
+\begin_inset Formula 
+\[
+\sin z=z-\frac{z^{3}}{3!}+\frac{z^{5}}{5!}-\cdots
+\]
+
+\end_inset
+
+Fungsi kosinus:
+\begin_inset Formula 
+\[
+\cos z=1-\frac{z^{2}}{2!}+\frac{z^{4}}{4!}-\cdots
+\]
+
+\end_inset
+
+Definisi tersebut dipilih agar sama dengan ekspansi deret Taylor standard
+ untuk 
+\begin_inset Formula $e^{x}$
+\end_inset
+
+, 
+\begin_inset Formula $\sin x$
+\end_inset
+
+, dan 
+\begin_inset Formula $\cos x$
+\end_inset
+
+ ketika 
+\begin_inset Formula $y=0$
+\end_inset
+
+ (bagian imajiner bernilai 0).
+\end_layout
+
+\begin_layout Standard
+Dari formula-formula tersebut dapat diperoleh
+\begin_inset Formula 
+\[
+\sin z=\frac{e^{\mathrm{i}z}-e^{-\mathrm{i}z}}{2\mathrm{i}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cos=\frac{e^{\mathrm{i}z}+e^{-\mathrm{i}z}}{2}
+\]
+
+\end_inset
+
+Untuk 
+\begin_inset Formula $z=\mathrm{i\theta}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+e^{\mathrm{i}\theta} & =1+(\mathrm{i\theta)+\frac{(\mathrm{i\theta)^{2}}}{2!}+\frac{(\mathrm{i\theta)^{3}}}{3!}+\frac{(\mathrm{i\theta)^{4}}}{4!}}+\frac{(\mathrm{i\theta)^{5}}}{5!}+\cdots\\
+ & =1+\mathrm{i}\theta-\frac{\theta^{2}}{2!}-\mathrm{i}\frac{\theta^{3}}{3!}+\frac{\theta^{4}}{4!}+\mathrm{i}\frac{\theta^{5}}{5!}+\cdots\\
+ & =\left(1-\frac{\theta^{2}}{2!}+\frac{\theta^{4}}{4!}-\cdots\right)+\mathrm{i}\left(\theta-\frac{\theta^{3}}{3!}+\frac{\theta^{5}}{5!}-\cdots\right)\\
+ & =\cos\theta+\mathrm{i}\sin\theta
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hubungan ini berguna untuk menuliskan bentuk polar bilangan kompleks 
+\begin_inset Formula $z=r(\cos\theta+\mathrm{i}\sin\theta)$
+\end_inset
+
+ menjadi
+\begin_inset Formula 
+\[
+z=re^{\mathrm{i}\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fungsi sinus hiperbolik dan kosinus hiperbolik didefinisikan sebagai
+\begin_inset Formula 
+\[
+\sinh z=\frac{e^{z}-e^{-z}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh z=\frac{e^{z}+e^{-z}}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hubungan berikut ini dapat diturunkan:
+\begin_inset Formula 
+\[
+\sinh\mathrm{i}z=\mathrm{i}\sin z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh\mathrm{i}z=\cos z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sin\mathrm{i}z=\mathrm{i}\sinh z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cos\mathrm{i}z=\cosh z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan memisahkan antara bagian real dan imajiner dari 
+\begin_inset Formula $\sin z$
+\end_inset
+
+ dan 
+\begin_inset Formula $\cos z$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\sin(z) & =\sin\left(x+\mathrm{i}y\right)\\
+ & =\sin(x)\cos(\mathrm{i}y)+\sin\mathrm{(i}y)\cos(x)\\
+ & =\sin(x)\cosh(y)+\mathrm{i}\sin(y)\cos(x)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\cos(z) & =\cos(x+\mathrm{i}y)\\
+ & =\cos(x)\cos(\mathrm{i}y)-\sin(x)\sin(\mathrm{i}y)\\
+ & =\cos(x)\cosh(y)-\mathrm{i}\sinh(x)\sinh(y)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Logaritma alami (natural logarithm) dari bilangan kompleks 
+\begin_inset Formula $z$
+\end_inset
+
+, ditulis sebagai 
+\begin_inset Formula $\ln z$
+\end_inset
+
+ harus didefinisikan sehingga
+\begin_inset Formula 
+\[
+e^{\ln z}=z
+\]
+
+\end_inset
+
+Dengan menggunakan bentuk polar dari 
+\begin_inset Formula $z$
+\end_inset
+
+ diperoleh:
+\begin_inset Formula 
+\begin{align*}
+\ln z & =\ln\left(re^{\mathrm{i}\theta}\right)\\
+ & =\ln r+\mathrm{i}\theta
+\end{align*}
+
+\end_inset
+
+Bentuk ini adalah kandidat untuk definisi dari 
+\begin_inset Formula $\ln z$
+\end_inset
+
+.
+ Konsekuensi dari definisi ini adalah
+\begin_inset Formula 
+\begin{align*}
+e^{\ln z} & =e^{\ln r+\mathrm{i}\theta}\\
+ & =e^{\ln r}e^{\mathrm{i}\theta}\\
+ & =r\left(\cos\theta+\mathrm{i}\sin\theta\right)\\
+ & =z
+\end{align*}
+
+\end_inset
+
+sehingga definisi ini memenuhi syarat untuk 
+\begin_inset Formula $\ln z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Perhatikan bahwa karena 
+\begin_inset Formula $\theta$
+\end_inset
+
+ dapat bernilai lebih dari satu karena 
+\begin_inset Formula $e^{\mathrm{i\theta}}=e^{\mathrm{i}(\theta+2\pi k)}$
+\end_inset
+
+ dengan 
+\begin_inset Formula $k=0,1,2,\ldots$
+\end_inset
+
+ , kita harus memberikan batasan untuk 
+\begin_inset Formula $\theta$
+\end_inset
+
+ sehingga 
+\begin_inset Formula $\ln z$
+\end_inset
+
+ menjadi 
+\begin_inset Formula $\ln x$
+\end_inset
+
+ ketika 
+\begin_inset Formula $y=0$
+\end_inset
+
+.
+ Batasan ini adalah 
+\begin_inset Formula $0\leq\theta<2\pi$
+\end_inset
+
+ atau 
+\begin_inset Formula $-\pi<\theta\leq\pi$
+\end_inset
+
+.
+ Batasan ini memberikan nilai prinsipal dari 
+\begin_inset Formula $\ln z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Untuk fungsi pangkat 
+\begin_inset Formula $z^{a}$
+\end_inset
+
+ dengan 
+\begin_inset Formula $z$
+\end_inset
+
+ dan 
+\begin_inset Formula $a$
+\end_inset
+
+ adalah bilangan kompleks.
+ Dari definisi
+\begin_inset Formula 
+\[
+z^{a}=e^{a\ln z}
+\]
+
+\end_inset
+
+Definisi ini sama dengan definisi dari 
+\begin_inset Formula $z^{a}$
+\end_inset
+
+ jika eksponen adalah bilangan rasional atau bilangan bulat.
+\end_layout
+
+\begin_layout Standard
+Fungsi Inverse Trigonometrik
+\end_layout
+
+\begin_layout Standard
+Misalkan
+\begin_inset Formula 
+\[
+w=\sin^{-1}z
+\]
+
+\end_inset
+
+atau
+\begin_inset Formula 
+\begin{align*}
+z & =\sin w=\frac{e^{\mathrm{i}w}-e^{-\mathrm{i}w}}{2\mathrm{i}}\\
+2\mathrm{i}z & =e^{\mathrm{i}w}-e^{-\mathrm{i}w}
+\end{align*}
+
+\end_inset
+
+Dengan mengalikan kedua ruas persamaan dengan 
+\begin_inset Formula $e^{\mathrm{i}w}$
+\end_inset
+
+ diperoleh
+\begin_inset Formula 
+\[
+e^{2\mathrm{i}w}-2\mathrm{i}ze^{\mathrm{i}w}-1=0
+\]
+
+\end_inset
+
+Dengan menuliskan 
+\begin_inset Formula $e^{\mathrm{i}w}\rightarrow\phi$
+\end_inset
+
+ diperoleh persamaan kuadrat dalam 
+\begin_inset Formula $\phi$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\phi^{2}-2\mathrm{i}z\phi-1=0
+\]
+
+\end_inset
+
+yang memiliki solusi:
+\begin_inset Formula 
+\begin{align*}
+e^{\mathrm{i}w} & =\phi=\frac{-(-2\mathrm{i}z)+\left((-2\mathrm{i}z)(-2\mathrm{i}z)-4(1)(-1)\right)^{1/2}}{2(1)}\\
+ & =\frac{-(-2\mathrm{i}z)+\left(-4z^{2}+4\right)^{1/2}}{2(1)}\\
+ & =\mathrm{i}z+\left(1-z^{2}\right)^{1/2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diperoleh ekspresi untuk 
+\begin_inset Formula $\grave{\mathrm{i}w}$
+\end_inset
+
+ sebagai berikut:
+\begin_inset Formula 
+\[
+\mathrm{i}w=\ln\left[\mathrm{i}z+\left(1-z^{2}\right)^{1/2}\right]
+\]
+
+\end_inset
+
+dan untuk 
+\begin_inset Formula $w=\sin^{-1}z$
+\end_inset
+
+ sebagai berikut:
+\begin_inset Formula 
+\[
+w=\sin^{-1}z=-\mathrm{i}\ln\left[\mathrm{i}z+\left(1-z^{2}\right)^{1/2}\right]
+\]
+
+\end_inset
+
+Ekspresi ini memiliki nilai ganda akibat tanda akar kuadrat (pangkat 
+\begin_inset Formula $1/2$
+\end_inset
+
+) dan multinilai karena fungsi logaritma natural.
+ Dua nilai prinsipal dihasilkan untuk tiap bilangan kompleks 
+\begin_inset Formula $z$
+\end_inset
+
+ kecuali untuk 
+\begin_inset Formula $z=1$
+\end_inset
+
+ karena tanda pada akar kuadrat akan bernilai 0.
+\end_layout
+
+\begin_layout Standard
+Dengan cara yang mirip dapat diperoleh definisi sebagai berikut
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sin^{-1}z=-\mathrm{i}\ln\left[\mathrm{i}z+\left(1-z^{2}\right)^{1/2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cos^{-1}z=-\mathrm{i}\ln\left[z+\left(z^{2}-1\right)^{1/2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tan^{-1}z=\frac{\mathrm{i}}{2}\ln\frac{1-\mathrm{i}z}{1+\mathrm{i}z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sinh^{-1}z=\ln\left[z+\left(1+z^{2}\right)^{1/2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\cosh^{-1}z=\ln\left[z+\left(z^{2}-1\right)^{1/2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tanh^{-1}z=\frac{1}{2}\ln\frac{1+z}{1-z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
