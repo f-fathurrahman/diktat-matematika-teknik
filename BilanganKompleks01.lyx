@@ -142,7 +142,7 @@ Magnitudo atau nilai absolut dari
 \begin_inset Formula $z$
 \end_inset
 
-:
+, atau modulus:
 \begin_inset Formula 
 \[
 \left|z\right|=\sqrt{x^{2}+y^{2}}
@@ -154,7 +154,7 @@ Magnitudo atau nilai absolut dari
 \end_layout
 
 \begin_layout Standard
-Argumen dari 
+Argumen atau fasa dari 
 \begin_inset Formula $z$
 \end_inset
 
