@@ -1,0 +1,65 @@
+\input{../PREAMBLE_BEAMER}
+
+\begin{document}
+
+\title{Engineering Mathematics II}
+\subtitle{Introduction to Complex Numbers and Their Arithmetics}
+\author{Fadjar Fathurrahman\\
+Mariya Al Qibtiya Nasution}
+\date{}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Complex number}
+
+A complex number $z$ can be written as:
+$$
+z = x + \imath y
+$$
+with $x,y$ are two real numbers and
+$$
+\imath = \sqrt{-1}
+$$
+
+\end{frame}
+
+% Cartesian plane
+% abs, arg
+
+% Polar representation
+
+% Basic operation
+
+\begin{frame}[fragile]
+\frametitle{Complex number in Python}
+
+Operasi bilangan kompleks pada Numpy sudah terintegrasi dengan bilangan
+kompleks pada Python.
+
+\begin{pythoncode}
+import numpy as np
+import cmath
+z = 3 + 4j
+cmath.sqrt(-1)
+\end{pythoncode}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Menggunakan Sympy}
+  
+\begin{pythoncode}
+from sympy import *
+init_printing()
+z = 3 + 4*I
+abs(z)
+arg(z)
+\end{pythoncode}
+
+\end{frame}
+
+
+\end{document}
+
