@@ -91,7 +91,7 @@ f'(z)=\lim_{\Delta z\rightarrow0}\frac{f(z+\Delta z)-f(z)}{\Delta z}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-f(z)=z^{*}=x-\mathrm{i}y
+f(z)=z^{*}=x-\imath y
 \]
 
 \end_inset
@@ -102,8 +102,46 @@ f(z)=z^{*}=x-\mathrm{i}y
 \begin_layout Standard
 \begin_inset Formula 
 \[
-f(z)=u(x,y)+\mathrm{i}v(x,y)
+f(z)=u(x,y)+\imath v(x,y)
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dari arah sumbu real 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+f'(z) & =\lim_{\Delta x\rightarrow0}\frac{u(x+\Delta x,y)+\imath v(x+\Delta x,y)-u(x,y)-\imath v(x,y)}{\Delta x}\\
+ & =\lim_{\Delta x\rightarrow0}\left[\frac{u(x+\Delta x,y)-u(x,y)}{\Delta x}+\imath\frac{v(x+\Delta x,y)-v(x,y)}{\Delta x}\right]\\
+ & =\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial x}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dari arah sumbu imajiner
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+f'(z) & =\lim_{\Delta y\rightarrow0}\frac{u(x,y+\Delta y)+\imath v(x,y+\Delta y)-u(x,y)-\imath v(x,y)}{\imath\Delta y}\\
+ & =\lim_{\Delta y\rightarrow0}\left[\frac{u(x,y+\Delta y)-u(x,y)}{\imath\Delta y}+\frac{v(x,y+\Delta y)-v(x,y)}{\Delta y}\right]\\
+ & =-\imath\frac{\partial u}{\partial y}+\frac{\partial v}{\partial y}
+\end{align*}
 
 \end_inset
 
