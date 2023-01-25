@@ -1,0 +1,194 @@
+\input{PREAMBLE}
+
+% -------------------------
+\begin{document}
+
+\title{%
+{\small TF2201 Matematika Rekayasa II}\\
+Variabel Kompleks: Representasi dan Aritmatika Dasar
+}
+\author{Fadjar Fathurrahman\\
+Teknik Fisika\\
+Institut Teknologi Bandung}
+\date{2023}
+\maketitle
+
+%\tableofcontents
+
+\section{Representasi bilangan kompleks}
+
+Suatu variabel atau bilangan kompleks $z$ dapat ditulis dalam bentuk
+\begin{equation}
+z = x + \mathrm{i}y
+\label{eq:complex-cart}
+\end{equation}
+dengan $x$ dan $y$ adalah bilangan real dan
+\begin{equation}
+\mathrm{i} = \sqrt{-1}
+\end{equation}
+Bilangan kompleks $z$ dapat diinterpretasikan secara geometrik geometrik
+sebagai titik $(x,y)$ pada bidang Cartesian $xy$.
+Sumbu-$x$ disebut juga dengan sumbu real dan sumbu-$y$
+disebut sebagai sumbu imajiner.
+Bentuk \ref{eq:complex-cart} dikenal juga sebagai bentuk Cartesian
+dari bilangan kompleks.
+
+Bagian real dari bilangan kompleks $z$ dapat ditulis dengan notasi
+\begin{equation*}
+\mathrm{Re}\ z=x
+\end{equation*}
+dan bagian imajiner dengan
+\begin{equation*}
+\mathrm{Im}\ z=y
+\end{equation*}
+
+Setiap bilagan kompleks memiliki konjugat yang dituliskan sebagain:
+\begin{equation}
+z^{*} = x - \mathrm{i}y
+\end{equation}
+
+Selain bentuk Cartesian, bilangan kompleks $z$ juga dapat dituliskan
+dalam bentuk polar
+\begin{align*}
+z & = r\cos\theta + \mathrm{i}r\sin\theta \\
+  & = r\left( \cos\theta + \mathrm{i}\sin \theta \right)
+\end{align*}
+dengan magnitudo atau nilai absolut atau modulus dari $z$ adalah
+\begin{equation}
+\left|z\right| = r = \sqrt{x^{2} + y^{2}}
+\end{equation}
+dan argumen atau fasa dari $z$:
+\begin{equation}
+\angle z = \arg(z) = \theta = \tan^{-1}\left(\frac{y}{x}\right)
+\end{equation}
+
+
+\section{Operasi aritmatika bilangan kompleks}
+
+Penjumlahan:
+
+\[
+z_{1}=x_{1}+\mathrm{i}y_{1}=r_{1}\left(\cos\theta_{1}+\mathrm{i}\sin\theta_{1}\right)
+\]
+
+\[
+z_{2} = x_{2} + \mathrm{\mathrm{i}}y_{2}=r_{2}\left(\cos\theta_{2}+\mathrm{i}\sin\theta_{2}\right)
+\]
+
+\[
+z_{1}+z_{2}=(x_{1}+x_{2})+\mathrm{i}\left(y_{1}+y_{2}\right)
+\]
+
+Pengurangan:
+\[
+z_{1}+(-z_{2})=(x_{1}-x_{2})+\mathrm{i}\left(y_{1}-y_{2}\right)
+\]
+\[
+z_{1}-z_{2}=(x_{1}-x_{2})+\mathrm{i}\left(y_{1}-y_{2}\right)
+\]
+
+Perkalian:
+\begin{align*}
+z_{1}z_{2} & =\left(x_{1}+\mathrm{i}y_{1}\right)\left(x_{2}+\mathrm{\mathrm{i}}y_{2}\right)\\
+ & =x_{1}x_{2}+x_{1}\mathrm{i}y_{2}+\mathrm{i}y_{1}x_{2}+(\mathrm{i}y_{1})(\mathrm{i}y_{2})\\
+ & =x_{1}x_{2}-y_{1}y_{2}+\mathrm{i}\left(x_{1}y_{2}+y_{1}x_{2}\right)
+\end{align*}
+
+\begin{align*}
+z_{1}z_{2} & =\left(r_{1}\left(\cos\theta_{1}+\mathrm{i}\sin\theta_{1}\right)\right)\left(r_{2}\left(\cos\theta_{2}+\mathrm{i}\sin\theta_{2}\right)\right)\\
+ & =r_{1}r_{2}\left(\cos\theta_{1}\cos\theta_{2}-\sin\theta_{1}\sin\theta_{2}+\mathrm{i}\left[\sin\theta_{1}\cos\theta_{2}+\cos\theta_{1}\sin\theta_{2}\right]\right)\\
+ & =r_{1}r_{2}\left[\cos\left(\theta_{1}+\theta_{2}\right)+\mathrm{i}\sin\left(\theta_{1}+\theta_{2}\right)\right]
+\end{align*}
+
+\[
+\frac{1}{z_{1}}=\frac{1}{x_{1}+\mathrm{i}y_{1}}\frac{x_{1}-\mathrm{i}y_{1}}{x_{1}-\mathrm{i}y_{1}}=\frac{x_{1}-\mathrm{i}y_{1}}{x_{1}^{2}+y_{1}^{2}}
+\]
+
+\[
+\frac{z_{2}}{z_{1}}=...
+\]
+
+Pemangkatan
+
+\[
+z_{1}z_{2}z_{3}=r_{1}r_{2}r_{3}\left[\cos\left(\theta_{1}+\theta_{2}+\theta_{3}\right)+\mathrm{i}\sin\left(\theta_{1}+\theta_{2}+\theta_{3}\right)\right]
+\]
+
+\[
+z^{3}=r^{3}\left[\cos3\theta+\mathrm{i}\sin3\theta\right]
+\]
+
+\[
+z^{n}=r^{n}\left[\cos n\theta+\mathrm{i}\sin n\theta\right]
+\]
+
+$n=0,1,2,\ldots$
+
+Tinjau kembali bentuk polar dari bilangan kompleks
+
+\[
+z=r\cos\theta+\mathrm{i}r\sin\theta
+\]
+yang juga dapat dituliskan
+
+\[
+z=r\cos\left(\theta+2\pi k\right)+\mathrm{i}r\sin\left(\theta+2\pi k\right)
+\]
+karena $\cos(\theta+2\pi)=\cos(\theta)$ dan $\sin(\theta+2\pi k)=\sin(\theta)$
+untuk suatu bilangan bulat positif $k$. Oleh karena itu juga dapat
+dituliskan
+\[
+z^{n}=r^{n}\left[\cos n\left(\theta+2\pi k\right)+\mathrm{i}\sin n\left(\theta+2\pi k\right)\right]
+\]
+Dengan mengubah $n\rightarrow1/n$ diperoleh:
+
+\[
+z^{1/n}=r^{1/n}\left[\cos\left(\frac{\theta+2\pi k}{n}\right)+\mathrm{i}\sin\left(\frac{\theta+2\pi k}{n}\right)\right]
+\]
+
+Formula ini dapat digunakan untuk mencari akar ke-$n$ dari suatu
+bilangan kompleks $z$, misalnya solusi dari persamaan
+\[
+z^{3}=1
+\]
+adalah $1^{1/3}.$ Dengan nilai $k=0,1,2,\ldots,n-1$ terdapat $n$
+akar berbeda pada rentang sudut $0\leq\theta_{k}<2\pi$, dengan $\theta_{k}\equiv\theta/n+2\pi k/n$.
+
+Kasus untuk $z=1$, $n$-th root of unity
+\[
+\omega_{k}=\cos\frac{2\pi k}{n}+\mathrm{i}\sin\frac{2\pi k}{n}
+\]
+
+Contoh soal
+
+Hitung tiga nilai dari:
+\[
+1^{1/3}
+\]
+
+Ubah bilangan $z=1$ menjadi bentuk kompleks: $z=r(\cos\theta+\mathrm{i}\sin\theta)$,
+diperoleh $r=1$ dan $\theta=0$. Dari soal $n=3$, dan $k=0,1,2$.
+
+Akar pertama: $n=3,k=0$
+\begin{align*}
+\omega_{0} & =\cos\frac{2\pi(0)}{3}+\mathrm{i}\sin\frac{2\pi(0)}{3}=1
+\end{align*}
+
+Akar kedua: $n=3,k=1$
+\[
+\omega_{1}=\cos\frac{2\pi(1)}{3}+\mathrm{i}\sin\frac{2\pi(1)}{3}=-\frac{1}{2}+\mathrm{i}\frac{\sqrt{3}}{2}
+\]
+
+Akar ketiga: $n=3,k=2$
+\[
+\omega_{2}=\cos\frac{2\pi(2)}{3}+\mathrm{i}\sin\frac{2\pi(2)}{3}=-\frac{1}{2}-\mathrm{i}\frac{\sqrt{3}}{2}
+\]
+
+Verifikasi bahwa: $\omega_{0}^{3}=1$, $\omega_{1}^{3}=1$, dan $\omega_{2}^{3}=1$
+
+
+
+
+
+
+\end{document}
