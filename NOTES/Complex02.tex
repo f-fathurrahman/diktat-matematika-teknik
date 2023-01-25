@@ -211,16 +211,14 @@ prinsipal dihasilkan untuk tiap bilangan kompleks $z$ kecuali untuk
 $z=1$ karena tanda pada akar kuadrat akan bernilai 0.
 
 Dengan cara yang mirip dapat diperoleh definisi sebagai berikut
-\begin{align*}
-\sin^{-1}(z) & = -\imath \ln\left[\imath z+\left(1-z^{2}\right)^{1/2}\right] \\
+\begin{align}
+\sin^{-1}(z) & = -\imath \ln\left[\imath z+\left(1-z^{2}\right)^{1/2}\right] \label{eq:inv-sin-z}\\
 \cos^{-1}(z) & = -\imath \ln\left[z+\left(z^{2}-1\right)^{1/2}\right] \\
 \tan^{-1}(z) & = \frac{\imath }{2}\ln\frac{1-\imath z}{1+\imath z} \\
 \sinh^{-1}(z) & = \ln\left[z + \left(1+z^{2} \right)^{1/2}\right] \\
 \cosh^{-1}(z) & = \ln\left[z + \left(z^{2} - 1\right)^{1/2}\right] \\
 \tanh^{-1}(z) & = \frac{1}{2} \ln\left( \frac{1+z}{1-z} \right)
-\end{align*}
-
-
+\end{align}
 
 
 \begin{contoh}
@@ -243,18 +241,22 @@ Sehingga diperoleh:
 & = e^{-\pi/2}
 \end{align*}
 
-Perbandingan dengan menggunakan Python.
+\end{contoh}
+
+Merujuk pada soal sebelumnya, kita juga dapat melakukan
+perbandingan hasil perhitungan dengan menggunakan Python.
 \begin{pyconcode}
 >>> 1j**1j
 (0.20787957635076193+0j)
->>> import math
+>>> import math, cmath
 >>> math.exp(-math.pi/2)
 0.20787957635076193
+>>> cmath.exp(-cmath.pi/2)
+(0.20787957635076193+0j)
 \end{pyconcode}
 Perhatikan bahwa modul \pyinline{cmath} juga dapat digunakan. Untuk perhitungan
 fungsi eksponensial dengan argumen variabel kompleks modul \pyinline{cmath}
 perlu digunakan.
-\end{contoh}
 
 
 \begin{contoh}
@@ -354,4 +356,80 @@ bag_c =  (3.853738037919377+27.016813258003936j)
 bag_d =  (1.6094379124341003-0.9272952180016122j)
 \end{textcode}
 
-\end{document}
+
+\begin{contoh}
+Cari nilai $z$ yang memenuhi $\sin(z) = 10$.
+
+Kita dapat menggunakan:
+\begin{equation*}
+\sin^{-1}(z) = -\imath \ln\left[\imath z+\left(1-z^{2}\right)^{1/2}\right]
+\end{equation*}
+Dengan menggunakan $z = 10$ diperoleh:
+\begin{equation*}
+z = \sin^{-1}(10) = -\imath \ln \left[ 10\imath + (-99)^{1/2} \right]
+\end{equation*}
+Dua akar dari $-99$ adalah $3\sqrt{11}$ dan $-3\sqrt{11}$ sehingga:
+\begin{align*}
+z_1 & = -\imath \ln\left[ (10 + 3\sqrt{11})\imath \right] \\
+z_2 & = -\imath \ln\left[ (10 - 3\sqrt{11})\imath \right]
+\end{align*}
+Untuk $\alpha$ real (bagian imajiner adalah nol):
+\begin{equation*}
+\ln(\alpha \imath) = \ln(|\alpha|) + (\pi/2)\imath
+\end{equation*}
+sehingga diperoleh:
+\begin{align*}
+z_1 & = \frac{\pi}{2} - \imath \ln(10 + 3\sqrt{11}) = \frac{\pi}{2} - 2.993\imath \\
+z_2 & = \frac{\pi}{2} - \imath \ln(10 - 3\sqrt{11}) = \frac{\pi}{2} + 2.993\imath
+\end{align*}
+
+\end{contoh}
+
+Pada modul \pyinline{cmath} juga terdapat fungsi \pyinline{asin} untuk menghitung
+invers fungsi sinus, akan tetapi fungsi ini hanya mengembalikan satu nilai:
+\begin{pyconcode}
+>>> cmath.asin(10)
+(1.5707963267948966+2.993222846126381j)
+\end{pyconcode}
+
+Karena menghitung $\sin^{-1}(10)$ sama dengan mencari solusi $z$ dari persamaan
+$\sin(z) = 10$ kita juga dapat menggunakan fungsi \pyinline{solve} dari SymPy
+seperti pada kode berikut.
+\begin{pythoncode}
+from sympy import *
+
+z = symbols("z")
+
+# Hitung sin^{-1}(10) dengan cara menyelesaikan persamaan sin(z) = 10
+res = solve(sin(z) - 10.0, z)
+# 10.0: gunakan floating point
+
+for r in res:
+    print(N(r)) # ubah ke bentuk numerik
+\end{pythoncode}
+
+Contoh keluaran dari program di atas adalah sebagai berikut.
+\begin{textcode}
+1.5707963267949 - 2.99322284612638*I
+1.5707963267949 + 2.99322284612638*I
+\end{textcode}
+
+Hal yang perlu diingat adalah fungsi \pyinline{solve} tidak menggunakan Persamaan
+\eqref{eq:inv-sin-z} sehingga hasil yang diperoleh mungkin saja terlihat berbeda.
+Sebagai alternatif, kita juga dapat mengimplementasikan sendiri fungsi-fungsi 
+untuk variabel kompleks, misalnya untuk fungsi invers sinus dan kosinus
+kompleks sebagai berikut.
+\begin{pythoncode}
+def my_arc_sin(z):
+    r1 = 1j*z + cmath.sqrt(1 - z**2)
+    r2 = 1j*z - cmath.sqrt(1 - z**2)
+    return -1j*cmath.log(r1), -1j*cmath.log(r2)
+
+def my_arc_cos(z):
+    r1 = z + cmath.sqrt(z**2 - 1)
+    r2 = z - cmath.sqrt(z**2 - 1)
+    return -1j*cmath.log(r1), -1j*cmath.log(r2)
+\end{pythoncode}
+
+
+\end{documen
