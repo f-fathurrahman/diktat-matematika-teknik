@@ -221,6 +221,8 @@ Dengan cara yang mirip dapat diperoleh definisi sebagai berikut
 \end{align}
 
 
+\section{Contoh soal}
+
 \begin{contoh}
 Hitung nilai pokok dari $\imath^{\imath}$
 
@@ -326,7 +328,37 @@ res =  (3.350259315072876-1.1891502215003975j)
 
 \begin{contoh}
 Untuk $z = 3 - 4\imath$ hitung nilai atau nilai pokok dari (a) $e^{\imath z}$,
-(b) $e^{-\imath z}$, (c) $\sin(z)$, dan (d) $\ln(z)$. 
+(b) $e^{-\imath z}$, (c) $\sin(z)$, dan (d) $\ln(z)$.
+
+\begin{align*}
+e^{\imath z} & = e^{\imath (3 - 4\imath)} \\
+             & = e^{4 + 3\imath} \\
+             & = e^{4} e^{3\imath} \\
+             & = e^{4}(\cos(3) + \imath \sin(3)) \\
+             & = -54.05 + 7.704\imath
+\end{align*}
+
+\begin{align*}
+e^{-\imath z} & = e^{-\imath (3 - 4\imath)} \\
+             & = e^{-4 - 3\imath} \\
+             & = e^{-4} e^{-3\imath} \\
+             & = e^{-4}(\cos(-3) + \imath \sin(-3)) \\
+             & = -0.01814 - 0.002585\imath
+\end{align*}
+
+
+\begin{align*}
+\sin(z) & = \frac{e^{\imath z} - e^{-\imath z}}{2\imath} \\
+        & = 3.853 + 27.01\imath
+\end{align*}
+
+
+\begin{align*}
+\ln(z) & = \ln(3 - 4\imath) \\
+       & = \ln(5) + \imath \tan^{-1}\left(\frac{-4}{3}\right) \\
+       & = 1.609 + 5.356\imath
+\end{align*}
+
 \end{contoh}
 
 Perbandingan dengan menggunakan Python:
@@ -432,4 +464,4 @@ def my_arc_cos(z):
 \end{pythoncode}
 
 
-\end{documen
+\end{document}
