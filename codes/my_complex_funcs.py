@@ -3,6 +3,9 @@ import cmath, math
 def my_log(z, k=0):
     r = math.sqrt(z.real**2 + z.imag**2)
     θ = math.atan2(z.imag, z.real)
+    # Restrict to -π < θ <= π
+    #if θ > math.pi:
+    #    θ = 2*math.pi - θ
     return math.log(r) + 1j*(θ + 2*math.pi*k)
 
 
