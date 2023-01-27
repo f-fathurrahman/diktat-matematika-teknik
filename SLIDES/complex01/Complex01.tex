@@ -4,8 +4,7 @@
 
 \title{Engineering Mathematics II}
 \subtitle{Introduction to Complex Numbers and Their Arithmetics}
-\author{Fadjar Fathurrahman\\
-Mariya Al Qibtiya Nasution}
+\author{Fadjar Fathurrahman} %Mariya Al Qibtiya Nasution}
 \date{}
 
 \frame{\titlepage}
@@ -34,21 +33,25 @@ $$
 \begin{frame}[fragile]
 \frametitle{Complex number in Python}
 
-Operasi bilangan kompleks pada Numpy sudah terintegrasi dengan bilangan
-kompleks pada Python.
-
+Complex number in Python can be entered like this:
 \begin{pythoncode}
-import numpy as np
+z1 = 3 + 4j
+z2 = 3.1 + 5.2j
+\end{pythoncode}
+Various mathematical operators already support complex arithmetics.
+
+Mathematical functions for complex numbers are defined in standard module
+\pyinline{cmath} (instead of \pyinline{math} which only supports real numbers).
+\begin{pythoncode}
 import cmath
-z = 3 + 4j
-cmath.sqrt(-1)
+zi = cmath.sqrt(-1)
 \end{pythoncode}
 
 \end{frame}
 
 
 \begin{frame}[fragile]
-\frametitle{Menggunakan Sympy}
+\frametitle{Using Sympy}
   
 \begin{pythoncode}
 from sympy import *
