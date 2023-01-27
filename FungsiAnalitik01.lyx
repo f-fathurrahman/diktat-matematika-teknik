@@ -424,6 +424,36 @@ analitik
 \end_layout
 
 \begin_layout Standard
+Definisi dari sifat analitik dari suatu fungsi memberikan batasan kepada
+ himpunan di mana fungsi 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ bersifat analitik.
+ Misalnya, jika 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ analitik untuk semua 
+\begin_inset Formula $z$
+\end_inset
+
+, dengan 
+\begin_inset Formula $z<1$
+\end_inset
+
+ dan juga pada 
+\begin_inset Formula $z=\imath$
+\end_inset
+
+, maka 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ setidaknya analitik pada domain yang diberikan pada Gambar XXX.
+\end_layout
+
+\begin_layout Standard
 Jika 
 \begin_inset Formula $f(z)$
 \end_inset
@@ -444,6 +474,51 @@ Jika
 \end_layout
 
 \begin_layout Standard
+Dalam banyak aplikasi, 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ adalah titik singular yang terisolasi, artinya di suatu lingkungan di sekitar
+ 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ bersifat analitik untuk 
+\begin_inset Formula $z\neq z_{0}$
+\end_inset
+
+ dan singular hanya pada 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+.
+ Titik singular yang paling umum ditemukan dari suatu fungsi yang analitik
+ di titik lainnya (selain titik singular) adalah akar (atau zero) dari penyebut
+ suatu fungsi yang melibatkan rasio.
+ Misalnya, 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ berikut memiliki titik singular terisolasi pada 
+\begin_inset Formula $z_{0}=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{1}{e^{z}-1},\frac{1}{z(z+1)},\frac{1}{z\sin(z)},\tan(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Fungsi rasional:
 \begin_inset Formula 
 \[
@@ -452,7 +527,77 @@ Q(z)=\frac{a_{n}z^{n}+a_{n-1}z^{n-1}+\cdots+a_{1}z+a_{0}}{b_{m}z^{m}+b_{m-1}z^{m
 
 \end_inset
 
-memiliki singularitas terisolasi pada setiap akar dari polinomial penyebut.
+memiliki singularitas terisolasi pada setiap akar (atau zero) dari polinomial
+ penyebut.
+\end_layout
+
+\begin_layout Standard
+Untuk fungsi analitik, berlaku aturan kalkulus diferensial yang biasa digunakan
+ untuk variabel real.
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}}{\mathrm{d}z}\left[f(z)\pm g(z)\right]=f'(z)+g'(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}}{\mathrm{d}z}[kf(z)]=kf'(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}}{\mathrm{d}z}\left[f(z)g(z)\right]=f'(z)g(z)+f(z)g'(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}}{\mathrm{d}z}\left[\frac{f(z)}{g(z)}\right]=\frac{f'(z)g(z)-f(z)g'(z)}{\left[g(z)\right]^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\mathrm{d}}{\mathrm{d}z}\left[f(g(z))\right]=\frac{\mathrm{d}f}{\mathrm{d}g}\frac{\mathrm{d}g}{\mathrm{d}z}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -564,6 +709,18 @@ Sehingga disimpulkan bahwa
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Contoh
 \end_layout
 
@@ -628,6 +785,424 @@ Kedua persamaan ini dipenuhi pada semua titik pada pada bidang kompleks.
 \end_inset
 
  bersifat analitik di titik manapun pada bidang kompleks.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Tentukan daerah di mana 
+\begin_inset Formula $f(z)=e^{z}$
+\end_inset
+
+ bersifat analitik dan hitung 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e^{z}=e^{x+\imath y}=e^{x}e^{\imath y}=e^{x}\cos(y)+\imath e^{x}\sin(y)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Maka:
+\begin_inset Formula 
+\begin{align*}
+u(x,y) & =e^{x}\cos(y)\\
+v(x,y) & =e^{x}\sin(y)
+\end{align*}
+
+\end_inset
+
+Dengan menghitung turunan-turunan parsial:
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=e^{x}\cos(y)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial y}=e^{x}\cos(y)
+\]
+
+\end_inset
+
+dan
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial u}{\partial y} & =-e^{x}\sin(y)\\
+\frac{\partial v}{\partial x} & =e^{x}\sin(y)
+\end{align*}
+
+\end_inset
+
+terlihat bahwa Persamaan Cauchy-Riemann terpenuhi untuk seluruh 
+\begin_inset Formula $z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Turunan dari 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ dapat dicari mengunakan
+\begin_inset Formula 
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d}z}\left[e^{z}\right] & =\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial x}\\
+ & =e^{x}\cos(y)+\imath e^{x}\sin(y)\\
+ & =e^{z}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Tentukan daerah di mana 
+\begin_inset Formula $f(z)=\ln(z)$
+\end_inset
+
+ bersifat analitik dan hitung 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan
+\begin_inset Formula 
+\begin{align*}
+\ln(z) & =\ln(r)+\imath\theta\\
+ & =\ln\left(\sqrt{x^{2}+y^{2}}\right)+\imath\tan^{-1}\left(\frac{y}{x}\right)
+\end{align*}
+
+\end_inset
+
+diperoleh
+\begin_inset Formula 
+\begin{align*}
+u(x,y) & =\ln\left(\sqrt{x^{2}+y^{2}}\right)=\frac{1}{2}\ln\left(x^{2}+y^{2}\right)\\
+v(x,y) & =\tan^{-1}\left(\frac{y}{x}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menghitung turunan-turunan parsial:
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=\frac{1}{2}\frac{2x}{x^{2}+y^{2}}=\frac{x}{x^{2}+y^{2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial v}{\partial y}=\frac{1/x}{1+\left(y/x\right)^{2}}=\frac{x}{x^{2}+y^{2}}
+\]
+
+\end_inset
+
+dan
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial u}{\partial y} & =\frac{1}{2}\frac{2y}{x^{2}+y^{2}}=\frac{y}{x^{2}+y^{2}}\\
+\frac{\partial v}{\partial x} & =-\frac{-y/x^{2}}{1+\left(y/x\right)^{2}}=-\frac{y}{x^{2}+y^{2}}
+\end{align*}
+
+\end_inset
+
+Dapat dilihat bahwa Persamaan Cauchy-Riemann terpenuhi asalkan 
+\begin_inset Formula $x^{2}+y^{2}\neq0$
+\end_inset
+
+ dan 
+\begin_inset Formula $\theta$
+\end_inset
+
+ terdefinisi secara unik (menggunakan nilai pokok).
+\end_layout
+
+\begin_layout Standard
+Turunan fungsi 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ adalah:
+\begin_inset Formula 
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d}z}\left[\ln(z)\right] & =\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial y}\\
+ & =\frac{x}{x^{2}+y^{2}}-\imath\frac{y}{x^{2}+y^{2}}\\
+ & =\frac{1}{z}
+\end{align*}
+
+\end_inset
+
+yang valid dengan syarat 
+\begin_inset Formula $z\neq0$
+\end_inset
+
+ dan 
+\begin_inset Formula $\ln(z)$
+\end_inset
+
+ kontinu.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Tentukan daerah di mana 
+\begin_inset Formula $f(z)=\sin(z)$
+\end_inset
+
+ bersifat analitik dan hitung 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tinjau kembali Persamaan Cauchy-Riemann:
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Operasikan 
+\begin_inset Formula $\dfrac{\partial}{\partial x}$
+\end_inset
+
+ pada persamaan pertama dan 
+\begin_inset Formula $\dfrac{\partial}{\partial y}$
+\end_inset
+
+ pada persamaan kedua, diperoleh:
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u}{\partial x^{2}}=\frac{\partial^{2}v}{\partial x\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u}{\partial y^{2}}=-\frac{\partial^{2}v}{\partial x\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jumlahkan kedua persamaan tersebut, diperoleh:
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}=0
+\]
+
+\end_inset
+
+atau:
+\begin_inset Formula 
+\[
+\nabla^{2}u=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sebagai alternatif, mulai dari Persamaan Cauchy-Riemann, kita juga dapat
+ melakukan operasi 
+\begin_inset Formula $\dfrac{\partial}{\partial x}$
+\end_inset
+
+ pada persamaan kedua dan 
+\begin_inset Formula $\dfrac{\partial}{\partial y}$
+\end_inset
+
+ pada persamaan pertama, sehingga diperoleh:
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u}{\partial x\partial y}=\frac{\partial^{2}v}{\partial y^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial^{2}u}{\partial x\partial y}=-\frac{\partial^{2}v}{\partial x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kurangi persamaan pertama dengan persamaan kedua, diperoleh:
+\begin_inset Formula 
+\[
+\frac{\partial^{2}v}{\partial x^{2}}+\frac{\partial^{2}v}{\partial y^{2}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+atau:
+\begin_inset Formula 
+\[
+\nabla^{2}v=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Persamaan diferensial parsial 
+\begin_inset Formula $\nabla^{2}u=0$
+\end_inset
+
+ dan 
+\begin_inset Formula $\nabla^{2}v=0$
+\end_inset
+
+ juga dikenal sebagai Persamaan Laplace.
+ Hasil di atas menyatakan bahwa bagian real dan bagian imajiner dari suatu
+ fungsi analitik akan memenuhi persamaan Laplace.
+ Fungsi yang memenuhi Persamaan Laplace disebut juga sebagai 
+\series bold
+fungsi harmonik
+\series default
+.
+ Fungsi 
+\begin_inset Formula $u$
+\end_inset
+
+ dan 
+\begin_inset Formula $v$
+\end_inset
+
+ dari suatu fungsi analitik dikenal juga sebagai fungsi harmonik konjugat.
+ Jika satu fungsi konjugat harmonik diketahui, maka fungsi konjugat harmonik
+ yang lain juga dapat ditemukan dengan menggunakan Persamaan Cauchy-Riemann.
 \end_layout
 
 \end_body
