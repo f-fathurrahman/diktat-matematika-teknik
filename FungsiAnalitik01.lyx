@@ -78,6 +78,11 @@
 \begin_body
 
 \begin_layout Standard
+Definisi turunan fungsi dari suatu variabel kompleks 
+\begin_inset Formula $z$
+\end_inset
+
+:
 \begin_inset Formula 
 \[
 f'(z)=\lim_{\Delta z\rightarrow0}\frac{f(z+\Delta z)-f(z)}{\Delta z}
@@ -89,6 +94,47 @@ f'(z)=\lim_{\Delta z\rightarrow0}\frac{f(z+\Delta z)-f(z)}{\Delta z}
 \end_layout
 
 \begin_layout Standard
+Perlu diperhatikan bahwa pada proses pengambilan limit, ada banyak cara
+ atau jalur untuk pengambilan 
+\begin_inset Formula $\Delta z$
+\end_inset
+
+.
+ Hal ini berbeda dalam kasus variabel real (yang berada pada garis), karena
+ hanya ada dua pilihan, yaitu dari arah kiri atau arah kanan.
+ Hal ini tidak berlaku untuk kasus variabel kompleks yang berada pada bidang.
+ Misalnya bisa saja 
+\begin_inset Formula $\Delta z$
+\end_inset
+
+ diambil dari arah sumbu 
+\begin_inset Formula $x$
+\end_inset
+
+ positif, sumbu 
+\begin_inset Formula $x$
+\end_inset
+
+ negatif, sumbu 
+\begin_inset Formula $y$
+\end_inset
+
+ positif, sumbu 
+\begin_inset Formula $y$
+\end_inset
+
+ negatif, dari arah sudut 
+\begin_inset Formula $45^{\circ}$
+\end_inset
+
+ , dan seterusnya.
+\end_layout
+
+\begin_layout Standard
+Contoh, tinjau fungsi
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \[
 f(z)=z^{*}=x-\imath y
@@ -96,7 +142,109 @@ f(z)=z^{*}=x-\imath y
 
 \end_inset
 
+Misalnya dengan menggunakan 
+\begin_inset Formula $\Delta z=\Delta x+\imath\Delta y$
+\end_inset
 
+ diperoleh
+\begin_inset Formula 
+\begin{align*}
+\frac{f(z+\Delta z)-f(z)}{\Delta z} & =\frac{\left[(x+\Delta x)-\imath(y+\Delta y)\right]-(x-\imath y)}{\Delta x+\imath\Delta y}\\
+ & =\frac{\Delta x-\imath\Delta y}{\Delta x+\imath\Delta y}
+\end{align*}
+
+\end_inset
+
+Sekarang kita perlu menentukan bagaimana limit 
+\begin_inset Formula $\Delta z$
+\end_inset
+
+ diambil.
+ Pertama misalkan 
+\begin_inset Formula $\Delta y=0$
+\end_inset
+
+ dan 
+\begin_inset Formula $\Delta x\rightarrow0$
+\end_inset
+
+, (limit diambil pada arah sumbu 
+\begin_inset Formula $x$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+\frac{\Delta x-\imath\Delta y}{\Delta x+\imath\Delta y}\rightarrow\frac{\Delta x-\imath(0)}{\Delta x+\imath(0)}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kemudian misalkan 
+\begin_inset Formula $\Delta x=0$
+\end_inset
+
+ dan 
+\begin_inset Formula $\Delta y\rightarrow0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\frac{\Delta x-\imath\Delta y}{\Delta x+\imath\Delta y}\rightarrow\frac{0-\imath(\Delta y)}{0+\imath(\Delta y)}=-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nilai kedua limit tersebut berbeda untuk dua jalur yang berbeda.
+ Karena nilai limit ini tidak unik maka turunan dari 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ tidak ada.
+\end_layout
+
+\begin_layout Standard
+Penentuan apakah 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ ada melalui proses pengambilan limit, seperti yang baru saja kita lakukan,
+ adalah sulit dan tidak praktikal.
+ Kita memerlukan alternatif untuk menentukan apakah 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ ada atau tidak.
+\end_layout
+
+\begin_layout Standard
+Asumsikan bahwa 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ ada.
+ Bagian real dan imajiner dari 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ dinotasikan sebagai 
+\begin_inset Formula $u(x,y)$
+\end_inset
+
+ dan 
+\begin_inset Formula $v(x,y)$
+\end_inset
+
+, yaitu:
 \end_layout
 
 \begin_layout Standard
@@ -111,8 +259,20 @@ f(z)=u(x,y)+\imath v(x,y)
 \end_layout
 
 \begin_layout Standard
-Dari arah sumbu real 
+Misalkan sekarang kita ingin mendekati 
+\begin_inset Formula $\Delta z\rightarrow0$
+\end_inset
+
+ dari arah sejajar dengan sumbu 
 \begin_inset Formula $x$
+\end_inset
+
+, atau 
+\begin_inset Formula $\Delta z=\Delta x$
+\end_inset
+
+ atau 
+\begin_inset Formula $\Delta y=0$
 \end_inset
 
 :
@@ -132,7 +292,23 @@ f'(z) & =\lim_{\Delta x\rightarrow0}\frac{u(x+\Delta x,y)+\imath v(x+\Delta x,y)
 \end_layout
 
 \begin_layout Standard
-Dari arah sumbu imajiner
+Sekarang kita ingin mendekati 
+\begin_inset Formula $\Delta z\rightarrow0$
+\end_inset
+
+ dari arah sejajar dengan sumbu 
+\begin_inset Formula $y$
+\end_inset
+
+, atau 
+\begin_inset Formula $\Delta z=\imath\Delta y$
+\end_inset
+
+ atau 
+\begin_inset Formula $\Delta x=0$
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
@@ -149,7 +325,24 @@ f'(z) & =\lim_{\Delta y\rightarrow0}\frac{u(x,y+\Delta y)+\imath v(x,y+\Delta y)
 \end_layout
 
 \begin_layout Standard
-Persamaan Cauchy-Riemann:
+Agar 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ memiliki turunan, maka dua kuantitas ini harus bernilai sama:
+\begin_inset Formula 
+\[
+\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial x}=-\imath\frac{\partial u}{\partial y}+\frac{\partial v}{\partial y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menyamakan bagian real dan bagian imajiner kita memperoleh Persamaan
+ Cauchy-Riemann:
 \end_layout
 
 \begin_layout Standard
@@ -172,6 +365,269 @@ Persamaan Cauchy-Riemann:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Jika Persamaan Cauchy-Riemann dipenuhi pada suatu titik 
+\begin_inset Formula $z=z_{0}$
+\end_inset
+
+, turunan parsial pertama dari 
+\begin_inset Formula $u$
+\end_inset
+
+ dan 
+\begin_inset Formula $v$
+\end_inset
+
+ akan kontinu pada 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ sehingga turunan 
+\begin_inset Formula $f'(z_{0})$
+\end_inset
+
+ ada.
+\end_layout
+
+\begin_layout Standard
+Jika 
+\begin_inset Formula $f'(z)$
+\end_inset
+
+ ada pada 
+\begin_inset Formula $z=z_{0}$
+\end_inset
+
+ dan pada setiap titik pada lingkungan (
+\emph on
+neighborhood
+\emph default
+) dari 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+, maka fungsi 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ dikatakan bersifat 
+\series bold
+analitik
+\series default
+ pada 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Jika 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ tidak analitik pada 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ dikatakan singular pada 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Fungsi rasional:
+\begin_inset Formula 
+\[
+Q(z)=\frac{a_{n}z^{n}+a_{n-1}z^{n-1}+\cdots+a_{1}z+a_{0}}{b_{m}z^{m}+b_{m-1}z^{m-1}+\cdots+b_{1}z+b_{0}}
+\]
+
+\end_inset
+
+memiliki singularitas terisolasi pada setiap akar dari polinomial penyebut.
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Tentukan apakah fungsi 
+\begin_inset Formula $f(z)=zz^{*}$
+\end_inset
+
+ bersifat analitik
+\end_layout
+
+\begin_layout Standard
+Tulis dalam bentuk
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(z)=zz^{*}=(x+\imath y)(x-\imath y)=x^{2}+y^{2}
+\]
+
+\end_inset
+
+sehinga 
+\begin_inset Formula $u(x,y)=x^{2}+y^{2}$
+\end_inset
+
+ dan 
+\begin_inset Formula $v(x,y)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Turunan-turunan parsial dari 
+\begin_inset Formula $u(x,y)$
+\end_inset
+
+ adalah 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial u}{\partial x} & =2x\\
+\frac{\partial u}{\partial y} & =2y
+\end{align*}
+
+\end_inset
+
+dan turunan-turunan parsial dari 
+\begin_inset Formula $v(x,y)$
+\end_inset
+
+ adalah:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial v}{\partial x} & =0\\
+\frac{\partial v}{\partial y} & =0
+\end{align*}
+
+\end_inset
+
+Persamaan Cauchy-Riemann pertama:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial u}{\partial x} & =\frac{\partial v}{\partial y}\\
+2x & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dan Persamaan Cauchy-Riemann kedua:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial u}{\partial y} & =-\frac{\partial v}{\partial x}\\
+2y & =0
+\end{align*}
+
+\end_inset
+
+Sehingga disimpulkan bahwa 
+\begin_inset Formula $x$
+\end_inset
+
+ dan 
+\begin_inset Formula $y$
+\end_inset
+
+ harus bernilai 0 agar Persamaan Cauchy-Riemann dapat dipenuhi.
+ Hal ini dipenuhi pada titik pusat 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+ tetapi tidak pada lingkungan disekitar titik 
+\begin_inset Formula $(0,0)$
+\end_inset
+
+, sehingga fungsi 
+\begin_inset Formula $f(z)=zz^{*}$
+\end_inset
+
+ tidak analitik di manapun pada bidang kompleks.
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Tentukan apakah fungsi 
+\begin_inset Formula $f(z)=z^{2}$
+\end_inset
+
+ bersifat analitik atau tidak.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(z)=z^{2}=(x+\imath y)(x+\imath y)=x^{2}-y^{2}+\imath2xy
+\]
+
+\end_inset
+
+sehingga
+\begin_inset Formula 
+\begin{align*}
+u(x,y) & =x^{2}-y^{2}\\
+v(x,y) & =2xy
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Persamaan Cauchy-Riemann memberikan:
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial u}{\partial x} & =\frac{\partial v}{\partial y}\\
+2x & =2x
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dan
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial u}{\partial y} & =-\frac{\partial v}{\partial x}\\
+-2y & =-2y
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kedua persamaan ini dipenuhi pada semua titik pada pada bidang kompleks.
+ Oleh karena itu 
+\begin_inset Formula $z^{2}$
+\end_inset
+
+ bersifat analitik di titik manapun pada bidang kompleks.
 \end_layout
 
 \end_body
