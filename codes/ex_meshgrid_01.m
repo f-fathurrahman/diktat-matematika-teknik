@@ -1,10 +1,10 @@
 % clear all; close all;
 
-x = [0, 1, 2];
-y = [3, 5, 6, 7];
+x = linspace(-5.0, 5.0, 100);
+y = linspace(-5.0, 5.0, 100);
 
-[x, y] = meshgrid(x, y)
+[X, Y] = meshgrid(x, y);
 
-z = x + 1i*y
-w = z.^2
+Z = X + 1i*Y;
+W = Z.^2;
 
