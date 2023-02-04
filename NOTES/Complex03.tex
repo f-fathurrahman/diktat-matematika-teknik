@@ -1,0 +1,350 @@
+\input{PREAMBLE}
+
+% -------------------------
+\begin{document}
+
+\title{%
+{\small TF2201 Matematika Rekayasa II}\\
+Variabel Kompleks: Fungsi Analitik
+}
+\author{Fadjar Fathurrahman\\
+Teknik Fisika\\
+Institut Teknologi Bandung}
+\date{2023}
+\maketitle
+
+
+% Preview body
+
+\section{Fungsi analitik dan Persamaan Cauchy-Riemann}
+
+
+Definisi turunan fungsi dari suatu variabel kompleks $z$:
+\begin{equation}
+f'(z) = \lim_{\Delta z\rightarrow0}\frac{f(z+\Delta z)-f(z)}{\Delta z}    
+\end{equation}
+%
+Perlu diperhatikan bahwa pada proses pengambilan limit, ada banyak
+cara atau jalur untuk pengambilan $\Delta z$. Hal ini berbeda dalam
+kasus variabel real (yang berada pada garis), karena hanya ada dua
+pilihan, yaitu dari arah kiri atau arah kanan. Hal ini tidak berlaku
+untuk kasus variabel kompleks yang berada pada bidang. Misalnya bisa
+saja $\Delta z$ diambil dari arah sumbu $x$ positif, sumbu $x$
+negatif, sumbu $y$ positif, sumbu $y$ negatif, dari arah sudut $45^{\circ}$,
+dan seterusnya.
+
+Contoh, tinjau fungsi
+\begin{equation}
+f(z)=z^{*}=x-\imath y
+\end{equation}
+Misalnya dengan menggunakan $\Delta z=\Delta x+\imath\Delta y$ diperoleh
+\begin{align*}
+\frac{f(z+\Delta z)-f(z)}{\Delta z} & =\frac{\left[(x+\Delta x)-\imath(y+\Delta y)\right]-(x-\imath y)}{\Delta x+\imath\Delta y}\\
+ & =\frac{\Delta x-\imath\Delta y}{\Delta x+\imath\Delta y}
+\end{align*}
+Sekarang kita perlu menentukan bagaimana limit $\Delta z$ diambil.
+Pertama misalkan $\Delta y=0$ dan $\Delta x\rightarrow0$, (limit
+diambil pada arah sumbu $x$):
+\begin{equation*}
+\frac{\Delta x-\imath\Delta y}{\Delta x+\imath\Delta y}\rightarrow\frac{\Delta x-\imath(0)}{\Delta x+\imath(0)}=1
+\end{equation*}
+
+Kemudian misalkan $\Delta x=0$ dan $\Delta y\rightarrow0$:
+\begin{equation*}
+\frac{\Delta x-\imath\Delta y}{\Delta x+\imath\Delta y}\rightarrow\frac{0-\imath(\Delta y)}{0+\imath(\Delta y)}=-1
+\end{equation*}
+
+Nilai kedua limit tersebut berbeda untuk dua jalur yang berbeda. Karena
+nilai limit ini tidak unik maka turunan dari $f(z)$ tidak ada.
+
+Penentuan apakah $f'(z)$ ada melalui proses pengambilan limit, seperti
+yang baru saja kita lakukan, adalah sulit dan tidak praktikal. Kita
+memerlukan alternatif untuk menentukan apakah $f'(z)$ ada atau tidak.
+
+Asumsikan bahwa $f'(z)$ ada. Bagian real dan imajiner dari $f(z)$
+dinotasikan sebagai $u(x,y)$ dan $v(x,y)$, yaitu:
+\begin{equation*}
+f(z)=u(x,y)+\imath v(x,y)
+\end{equation*}
+
+Misalkan sekarang kita ingin mendekati $\Delta z\rightarrow0$ dari
+arah sejajar dengan sumbu $x$, atau $\Delta z=\Delta x$ atau $\Delta y=0$:
+\begin{align*}
+f'(z) & =\lim_{\Delta x\rightarrow0}\frac{u(x+\Delta x,y) + \imath v(x+\Delta x,y)-u(x,y)-\imath v(x,y)}{\Delta x}\\
+ & =\lim_{\Delta x\rightarrow0}\left[\frac{u(x+\Delta x,y)-u(x,y)}{\Delta x}+\imath\frac{v(x+\Delta x,y)-v(x,y)}{\Delta x}\right]\\
+ & =\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial x}
+\end{align*}
+
+Sekarang kita ingin mendekati $\Delta z\rightarrow0$ dari arah sejajar
+dengan sumbu $y$, atau $\Delta z=\imath\Delta y$ atau $\Delta x=0$:
+
+\begin{align*}
+f'(z) & =\lim_{\Delta y\rightarrow0}\frac{u(x,y+\Delta y)+\imath v(x,y+\Delta y)-u(x,y)-\imath v(x,y)}{\imath\Delta y}\\
+ & =\lim_{\Delta y\rightarrow0}\left[\frac{u(x,y+\Delta y)-u(x,y)}{\imath\Delta y}+\frac{v(x,y+\Delta y)-v(x,y)}{\Delta y}\right]\\
+ & =-\imath\frac{\partial u}{\partial y}+\frac{\partial v}{\partial y}
+\end{align*}
+
+Agar $f'(z)$ memiliki turunan, maka dua kuantitas ini harus bernilai sama:
+\begin{equation*}
+\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial x} = 
+-\imath\frac{\partial u}{\partial y}+\frac{\partial v}{\partial y}
+\end{equation*}
+
+
+Dengan menyamakan bagian real dan bagian imajiner kita memperoleh
+Persamaan Cauchy-Riemann:
+\begin{align}
+\frac{\partial u}{\partial x} & = \frac{\partial v}{\partial y} \\
+\frac{\partial u}{\partial y} & = -\frac{\partial v}{\partial x}
+\end{align}
+
+Jika Persamaan Cauchy-Riemann dipenuhi pada suatu titik $z = z_{0}$,
+turunan parsial pertama dari $u$ dan $v$ akan kontinu pada $z_{0}$
+sehingga turunan $f'(z_{0})$ ada.
+
+Jika $f'(z)$ ada pada $z=z_{0}$ dan pada setiap titik pada lingkungan
+(\emph{neighborhood}) dari $z_{0}$, maka fungsi $f(z)$ dikatakan
+bersifat \textbf{analitik} pada $z_{0}$.
+
+Definisi dari sifat analitik dari suatu fungsi memberikan batasan
+kepada himpunan di mana fungsi $f(z)$ bersifat analitik. Misalnya,
+jika $f(z)$ analitik untuk semua $z$, dengan $z<1$ dan juga pada
+$z=\imath$, maka $f(z)$ setidaknya analitik pada domain yang diberikan
+pada Gambar XXX.
+
+Jika $f(z)$ tidak analitik pada $z_{0}$, $f(z)$ dikatakan singular pada $z_{0}$.
+
+Dalam banyak aplikasi, $z_{0}$ adalah titik singular yang terisolasi,
+artinya di suatu lingkungan di sekitar $z_{0}$, $f(z)$ bersifat
+analitik untuk $z\neq z_{0}$ dan singular hanya pada $z_{0}$. Titik
+singular yang paling umum ditemukan dari suatu fungsi yang analitik
+di titik lainnya (selain titik singular) adalah akar (atau zero) dari
+penyebut suatu fungsi yang melibatkan rasio. Misalnya, $f(z)$ berikut
+memiliki titik singular terisolasi pada $z_{0}=0$:
+\begin{equation*}
+\frac{1}{e^{z}-1},\frac{1}{z(z+1)},\frac{1}{z\sin(z)},\tan(z)
+\end{equation*}
+
+Fungsi rasional:
+\begin{equation*}
+Q(z)=\frac{a_{n}z^{n}+a_{n-1}z^{n-1}+\cdots+a_{1}z+a_{0}}{b_{m}z^{m}+b_{m-1}z^{m-1}+\cdots+b_{1}z+b_{0}}    
+\end{equation*}
+memiliki singularitas terisolasi pada setiap akar (atau \textit{zero}) dari
+polinomial penyebut.
+
+Untuk fungsi analitik, berlaku aturan kalkulus diferensial yang biasa
+digunakan untuk variabel real.
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d}z}\left[f(z)\pm g(z)\right] & = f'(z)+g'(z) \\
+\frac{\mathrm{d}}{\mathrm{d}z}[kf(z)] & = kf'(z) \\
+\frac{\mathrm{d}}{\mathrm{d}z}\left[f(z)g(z)\right] & = f'(z)g(z)+f(z)g'(z) \\
+\frac{\mathrm{d}}{\mathrm{d}z}\left[\frac{f(z)}{g(z)}\right] & = \frac{f'(z)g(z)-f(z)g'(z)}{\left[g(z)\right]^{2}} \\
+\frac{\mathrm{d}}{\mathrm{d}z}\left[f(g(z))\right] & = \frac{\mathrm{d}f}{\mathrm{d}g}\frac{\mathrm{d}g}{\mathrm{d}z}
+\end{align*}
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+{\color{blue}
+Tentukan apakah fungsi $f(z)=zz^{*}$ bersifat analitik
+}
+
+Tulis dalam bentuk
+\begin{equation*}
+f(z) = zz^{*} = (x + \imath y)(x - \imath y) = x^{2} + y^{2}
+\end{equation*}
+sehinga $u(x,y)=x^{2}+y^{2}$ dan $v(x,y)=0$.
+
+Turunan-turunan parsial dari $u(x,y)$ adalah 
+\begin{align*}
+\frac{\partial u}{\partial x} & = 2x\\
+\frac{\partial u}{\partial y} & = 2y
+\end{align*}
+dan turunan-turunan parsial dari $v(x,y)$ adalah:
+\begin{align*}
+\frac{\partial v}{\partial x} & =0\\
+\frac{\partial v}{\partial y} & =0
+\end{align*}
+Persamaan Cauchy-Riemann pertama:
+\begin{align*}
+\frac{\partial u}{\partial x} & =\frac{\partial v}{\partial y} \\
+2x & = 0
+\end{align*}
+%
+dan Persamaan Cauchy-Riemann kedua:
+\begin{align*}
+\frac{\partial u}{\partial y} & =-\frac{\partial v}{\partial x} \\
+2y & =0
+\end{align*}
+Sehingga disimpulkan bahwa $x$ dan $y$ harus bernilai 0 agar Persamaan
+Cauchy-Riemann dapat dipenuhi. Hal ini dipenuhi pada titik pusat $(0,0)$
+tetapi tidak pada lingkungan disekitar titik $(0,0)$, sehingga fungsi
+$f(z)=zz^{*}$ tidak analitik di manapun pada bidang kompleks.
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+{\color{blue}
+Tentukan apakah fungsi $f(z)=z^{2}$ bersifat analitik atau tidak.
+}
+
+Tulis $f(z)$ dalam bentuk $u(x,y) + \imath v(x,y)$ 
+\begin{equation*}
+f(z) = z^{2} = (x+\imath y)(x+\imath y) = x^{2} - y^{2} + \imath 2xy
+\end{equation*}
+sehingga
+\begin{align*}
+u(x,y) & = x^{2} - y^{2} \\
+v(x,y) & = 2xy
+\end{align*}
+
+
+Persamaan Cauchy-Riemann memberikan:
+\begin{align*}
+\frac{\partial u}{\partial x} & =\frac{\partial v}{\partial y} \\
+2x & = 2x
+\end{align*}
+dan
+\begin{align*}
+\frac{\partial u}{\partial y} & = -\frac{\partial v}{\partial x} \\
+-2y & =-2y
+\end{align*}
+
+Kedua persamaan ini dipenuhi pada semua titik pada pada bidang kompleks.
+Oleh karena itu $z^{2}$ bersifat analitik di titik manapun pada bidang
+kompleks.
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+{\color{blue}
+Tentukan daerah di mana $f(z)=e^{z}$ bersifat analitik dan hitung
+$f'(z)$
+}
+
+\begin{equation*}
+e^{z}=e^{x+\imath y}=e^{x}e^{\imath y}=e^{x}\cos(y)+\imath e^{x}\sin(y)    
+\end{equation*}
+Maka:
+\begin{align*}
+u(x,y) & = e^{x}\cos(y)\\
+v(x,y) & = e^{x}\sin(y)
+\end{align*}
+Dengan menghitung turunan-turunan parsial:
+\begin{align*}
+\frac{\partial u}{\partial x} &= e^{x}\cos(y) \\
+\frac{\partial v}{\partial y} &= e^{x}\cos(y)
+\end{align*}
+dan
+\begin{align*}
+\frac{\partial u}{\partial y} & = -e^{x}\sin(y) \\
+\frac{\partial v}{\partial x} & = e^{x}\sin(y)
+\end{align*}
+terlihat bahwa Persamaan Cauchy-Riemann terpenuhi untuk seluruh $z$.
+
+Turunan dari $f(z)$ dapat dicari mengunakan
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d}z}\left[e^{z}\right] & =\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial x}\\
+ & =e^{x}\cos(y)+\imath e^{x}\sin(y)\\
+ & =e^{z}
+\end{align*}
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+{\color{blue}
+Tentukan daerah di mana $f(z)=\ln(z)$ bersifat analitik dan hitung $f'(z)$
+}
+
+Dengan
+\begin{align*}
+\ln(z) & = \ln(r) + \imath\theta\\
+ & = \ln\left(\sqrt{x^{2}+y^{2}}\right)+\imath\tan^{-1}\left(\frac{y}{x}\right)
+\end{align*}
+diperoleh
+\begin{align*}
+u(x,y) & =\ln\left(\sqrt{x^{2}+y^{2}}\right)=\frac{1}{2}\ln\left(x^{2}+y^{2}\right)\\
+v(x,y) & =\tan^{-1}\left(\frac{y}{x}\right)
+\end{align*}
+
+Dengan menghitung turunan-turunan parsial:
+\begin{align*}
+\frac{\partial u}{\partial x} & = \frac{1}{2}\frac{2x}{x^{2}+y^{2}}=\frac{x}{x^{2}+y^{2}} \\
+\frac{\partial v}{\partial y} & = \frac{1/x}{1+\left(y/x\right)^{2}}=\frac{x}{x^{2}+y^{2}}
+\end{align*}
+dan
+\begin{align*}
+\frac{\partial u}{\partial y} & =\frac{1}{2}\frac{2y}{x^{2}+y^{2}}=\frac{y}{x^{2}+y^{2}}\\
+\frac{\partial v}{\partial x} & =-\frac{-y/x^{2}}{1+\left(y/x\right)^{2}}=-\frac{y}{x^{2}+y^{2}}
+\end{align*}
+%
+Dapat dilihat bahwa Persamaan Cauchy-Riemann terpenuhi asalkan $x^{2}+y^{2}\neq0$
+dan $\theta$ terdefinisi secara unik (menggunakan nilai pokok).
+
+Turunan fungsi $f(z)$ adalah:
+\begin{align*}
+\frac{\mathrm{d}}{\mathrm{d}z}\left[\ln(z)\right] & =\frac{\partial u}{\partial x}+\imath\frac{\partial v}{\partial y}\\
+ & =\frac{x}{x^{2}+y^{2}}-\imath\frac{y}{x^{2}+y^{2}}\\
+ & =\frac{1}{z}
+\end{align*}
+yang valid dengan syarat $z\neq0$ dan $\ln(z)$ kontinu.
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+{\color{blue}
+Tentukan daerah di mana $f(z) = \sin(z)$ bersifat analitik dan hitung $f'(z)$
+}
+
+
+\section{Persamaan Laplace dan Fungsi harmonik}
+
+Tinjau kembali Persamaan Cauchy-Riemann:
+\begin{align*}
+\frac{\partial u}{\partial x} & = \frac{\partial v}{\partial y} \\
+\frac{\partial u}{\partial y} & = -\frac{\partial v}{\partial x}
+\end{align*}
+
+Operasikan $\dfrac{\partial}{\partial x}$ pada persamaan pertama
+dan $\dfrac{\partial}{\partial y}$ pada persamaan kedua, diperoleh:
+\begin{align*}
+\frac{\partial^{2}u}{\partial x^{2}} &= \frac{\partial^{2}v}{\partial x\partial y} \\
+\frac{\partial^{2}u}{\partial y^{2}} &= -\frac{\partial^{2}v}{\partial x\partial y}
+\end{align*}
+
+Jumlahkan kedua persamaan tersebut, diperoleh:
+\begin{equation*}
+\frac{\partial^{2}u}{\partial x^{2}}+\frac{\partial^{2}u}{\partial y^{2}}=0
+\end{equation*}
+atau:
+\begin{equation}
+\nabla^{2} u = 0    
+\end{equation}
+
+Sebagai alternatif, mulai dari Persamaan Cauchy-Riemann, kita juga
+dapat melakukan operasi $\dfrac{\partial}{\partial x}$ pada persamaan
+kedua dan $\dfrac{\partial}{\partial y}$ pada persamaan pertama,
+sehingga diperoleh:
+\begin{align*}
+\frac{\partial^{2}u}{\partial x\partial y} &= \frac{\partial^{2}v}{\partial y^{2}} \\
+\frac{\partial^{2}u}{\partial x\partial y} &= -\frac{\partial^{2}v}{\partial x^{2}}
+\end{align*}
+%
+Kurangi persamaan pertama dengan persamaan kedua, diperoleh:
+\begin{equation*}
+\frac{\partial^{2}v}{\partial x^{2}}+\frac{\partial^{2}v}{\partial y^{2}}=0    
+\end{equation*}
+atau:
+\begin{equation}
+\nabla^{2}v=0    
+\end{equation}
+
+Persamaan diferensial parsial $\nabla^{2}u=0$ dan $\nabla^{2}v=0$
+juga dikenal sebagai Persamaan Laplace. Hasil di atas menyatakan bahwa
+bagian real dan bagian imajiner dari suatu fungsi analitik akan memenuhi
+persamaan Laplace. Fungsi yang memenuhi Persamaan Laplace disebut
+juga sebagai \textbf{fungsi harmonik}. Fungsi $u$ dan $v$ dari suatu
+fungsi analitik dikenal juga sebagai fungsi harmonik konjugat. Jika
+satu fungsi konjugat harmonik diketahui, maka fungsi konjugat harmonik
+yang lain juga dapat ditemukan dengan menggunakan Persamaan Cauchy-Riemann.
+
+
+
+
+
+\end{document}
