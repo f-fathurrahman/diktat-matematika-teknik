@@ -1,0 +1,598 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Busur (arc) dan kontur (contour)
+\end_layout
+
+\begin_layout Standard
+Suatu busur halus (smooth arc) adalah himpunan titik-titik 
+\begin_inset Formula $(x,y)$
+\end_inset
+
+ yang memenuhi:0000
+\begin_inset Formula 
+\[
+x=\phi(t),\ \ \ \ y=\psi(t),\ \ \ \ a\leq t\leq b
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $\phi'(t)$
+\end_inset
+
+ dan 
+\begin_inset Formula $\psi'(t)$
+\end_inset
+
+ bersifat kontinu pada 
+\begin_inset Formula $[a,b]$
+\end_inset
+
+ dan tidak bernilai nol pada 
+\begin_inset Formula $t$
+\end_inset
+
+ yang sama.
+\end_layout
+
+\begin_layout Standard
+Misalnya lingkaran 
+\begin_inset Formula $x^{2}+y^{2}=1$
+\end_inset
+
+ dapat direpresentasikan secara parametrik dengan
+\begin_inset Formula 
+\[
+x=\cos(t),\ \ \ \ y=\sin(t),\ \ \ \ 0\leq t\leq2\pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Representasi
+\begin_inset Formula 
+\[
+x=t,\ \ \ \ y=t^{2},\ \ \ \ -\infty<t<\infty
+\]
+
+\end_inset
+
+mendefinisikan parabola 
+\begin_inset Formula $y=x^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Perhatikan bahwa suatu representasi parametrik memberikan suatu urutan untuk
+ titik-titik pada busur.
+\end_layout
+
+\begin_layout Standard
+Suatu busur halus memiliki panjang yang diberikan oleh:
+\begin_inset Formula 
+\[
+L=\int_{a}^{b}\sqrt{\left[\phi'(t)\right]^{2}+\left[\psi'(t)\right]^{2}}\ \mathrm{d}t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sebuah kontur adalah sekumpulan busur halus yang saling terhubung secara
+ kontinu.
+\end_layout
+
+\begin_layout Standard
+Suatu kontur tertutup sederhana atau kurva Jordan, adalah suatu kontur yang
+ tidak berpotongan dengan dirinya sendiri kecuali pada 
+\begin_inset Formula $\phi(a)=\phi(b)$
+\end_inset
+
+ dan 
+\begin_inset Formula $\psi(a)=\psi(b)$
+\end_inset
+
+.
+ Suatu kontur tertutup sederhana membagi sebuah bidang menjadi dua bagian,
+ yaitu bagian 
+\begin_inset Quotes eld
+\end_inset
+
+dalam
+\begin_inset Quotes erd
+\end_inset
+
+ dan bagian 
+\begin_inset Quotes eld
+\end_inset
+
+luar
+\begin_inset Quotes erd
+\end_inset
+
+, dan dikatakan dilalui secara positif jika bagian dalam berada pada sebelah
+ kiri.
+ Contoh Gambar 10.5
+\end_layout
+
+\begin_layout Standard
+Lingkaran pada bidang kompleks memiliki representasi yang sederhana, menggunakan
+ bentuk polar dan eksponensial dari 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ Suatu lingkaran 
+\begin_inset Formula $|z|=a$
+\end_inset
+
+ diberikan secara parametrik dengan persamaan:
+\begin_inset Formula 
+\[
+z=a\cos(\theta)+\imath a\sin(\theta),\ \ \ \ 0\leq\theta\leq2\pi
+\]
+
+\end_inset
+
+atau:
+\begin_inset Formula 
+\[
+z=ae^{\imath\theta},\ \ \ \ 0\leq\theta\leq2\pi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suatu lingkaran dengan jari-jari 
+\begin_inset Formula $a$
+\end_inset
+
+ berpusat pada 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ ditunjukkan dengan persamaan:
+\begin_inset Formula 
+\[
+z-z_{0}=ae^{\imath\theta}=a\cos(\theta)+\imath a\sin(\theta)
+\]
+
+\end_inset
+
+dengan 
+\begin_inset Formula $\theta$
+\end_inset
+
+ diukur dari suatu sumbu yang melewati titik 
+\begin_inset Formula $z=z_{0}$
+\end_inset
+
+ dan sejajar dengan sumbu 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Integral garis
+\end_layout
+
+\begin_layout Standard
+Misalkan 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ dan 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+ adalah dua titik pada bidang kompleks dan 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah suatu kontur yang menghubungkan antara keduanya, misalkan 
+\begin_inset Formula $C$
+\end_inset
+
+ didefinisikan secara parametrik dengan
+\begin_inset Formula 
+\[
+x=\phi(t)\ \ \ \ y=\psi(t)
+\]
+
+\end_inset
+
+sehingga
+\begin_inset Formula 
+\[
+z_{0}=\phi(a)+\imath\psi(a),\ \ \ \ z_{1}=\phi(b)+\imath\psi(b)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Integral garis
+\begin_inset Formula 
+\[
+\int_{C}f(z)\ \mathrm{d}z=\int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+didefinisikan sebagai integral real:
+\begin_inset Formula 
+\begin{align*}
+\int_{C}f(z)\ \mathrm{d}z & =\int_{C}(u+\imath v)(\mathrm{d}x+\imath\ \mathrm{d}y)\\
+ & =\int_{C}(u\ \mathrm{d}x-\mathrm{v}\ \mathrm{d}y)+\imath\int_{C}(v\ \mathrm{d}x+u\ \mathrm{d}y)
+\end{align*}
+
+\end_inset
+
+di mana kita telah menuliskan 
+\begin_inset Formula $f(z)=u+\imath v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dari definisi ini dapat diperoleh beberapa hubungan sebagai berikut.
+\end_layout
+
+\begin_layout Standard
+Pertama:
+\begin_inset Formula 
+\[
+\int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z=-\int_{z_{1}}^{z_{0}}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+di mana jalur yang ditempuh pada integral pada RHS sama dengan LHS, namun
+ dengan arah yang berbeda.
+\end_layout
+
+\begin_layout Standard
+Kedua:
+\begin_inset Formula 
+\[
+\int_{z_{0}}^{z_{1}}kf(z)\ \mathrm{d}z=k\int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jika kontur 
+\begin_inset Formula $C$
+\end_inset
+
+ terdiri dari kumpulan kontur-kontur 
+\begin_inset Formula $C_{1},C_{2},\ldots,C_{k}$
+\end_inset
+
+ yang terhubung secara kontinu maka:
+\begin_inset Formula 
+\[
+\int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z=\int_{C_{1}}f(z)\ \mathrm{d}z+\int_{C_{2}}f(z)\ \mathrm{d}z+\cdots+\int_{C_{k}}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teorema:
+\end_layout
+
+\begin_layout Standard
+Misalkan 
+\begin_inset Formula $\left|f(z)\right|\leq M$
+\end_inset
+
+ di sepanjang kontur 
+\begin_inset Formula $C$
+\end_inset
+
+ dan panjang dari 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah 
+\begin_inset Formula $L$
+\end_inset
+
+ maka:
+\begin_inset Formula 
+\[
+\left|\int_{C}f(z)\ \mathrm{d}z\right|\leq ML
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Tentukan nilai dari:
+\begin_inset Formula 
+\[
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z
+\]
+
+\end_inset
+
+di sepanjang kontur berikut.
+ (a) garis lurus dari 
+\begin_inset Formula $0$
+\end_inset
+
+ sampai 
+\begin_inset Formula $1+\imath$
+\end_inset
+
+, (b) garis poligon dari 
+\begin_inset Formula $0$
+\end_inset
+
+ ke 
+\begin_inset Formula $1$
+\end_inset
+
+ dan dari 
+\begin_inset Formula $1$
+\end_inset
+
+ ke 
+\begin_inset Formula $1+\imath$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Pada sembarang kontur dapat dituliskan:
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & =\int_{0}^{1+\imath}\left[\left(x^{2}-y^{2}\right)+\imath2xy\right]\left(\mathrm{d}x+\imath\ \mathrm{d}y\right)\\
+ & =\int_{0}^{1+\imath}\left[\left(x^{2}-y^{2}\right)\ \mathrm{d}x-2xy\ \mathrm{d}y\right]+\imath\int_{0}^{1+\imath}\left[2xy\ \mathrm{d}x+\left(x^{2}-y^{2}\right)\ \mathrm{d}y\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(a) Kontur 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+: garis lurus dari 
+\begin_inset Formula $0$
+\end_inset
+
+ ke 
+\begin_inset Formula $1+\imath$
+\end_inset
+
+ dengan bentuk parametrik:
+\begin_inset Formula 
+\[
+x=t,\ \ \ \ y=t,\ \ \ \ 0\leq t\leq1
+\]
+
+\end_inset
+
+dengan 
+\begin_inset Formula $\mathrm{d}t=\mathrm{d}x=\mathrm{d}y$
+\end_inset
+
+.
+ Dengan substitusi parametrik tersebut diperoleh:
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & =\int_{0}^{1}\left[\left(t^{2}-t^{2}\right)\ \mathrm{d}t-2(t)(t)\ \mathrm{d}t\right]+\imath\int_{0}^{1}\left[2(t)(t)\ \mathrm{d}t+\left(t^{2}-t^{2}\right)\ \mathrm{d}t\right]\\
+ & =\int_{0}^{1}\left[-2t^{2}\ \mathrm{d}t\right]+\imath\int_{0}^{1}\left[2t^{2}\ \mathrm{d}t\right]\\
+ & =\left[-\frac{2}{3}t^{3}\right]_{0}^{1}+\imath\left[\frac{2}{3}t^{3}\right]_{0}^{1}\\
+ & =\left(-\frac{2}{3}-0\right)+\imath\left(\frac{2}{3}\right)\\
+ & =-\frac{2}{3}+\frac{2}{3}\imath
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) Kontur 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ dengan 
+\begin_inset Formula $z=x$
+\end_inset
+
+ dan kontur 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ dengan 
+\begin_inset Formula $z=1+\imath y$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z=\int_{0}^{1}x^{2}\ \mathrm{d}x+\int_{0}^{1}\left(1+\imath y\right)^{2}\imath\ \mathrm{d}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teorema Green
+\end_layout
+
+\begin_layout Standard
+Misalkan 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah kontur tertutup sederhana yang dilalui pada arah positif dan membatasi
+ daerah 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Misalkan juga 
+\begin_inset Formula $u$
+\end_inset
+
+ dan 
+\begin_inset Formula $v$
+\end_inset
+
+ adalah kontinu dengan turunan parsial pertama yang juga kontinu pada 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Maka
+\begin_inset Formula 
+\[
+\oint_{C}\left(u\ \mathrm{d}x-v\ \mathrm{d}y\right)=-\iint_{R}\left(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\right)\ \mathrm{d}x\mathrm{\ d}y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,250 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Tinjau integral
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ adalah fungsi analitik di dalam suatu daerah terhubung sederhana 
+\begin_inset Formula $R$
+\end_inset
+
+ yang dilingkupi oleh suatu kontur tertutup sederhana 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Dapat dituliskan:
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=\oint_{C}\left(u\ \mathrm{d}x-v\ \mathrm{d}y\right)+\imath\oint_{C}\left(v\ \mathrm{d}x+u\ \mathrm{d}y\right)
+\]
+
+\end_inset
+
+Dengan menggunakan teorema Green:
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=-\iint_{R}\left(\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\right)\ \mathrm{d}x\ \mathrm{d}y-\imath\iint_{R}\left(-\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\right)\ \mathrm{d}x\ \mathrm{d}y
+\]
+
+\end_inset
+
+Dengan menggunakan Persamaan Cauchy-Riemann, kita mendapatkan Teorema Integral
+ Cauchy:
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dalam bentuk teorema
+\end_layout
+
+\begin_layout Standard
+Misalkan 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah kontur tertutup sederhana yang melingkupi daerah 
+\begin_inset Formula $R$
+\end_inset
+
+ di mana 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ merupakan fungsi analitik.
+ Maka:
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suatu integral tak-tentu:
+\begin_inset Formula 
+\[
+F(z)=\int_{z_{0}}^{z}f(w)\ \mathrm{d}w
+\]
+
+\end_inset
+
+mendefinisikan 
+\begin_inset Formula $F$
+\end_inset
+
+ sebagai fungsi dari 
+\begin_inset Formula $z$
+\end_inset
+
+ sepanjang kontur yang menghubungkan antara 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ dan 
+\begin_inset Formula $z$
+\end_inset
+
+ berada seluruhnya pada suatu daerah 
+\begin_inset Formula $D$
+\end_inset
+
+ yang terhubung sederhana dan di dalamnya 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ bersifat analitik.
+\end_layout
+
+\begin_layout Standard
+Selain itu:
+\begin_inset Formula 
+\[
+F'(z)=f(z)\ \ \ \ \text{pada}\ D
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Evaluasi integral
+\begin_inset Formula 
+\[
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Misalkan:
+\begin_inset Formula 
+\[
+F(z)=\frac{z^{3}}{3}
+\]
+
+\end_inset
+
+Karena 
+\begin_inset Formula $F'(z)=z^{2}$
+\end_inset
+
+, maka:
+\begin_inset Formula 
+\begin{align*}
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & =F(1+\imath)-F(0)\\
+ & =\frac{(1+\imath)^{3}}{3}-0\\
+ & =-\frac{2}{3}+\frac{2}{3}\imath
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
