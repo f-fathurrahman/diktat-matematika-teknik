@@ -91,7 +91,15 @@ untuk fungsi analitik
 \begin_inset Formula $u(x,y)+\imath v(x,y)$
 \end_inset
 
- adalah ortogonal karena hasil kali dalam (dot) adalah nol.
+ adalah ortogonal karena hasil kali dalam (dot) antara 
+\begin_inset Formula $\nabla f_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $\nabla f_{2}$
+\end_inset
+
+ adalah nol.
 \end_layout
 
 \begin_layout Standard
