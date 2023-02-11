@@ -344,6 +344,35 @@ satu fungsi konjugat harmonik diketahui, maka fungsi konjugat harmonik
 yang lain juga dapat ditemukan dengan menggunakan Persamaan Cauchy-Riemann.
 
 
+\section{Fungsi analisis dan kontur isoline}
+
+Selanjutnya akan ditunjukkan bahwa garis $u$ konstan (\textit{isoline}) bersifat tegak lurus (normal)
+terhadap garis $v$ konstan jika $u + \imath v$ adalah fungsi analitik.
+Misalkan dua kurva tersebut dijelaskan dengan persamaan berikut.
+\begin{align*}
+f_{1}(x,y) & = u(x,y) - c_{1} = 0\\
+f_{2}(x,y) & = v(x,y) - c_{2} = 0
+\end{align*}
+dengan $c_1$ dan $c_2$ adalah konstanta real.
+Dua kurva tersebut ortogonal jika hasil kali dalam (\textit{dot product}) antara kedua gradien
+dari fungsi tersebut adalah nol.
+
+Pertama kita akan menghitung gradien dari $f_1(x,y)$ dan $f_2(x,y)$:
+\begin{align*}
+\nabla f_{1} & = \frac{\partial f_{1}}{\partial x}\widehat{\mathbf{i}}+\frac{\partial f_{1}}{\partial y}\widehat{\mathbf{j}}=\frac{\partial u}{\partial x}\widehat{\mathbf{i}}+\frac{\partial u}{\partial y}\widehat{\mathbf{j}}\\
+\nabla f_{2} & = \frac{\partial f_{2}}{\partial x}\widehat{\mathbf{i}}+\frac{\partial f_{2}}{\partial y}\widehat{\mathbf{j}}=\frac{\partial v}{\partial x}\widehat{\mathbf{i}}+\frac{\partial v}{\partial y}\widehat{\mathbf{j}}
+\end{align*}
+
+Hasil kali dalam antara keduanya adalah:
+\begin{align*}
+\nabla f_{1}\cdot\nabla f_{2} & = \left(\frac{\partial u}{\partial x}\widehat{\mathbf{i}} + \frac{\partial u}{\partial y}\widehat{\mathbf{j}}\right)\cdot\left(\frac{\partial v}{\partial x}\widehat{\mathbf{i}}+\frac{\partial v}{\partial y}\widehat{\mathbf{j}}\right)\\
+ & = \frac{\partial u}{\partial x}\frac{\partial v}{\partial x}+\frac{\partial u}{\partial y}\frac{\partial v}{\partial y}\\
+ & = \frac{\partial v}{\partial y}\left(-\frac{\partial u}{\partial y}\right) + \frac{\partial u}{\partial y}\frac{\partial v}{\partial y}\\
+ & = 0
+\end{align*}
+di mana kita telah menggunakan Persamaan Cauchy-Riemann pada untuk mendapatkan baris ketiga dari baris kedua.
+
+
 
 
 
