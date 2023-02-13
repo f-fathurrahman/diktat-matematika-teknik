@@ -343,6 +343,64 @@ fungsi analitik dikenal juga sebagai fungsi harmonik konjugat. Jika
 satu fungsi konjugat harmonik diketahui, maka fungsi konjugat harmonik
 yang lain juga dapat ditemukan dengan menggunakan Persamaan Cauchy-Riemann.
 
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+{\color{blue}
+Fungsi variabel real $u(x,y)=Ax+By$ memenuhi Persamaan Laplace: $\nabla^{2}u=0$.
+Tentukan fungsi konjugat harmoniknya dan tuliskan fungsi $f(z)$.
+}
+
+Dari Persamaan Cauchy-Riemann:
+\begin{equation*}
+\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}
+\end{equation*}
+atau
+\begin{equation*}
+A = \frac{\partial v}{\partial y}
+\end{equation*}
+Dengan mengintegralkan persamaan diferensial ini diperoleh:
+\begin{equation*}
+v(x,y)=Ay+g(x)
+\end{equation*}
+di mana $g(x)$ adalah suatu fungsi yang hanya bergantung pada $x$.
+
+Dari persamaan Cauchy-Riemann kedua:
+\begin{equation*}
+\frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}
+\end{equation*}
+atau
+\begin{equation*}
+B = -\frac{\partial v}{\partial x}
+\end{equation*}
+Dengan substitusi $v(x,y)=Ay+g(x)$ diperoleh:
+\begin{align*}
+B & =-\frac{\partial}{\partial x}\left(Ay+g(x)\right)\\
+B & =-\frac{\partial g}{\partial x}
+\end{align*}
+sehingga:
+\begin{equation*}
+g(x)=-Bx+C
+\end{equation*}
+di mana $C$ adalah suatu konstanta real.
+
+Fungsi konjugat harmonik yang diperlukan adalah:
+\begin{equation*}
+v(x,y) = Ay - Bx + C
+\end{equation*}
+
+Fungsi $f(z) = u(x,y) + \imath v(x,y)$ adalah:
+\begin{align*}
+f(z) & = Ax + By+\imath\left(Ay - Bx + C\right)\\
+ & =Ax+By+\imath Ay-\imath Bx + \imath C\\
+ & =A(x+\imath y) + By-\imath Bx + \imath C\\
+ & =A(x+\imath y) + B(-\imath)(\imath y) - \imath Bx+\imath C\\
+ & =A(x+\imath y) + (-\imath B)(x + \imath y) + \imath C\\
+ & =Az - \imath Bz + \imath C\\
+ & =K_{1}z + K_{2}
+\end{align*}
+dengan $K_{1}=A-\imath B$ dan $K_{2}=\imath C$.
+
+
 
 \section{Fungsi analisis dan kontur isoline}
 
