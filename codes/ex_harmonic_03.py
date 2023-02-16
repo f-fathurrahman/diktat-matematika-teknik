@@ -5,16 +5,8 @@ init_printing()
 z = symbols("z")
 x, y = symbols("x y", real=True)
 
-f = sin(z)*cos(2*z)
-#f = (z**2 + z + 1) / (z**3 + 3*z + 1) 
-fxy = expand( f.subs({z: x + I*y}) )
-
-pprint(fxy)
-
-u = re(fxy)
-v = im(fxy)
-print("u = "); pprint(u)
-print("v = "); pprint(v)
+u = log(x**2 + y**2)
+v = 2*atan2(y,x)
 
 dudx = simplify(diff(u, x))
 dudy = simplify(diff(u, y))
@@ -32,8 +24,3 @@ pprint(CR_eq1)
 
 CR_eq2 = Equality(dudy, -dvdx)
 pprint(CR_eq2)
-
-dfdz1 = dudx + I*dvdx
-
-fz1 = diff(f, z, 1)
-fz1.subs({x})

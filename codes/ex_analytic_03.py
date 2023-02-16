@@ -5,8 +5,7 @@ init_printing()
 z = symbols("z")
 x, y = symbols("x y", real=True)
 
-f = sin(z)*cos(2*z)
-#f = (z**2 + z + 1) / (z**3 + 3*z + 1) 
+f = conjugate(z) * z**2
 fxy = expand( f.subs({z: x + I*y}) )
 
 pprint(fxy)
@@ -28,12 +27,10 @@ pprint(dvdy)
 
 
 CR_eq1 = Equality(dudx, dvdy)
+print("Cauchy-Riemann 1st:")
 pprint(CR_eq1)
 
 CR_eq2 = Equality(dudy, -dvdx)
+print("Cauchy-Riemann 2nd:")
 pprint(CR_eq2)
 
-dfdz1 = dudx + I*dvdx
-
-fz1 = diff(f, z, 1)
-fz1.subs({x})
