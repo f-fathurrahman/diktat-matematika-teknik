@@ -205,6 +205,18 @@ F'(z)=f(z)\ \ \ \ \text{pada}\ D
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Contoh
 \end_layout
 
@@ -244,6 +256,177 @@ Karena
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kontur ekuivalen
+\end_layout
+
+\begin_layout Standard
+Teorema integral Cauchy memungkinkan kita untuk mengganti integral pada
+ suatu kontur tertutup sederhana dengan integral lain pada suatu kontur
+ lain yang lebih sederhana, biasanya suatu lingkaran.
+\end_layout
+
+\begin_layout Standard
+Tinjau integral 
+\begin_inset Formula $\int_{C_{1}}f(z)\ \mathrm{d}z$
+\end_inset
+
+, di mana kontur 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ digambarkan sebagai berikut.
+\end_layout
+
+\begin_layout Standard
+XXX Gambar XXX
+\end_layout
+
+\begin_layout Standard
+Kita dapat mengatakan bahwa suatu kontur lain 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ adalah kontur ekuivalen dari 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ jika:
+\begin_inset Formula 
+\[
+\oint_{C_{1}}f(z)\ \mathrm{d}z=\oint_{C_{2}}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+Pertanyaan selanjutnya adalah pada kondisi apa kontur 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ merupakan kontur ekuivalen.
+\end_layout
+
+\begin_layout Standard
+Misalkan 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ adalah analitik pada daerah yang diapit oleh kontur 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ dan pada kontur tersebut seperti pada gambar berikut.
+\end_layout
+
+\begin_layout Standard
+XXX Gambar XXX
+\end_layout
+
+\begin_layout Standard
+Misalkan segmen garis 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ menghubungkan antara 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ dan misalkan kontur 
+\begin_inset Formula $C$
+\end_inset
+
+ dibentuk dari 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ (berlawanan arah jarum jam), 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ ke 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ (searah jarum jam), dan 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ dari 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ ke 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+.
+ Berdasarkan teorema integral Cauchy:
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Akan tetapi, dari konstruksi kontur 
+\begin_inset Formula $C$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=\oint_{C_{1}}f(z)\ \mathrm{d}z+\oint_{C_{3}}f(z)\ \mathrm{d}z-\oint_{C_{2}}f(z)\ \mathrm{d}z-\oint_{C_{3}}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+Dari konstruksi di atas, kita melihat bahwa 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ ekuivalen dengan 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ karena dua integral pada 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ saling menghilangkan.
 \end_layout
 
 \end_body
