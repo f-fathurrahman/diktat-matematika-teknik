@@ -1,0 +1,357 @@
+\input{PREAMBLE}
+
+% -------------------------
+\begin{document}
+
+\title{%
+{\small TF2201 Matematika Rekayasa II}\\
+Variabel Kompleks: Integral Kompleks
+}
+\author{Fadjar Fathurrahman\\
+Teknik Fisika\\
+Institut Teknologi Bandung}
+\date{2023}
+\maketitle
+
+
+\section{Busur (\textit{arc}) dan kontur (\textit{contour})}
+
+Suatu busur halus (smooth arc) adalah himpunan titik-titik $(x,y)$
+yang memenuhi:
+\begin{equation*}
+x=\phi(t),\ \ \ \ y=\psi(t),\ \ \ \ a\leq t\leq b
+\end{equation*}
+di mana $\phi'(t)$ dan $\psi'(t)$ bersifat kontinu pada $[a,b]$
+dan tidak bernilai nol pada $t$ yang sama.
+
+Misalnya lingkaran $x^{2} + y^{2} = 1$ dapat direpresentasikan secara
+parametrik dengan
+\begin{equation*}
+x=\cos(t),\ \ \ \ y=\sin(t),\ \ \ \ 0 \leq t \leq 2\pi
+\end{equation*}
+
+Contoh lain, representasi parametrik
+\begin{equation*}
+x=t,\ \ \ \ y=t^{2},\ \ \ \ -\infty<t<\infty    
+\end{equation*}
+mendefinisikan parabola $y=x^{2}$.
+
+Perhatikan bahwa suatu representasi parametrik memberikan suatu urutan
+untuk titik-titik pada busur.
+
+Suatu busur halus memiliki panjang yang diberikan oleh:
+\begin{equation*}
+L = \int_{a}^{b} \sqrt{\left[\phi'(t)\right]^{2}+\left[\psi'(t)\right]^{2}}\ \mathrm{d}t    
+\end{equation*}
+
+Sebuah kontur adalah sekumpulan busur halus yang saling terhubung
+secara kontinu.
+
+Suatu kontur tertutup sederhana atau kurva Jordan, adalah suatu kontur
+yang tidak berpotongan dengan dirinya sendiri kecuali pada $\phi(a)=\phi(b)$
+dan $\psi(a)=\psi(b)$. Suatu kontur tertutup sederhana membagi sebuah
+bidang menjadi dua bagian, yaitu bagian "dalam" dan bagian "luar",
+dan dikatakan dilalui secara positif jika bagian dalam berada pada
+sebelah kiri. Contoh kurva dapat dilihat pada Gambar
+\ref{fig:Potter_Fig_10_05}.
+
+\begin{figure}[h]
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_05.png}
+\par}
+\caption{Beberapa contoh kurva}\label{fig:Potter_Fig_10_05}
+\end{figure}
+
+Lingkaran pada bidang kompleks memiliki representasi yang sederhana,
+menggunakan bentuk polar dan eksponensial dari $z$. Suatu lingkaran
+$|z|=a$ diberikan secara parametrik dengan persamaan:
+\begin{equation*}
+z=a\cos(\theta)+\imath a\sin(\theta),\ \ \ \ 0\leq\theta\leq2\pi
+\end{equation*}
+atau:
+\begin{equation*}
+z=ae^{\imath\theta},\ \ \ \ 0\leq\theta\leq2\pi
+\end{equation*}
+
+\begin{figure}[h]
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_06.png}
+\par}
+\caption{Kontur lingkaran}\label{fig:Potter_Fig_10_06}
+\end{figure}
+
+Suatu lingkaran dengan jari-jari $a$ berpusat pada $z_{0}$,
+seperti ditunjukkan pada Gambar \ref{fig:Potter_Fig_10_06},
+dapat dinyatakan dengan persamaan:
+\begin{equation*}
+z-z_{0}  = ae^{\imath\theta} = a\cos(\theta) + \imath a\sin(\theta)
+\end{equation*}
+dengan $\theta$ diukur dari suatu sumbu yang melewati titik $z=z_{0}$
+dan sejajar dengan sumbu $x$.
+
+\section{Integral garis}
+
+Misalkan $z_{0}$ dan $z_{1}$ adalah dua titik pada bidang kompleks
+dan $C$ adalah suatu kontur yang menghubungkan antara keduanya, misalkan
+$C$ didefinisikan secara parametrik dengan
+\begin{equation*}
+x=\phi(t)\ \ \ \ y=\psi(t)
+\end{equation*}
+sehingga
+\begin{equation*}
+z_{0}=\phi(a)+\imath\psi(a),\ \ \ \ z_{1}=\phi(b)+\imath\psi(b)
+\end{equation*}
+
+Integral garis
+\begin{equation*}
+\int_{C}f(z)\ \mathrm{d}z=\int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z
+\end{equation*}
+didefinisikan sebagai integral real:
+\begin{align}
+\int_{C}f(z)\ \mathrm{d}z & = \int_{C}(u + \imath v)(\mathrm{d}x+\imath\ \mathrm{d}y) \nonumber \\
+ & =\int_{C}(u\ \mathrm{d}x - v \ \mathrm{d}y) +
+ \imath\int_{C}(v\ \mathrm{d}x + u\ \mathrm{d}y) \label{eq:integ_line}
+\end{align}
+di mana kita telah menuliskan $f(z) = u + \imath v$.
+
+Dari definisi ini dapat diperoleh beberapa hubungan sebagai berikut.
+Pertama:
+\begin{equation}
+\int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z=-\int_{z_{1}}^{z_{0}}f(z)\ \mathrm{d}z
+\end{equation}
+di mana jalur yang ditempuh pada integral pada RHS sama dengan LHS,
+namun dengan arah yang berbeda.
+Kedua:
+\begin{equation}
+\int_{z_{0}}^{z_{1}}kf(z)\ \mathrm{d}z = k \int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z
+\end{equation}
+
+Jika kontur $C$ terdiri dari kumpulan kontur-kontur $C_{1},C_{2},\ldots,C_{k}$
+yang terhubung secara kontinu maka:
+\begin{equation*}
+\int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z =
+\int_{C_{1}}f(z)\ \mathrm{d}z + \int_{C_{2}}f(z)\ \mathrm{d}z + \cdots +
+\int_{C_{k}}f(z)\ \mathrm{d}z
+\end{equation*}
+
+\begin{theorem}
+Misalkan $\left| f(z) \right| \leq M$ di sepanjang kontur $C$ dan panjang
+dari $C$ adalah $L$ maka:
+\begin{equation*}
+\left|\int_{C}f(z)\ \mathrm{d}z\right|\leq ML
+\end{equation*}
+\end{theorem}
+
+
+
+\begin{contoh}[Integral kontur sederhana]
+Tentukan nilai dari:
+\begin{equation*}
+\int_{0}^{1 + \imath} z^{2}\ \mathrm{d}z    
+\end{equation*}
+di sepanjang kontur berikut. (a) garis lurus dari $0$ sampai $1+\imath$,
+(b) garis poligon dari $0$ ke $1$ dan dari $1$ ke $1+\imath$.
+\end{contoh}
+
+Kontur diberikan pada gambar berikut.
+
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_Ex_5_1.png}
+\par}
+
+Pada sembarang kontur dapat dituliskan:
+\begin{align*}
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & = \int_{0}^{1 + \imath}
+\left[ \left( x^{2}-y^{2} \right) + \imath 2xy \right]
+\left( \mathrm{d}x +\imath\ \mathrm{d}y \right) \\
+ & =\int_{0}^{1 + \imath} \left[ \left( x^{2}-y^{2} \right)\ \mathrm{d}x -
+ 2xy\ \mathrm{d}y \right] + \imath \int_{0}^{1 + \imath}
+ \left[ 2xy\ \mathrm{d}x + \left(x^{2}-y^{2} \right)\ \mathrm{d}y\right]
+\end{align*}
+
+(a) Kontur $C_{1}$: garis lurus dari $0$ ke $1+\imath$ dengan bentuk
+parametrik:
+\[
+x=t,\ \ \ \ y=t,\ \ \ \ 0\leq t\leq1
+\]
+dengan $\mathrm{d}t=\mathrm{d}x=\mathrm{d}y$. Dengan substitusi parametrik
+tersebut diperoleh:
+\begin{align*}
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & =\int_{0}^{1}\left[\left(t^{2}-t^{2}\right)\ \mathrm{d}t-2(t)(t)\ \mathrm{d}t\right]+\imath\int_{0}^{1}\left[2(t)(t)\ \mathrm{d}t+\left(t^{2}-t^{2}\right)\ \mathrm{d}t\right]\\
+ & =\int_{0}^{1}\left[-2t^{2}\ \mathrm{d}t\right]+\imath\int_{0}^{1}\left[2t^{2}\ \mathrm{d}t\right]\\
+ & =\left[-\frac{2}{3}t^{3}\right]_{0}^{1}+\imath\left[\frac{2}{3}t^{3}\right]_{0}^{1}\\
+ & =\left(-\frac{2}{3}-0\right)+\imath\left(\frac{2}{3}\right)\\
+ & =-\frac{2}{3}+\frac{2}{3}\imath
+\end{align*}
+
+(b) Kontur $C_{2}$ dengan $z=x$ dan kontur $C_{3}$ dengan $z=1+\imath y$:
+\begin{equation*}
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z = \int_{0}^{1}x^{2}\ \mathrm{d}x +
+\int_{0}^{1}\left(1 + \imath y\right)^{2} \imath\ \mathrm{d}y
+\end{equation*}
+
+
+\section{Teorema Green}
+
+Misalkan $C$ adalah kontur tertutup sederhana yang dilalui pada arah
+positif dan membatasi daerah $R$. Misalkan juga $u$ dan $v$ adalah
+kontinu dengan turunan parsial pertama yang juga kontinu pada $R$.
+Maka
+\begin{equation*}
+\oint_{C}\left(u\ \mathrm{d}x-v\ \mathrm{d}y\right) =
+-\iint_{R}\left(\frac{\partial v}{\partial x} +
+\frac{\partial u}{\partial y}\right)\ \mathrm{d}x\mathrm{\ d}y
+\end{equation*}
+
+Tinjau kurva $C$ yang meliputi daerah $R$ pada
+Gambar \ref{fig:Potter_Ch10_Fig_10}.
+\begin{figure}[h]
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_10.png}
+\par}\label{fig:Potter_Ch10_Fig_10}
+\end{figure}
+
+\begin{align*}
+\iint\frac{\partial v}{\partial x}\ \mathrm{d}x\mathrm{\ d}y & =\int_{h_{1}}^{h_{2}}\int_{x_{1}(y)}^{x_{2}(y)}\frac{\partial v}{\partial x}\ \ dx\mathrm{\ d}y\\
+ & =\int_{h_{1}}^{h_{2}}\left[v(x_{2},y)-v(x_{1},y)\right]\ \mathrm{d}y\\
+ & =\int_{h_{1}}^{h_{2}}v(x_{2},y)\ \mathrm{d}y+\int_{h_{2}}^{h_{1}}v(x_{1},y)\ \mathrm{d}y
+\end{align*}
+
+Integral pertama pada RHS adalah integral garis dari $v(x,y)$ pada
+jalur ABC dari A ke C dan integral kedua adalah integral garis dari
+$v(x,y)$ pada jalur ADC dari C ke A. Perhatikan bahwa daerah $R$
+berada pada bagian kiri dari kurva. Kemudian
+\begin{equation*}
+\iint_{R}\frac{\partial v}{\partial x}\ \mathrm{d}x\ \mathrm{d}y=\oint_{C}v(x,y)\ \mathrm{d}y
+\end{equation*}
+
+Dengan cara yang sama dapat ditunjukkan bahwa:
+\begin{equation*}
+\iint_{R}\frac{\partial u}{\partial y}\ \mathrm{d}x\ \mathrm{d}y=-\oint_{C}u(x,y)\ \mathrm{d}y    
+\end{equation*}
+dan Teorema Green terbukti.
+
+
+
+
+Tinjau integral
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z
+\end{equation*}
+di mana $f(z)$ adalah fungsi analitik di dalam suatu daerah terhubung
+sederhana $R$ yang dilingkupi oleh suatu kontur tertutup sederhana
+$C$. Dapat dituliskan:
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z =
+\oint_{C} \left( u\ \mathrm{d}x-v\ \mathrm{d}y \right) +
+\imath \oint_{C} \left( v\ \mathrm{d}x + u\ \mathrm{d}y \right)
+\end{equation*}
+Dengan menggunakan teorema Green:
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z = -\iint_{R} \left(\frac{\partial v}{\partial x} +
+\frac{\partial u}{\partial y}\right)\ \mathrm{d}x\ \mathrm{d}y -
+\imath\iint_{R}\left(-\frac{\partial u}{\partial x} +
+\frac{\partial v}{\partial y}\right)\ \mathrm{d}x\ \mathrm{d}y
+\end{equation*}
+Dengan menggunakan Persamaan Cauchy-Riemann, kita mendapatkan Teorema
+Integral Cauchy:
+\begin{equation*}
+\oint_{C} f(z)\ \mathrm{d}z = 0
+\end{equation*}
+
+Dalam bentuk teorema
+
+Misalkan $C$ adalah kontur tertutup sederhana yang melingkupi daerah
+$R$ di mana $f(z)$ merupakan fungsi analitik. Maka:
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z = 0
+\end{equation*}
+
+Suatu integral tak-tentu:
+\begin{equation*}
+F(z)=\int_{z_{0}}^{z}f(w)\ \mathrm{d}w
+\end{equation*}
+mendefinisikan $F$ sebagai fungsi dari $z$ sepanjang kontur yang
+menghubungkan antara $z_{0}$ dan $z$ berada seluruhnya pada suatu
+daerah $D$ yang terhubung sederhana dan di dalamnya $f(z)$ bersifat
+analitik.
+
+Selain itu:
+\begin{equation*}
+F'(z)=f(z)\ \ \ \ \text{pada}\ D
+\end{equation*}
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Evaluasi integral
+\begin{equation*}
+\int_{0}^{1 + \imath}z^{2}\ \mathrm{d}z
+\end{equation*}
+
+Misalkan:
+\begin{equation*}
+F(z)=\frac{z^{3}}{3}
+\end{equation*}
+Karena $F'(z) = z^{2}$, maka:
+\begin{align*}
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & =F(1+\imath)-F(0)\\
+ & =\frac{(1+\imath)^{3}}{3}-0\\
+ & =-\frac{2}{3}+\frac{2}{3}\imath
+\end{align*}
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Kontur ekuivalen
+
+Teorema integral Cauchy memungkinkan kita untuk mengganti integral
+pada suatu kontur tertutup sederhana dengan integral lain pada suatu
+kontur lain yang lebih sederhana, biasanya suatu lingkaran.
+
+Tinjau integral $\int_{C_{1}}f(z)\ \mathrm{d}z$, di mana kontur $C_{1}$
+ditunjukkan pada Gambar \ref{fig:Potter_Fig_10_13}.
+
+\begin{figure}[h]
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_13.png}
+\par}
+\caption{Kontur}\label{fig:Potter_Fig_10_13}
+\end{figure}
+
+Kita dapat mengatakan bahwa suatu kontur lain $C_{2}$ adalah kontur
+ekuivalen dari $C_{1}$ jika:
+\begin{equation*}
+\oint_{C_{1}}f(z)\ \mathrm{d}z=\oint_{C_{2}}f(z)\ \mathrm{d}z
+\end{equation*}
+Pertanyaan selanjutnya adalah pada kondisi apa kontur $C_{1}$ dan
+$C_{2}$ merupakan kontur ekuivalen.
+
+Misalkan $f(z)$ adalah analitik pada daerah yang diapit oleh kontur
+$C_{1}$ dan $C_{2}$ dan pada kontur tersebut seperti pada Gambar
+\ref{fig:Potter_Fig_10_13}.
+
+Misalkan segmen garis $C_{3}$ menghubungkan antara $C_{1}$ dan $C_{2}$
+dan misalkan kontur $C$ dibentuk dari $C_{1}$ (berlawanan arah jarum
+jam), $C_{3}$ ke $C_{2}$, $C_{2}$ (searah jarum jam), dan $C_{3}$
+dari $C_{2}$ ke $C_{1}$. Berdasarkan teorema integral Cauchy:
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z=0
+\end{equation*}
+
+Akan tetapi, dari konstruksi kontur $C$:
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z = \oint_{C_{1}}f(z)\ \mathrm{d}z +
+\oint_{C_{3}}f(z)\ \mathrm{d}z - \oint_{C_{2}}f(z)\ \mathrm{d}z - 
+\oint_{C_{3}}f(z)\ \mathrm{d}z
+\end{equation*}
+Dari konstruksi di atas, kita melihat bahwa $C_{2}$ ekuivalen dengan
+$C_{1}$ karena dua integral pada $C_{3}$ saling menghilangkan.
+
+
+
+
+
+
+
+\end{document}
