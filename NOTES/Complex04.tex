@@ -5,7 +5,7 @@
 
 \title{%
 {\small TF2201 Matematika Rekayasa II}\\
-Variabel Kompleks: Integral Kompleks
+Variabel Kompleks: Integrasi Fungsi Kompleks
 }
 \author{Fadjar Fathurrahman\\
 Teknik Fisika\\
@@ -144,7 +144,7 @@ dari $C$ adalah $L$ maka:
 
 
 
-\begin{contoh}[Integral kontur sederhana]
+\begin{contoh}
 Tentukan nilai dari:
 \begin{equation*}
 \int_{0}^{1 + \imath} z^{2}\ \mathrm{d}z    
@@ -179,8 +179,8 @@ tersebut diperoleh:
 \begin{align*}
 \int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & =\int_{0}^{1}\left[\left(t^{2}-t^{2}\right)\ \mathrm{d}t-2(t)(t)\ \mathrm{d}t\right]+\imath\int_{0}^{1}\left[2(t)(t)\ \mathrm{d}t+\left(t^{2}-t^{2}\right)\ \mathrm{d}t\right]\\
  & =\int_{0}^{1}\left[-2t^{2}\ \mathrm{d}t\right]+\imath\int_{0}^{1}\left[2t^{2}\ \mathrm{d}t\right]\\
- & =\left[-\frac{2}{3}t^{3}\right]_{0}^{1}+\imath\left[\frac{2}{3}t^{3}\right]_{0}^{1}\\
- & =\left(-\frac{2}{3}-0\right)+\imath\left(\frac{2}{3}\right)\\
+ & =\left[-\frac{2}{3}t^{3}\right]_{0}^{1} + \imath\left[\frac{2}{3}t^{3}\right]_{0}^{1}\\
+ & =\left(-\frac{2}{3}-0\right) + \imath\left(\frac{2}{3}\right)\\
  & =-\frac{2}{3}+\frac{2}{3}\imath
 \end{align*}
 
@@ -190,9 +190,56 @@ tersebut diperoleh:
 \int_{0}^{1}\left(1 + \imath y\right)^{2} \imath\ \mathrm{d}y
 \end{equation*}
 
+....
+
+
+\begin{contoh}
+Tentukan nilai dari:
+\begin{equation*}
+\oint_{C} \frac{1}{z} \, \mathrm{d}z    
+\end{equation*}
+di mana $C$ adalah lingkaran dengan jari-jari satu yang berpusat
+pada titik (0,0) (lingkaran ini sering juga disebut sebagai lingkaran satuan).
+\end{contoh}
+
+Representasi paling sederhana dari lingkaran ini adalah bentuk
+eksponensial $z = e^{\imath \theta}$, sehingga
+$\mathrm{d}z = \imath e^{\imath \theta}\, \mathrm{d}\theta$.
+Kita dapat memperoleh
+\begin{equation*}
+\oint \frac{1}{z} \, \mathrm{d}z = \int_{0}^{2\pi}
+\frac{\imath e^{\imath \theta}}{e^{\imath \theta}} \, \mathrm{d}\theta =
+\imath \int_{0}^{2\pi} \mathrm{d}\theta = 2\pi \imath 
+\end{equation*}
+
+\begin{soal}
+Ulangi contoh sebelumnya, namun dengan menggunakan lingkaran dengan jari-jari sembarang,
+misalkan $r$, dengan $r$ adalah bilangan real positif.
+\end{soal}
+
+
+\begin{contoh}
+Hitung
+\begin{equation*}
+\oint_{C} \frac{1}{z^n} \, \mathrm{d}z    
+\end{equation*}
+di mana $C$ adalah lingkaran satuan dan $n$ merupakan bilangan bulat positif
+lebih besar dari 1.
+\end{contoh}
+
+Menggunakan $z = e^{\imath \theta}$ dan
+$\mathrm{d}z = \imath e^{\imath \theta}\, \mathrm{d}\theta$, diperoleh:
+
+\begin{align*}
+\oint \frac{1}{z^n} \, \mathrm{d}z & = \int_{0}^{2\pi} \frac{\imath e^{\imath \theta}}{e^{n \imath \theta}} \\
+& = \imath \int_{0}^{2\pi} e^{\imath \theta (1 - n)} \, \mathrm{d} \theta \\
+& = \cdots
+\end{align*}
+
 
 \section{Teorema Green}
 
+\begin{theorem}
 Misalkan $C$ adalah kontur tertutup sederhana yang dilalui pada arah
 positif dan membatasi daerah $R$. Misalkan juga $u$ dan $v$ adalah
 kontinu dengan turunan parsial pertama yang juga kontinu pada $R$.
@@ -202,6 +249,8 @@ Maka
 -\iint_{R}\left(\frac{\partial v}{\partial x} +
 \frac{\partial u}{\partial y}\right)\ \mathrm{d}x\mathrm{\ d}y
 \end{equation*}
+\end{theorem}
+
 
 Tinjau kurva $C$ yang meliputi daerah $R$ pada
 Gambar \ref{fig:Potter_Ch10_Fig_10}.

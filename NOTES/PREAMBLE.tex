@@ -62,6 +62,17 @@
 \newcommand{\highlighteq}[1]{\colorbox{blue!25}{$\displaystyle#1$}}
 \newcommand{\highlight}[1]{\colorbox{red!25}{#1}}
 
+\newtheorem{theorem}{Teorema}
+\definecolor{thmbgcol}{rgb}{0.9,0.9,0.9}
+\BeforeBeginEnvironment{theorem}{
+    \begin{mdframed}[backgroundcolor=thmbgcol,%
+        topline=false,bottomline=false,%
+        leftline=false,rightline=false]
+}
+\AfterEndEnvironment{theorem}{\end{mdframed}}
+
+
+
 \newcounter{soal}%[section]
 \newenvironment{soal}[1][]{\refstepcounter{soal}\par\medskip
    \noindent \textbf{Soal~\thesoal. #1} \sffamily}{\medskip}
@@ -87,7 +98,7 @@
 
 \newcounter{contoh}%[section]
 \newenvironment{contoh}[1][]{\refstepcounter{soal}\par\medskip
-   \noindent \textbf{Soal~\thesoal. #1} \rmfamily}{\medskip}
+   \noindent \textbf{Contoh~\thesoal. #1} \rmfamily}{\medskip}
 
 \BeforeBeginEnvironment{contoh}{
     \begin{mdframed}[%
