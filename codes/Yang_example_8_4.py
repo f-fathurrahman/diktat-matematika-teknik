@@ -19,7 +19,7 @@ def calc_v(x,y):
 fig, ax = plt.subplots()
 
 x = np.linspace(-4.0, 4.0, 10)
-y = np.linspace(0.0, 2.0, 5)
+y = np.linspace(-2.0, 2.0, 10)
 X, Y = np.meshgrid(x, y)
 UXY = calc_u(X, Y)
 VXY = calc_v(X, Y)
@@ -34,7 +34,7 @@ for i in range(len(x)):
 ax.quiver(X, Y, UXY, VXY, width=3e-3)
 
 x = np.linspace(-4.0, 4.0, 200)
-y = np.linspace(0.0, 2.0, 200)
+y = np.linspace(-2.0, 2.0, 200)
 X, Y = np.meshgrid(x, y)
 ϕ = calc_phi(X, Y)
 ψ = calc_psi(X, Y)
