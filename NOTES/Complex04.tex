@@ -119,7 +119,7 @@ Pertama:
 \begin{equation}
 \int_{z_{0}}^{z_{1}}f(z)\ \mathrm{d}z=-\int_{z_{1}}^{z_{0}}f(z)\ \mathrm{d}z
 \end{equation}
-di mana jalur yang ditempuh pada integral pada RHS sama dengan LHS,
+di mana jalur yang ditempuh pada integral pada bagian kanan sama dengan bagian kiri,
 namun dengan arah yang berbeda.
 Kedua:
 \begin{equation}
@@ -266,7 +266,7 @@ Gambar \ref{fig:Potter_Ch10_Fig_10}.
  & =\int_{h_{1}}^{h_{2}}v(x_{2},y)\ \mathrm{d}y+\int_{h_{2}}^{h_{1}}v(x_{1},y)\ \mathrm{d}y
 \end{align*}
 
-Integral pertama pada RHS adalah integral garis dari $v(x,y)$ pada
+Integral pertama pada bagian kanan adalah integral garis dari $v(x,y)$ pada
 jalur ABC dari A ke C dan integral kedua adalah integral garis dari
 $v(x,y)$ pada jalur ADC dari C ke A. Perhatikan bahwa daerah $R$
 berada pada bagian kiri dari kurva. Kemudian
@@ -280,7 +280,97 @@ Dengan cara yang sama dapat ditunjukkan bahwa:
 \end{equation*}
 dan Teorema Green terbukti.
 
+\begin{figure}[h]
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_11.png}
+\par}
+\caption{Daerah terhubung banyak}\label{fig:Potter_Ch10_Fig_11}
+\end{figure}
 
+Perhatikan bahwa Teorema Green juga dapat diaplikasikan pada daerah terhubung banyak dengan
+cara memotong daerah tersebut menjadi daerah terhubung satu seperti pada Gambar
+\ref{fig:Potter_Ch10_Fig_11}. Kontribusi integral garis
+dari garis pemotongan bernilai nol karena setiap potongan akan dilalui dua kali dengan arah
+yang berbeda sehingga akan memberikan nilai integral bersih nol.
+
+
+
+\begin{contoh}
+Verifikasi Teorema Green dengan mennghitung integral dari fungsi kompleks dengan $u(x,y) = x + y$
+dan $v(x,y) = 2y$ pada kontur berikut.
+
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_Ex_5_5.png}
+\par}
+\end{contoh}
+
+Dengan mendefinisikan integran sebagai $\mathrm{d}F = u(x,y)\,\mathrm{d}x - v(x,y)\,\mathrm{d}y$
+\begin{equation*}
+\oint_{C} \mathrm{d}F = 
+\int_{C_1} \mathrm{d}F +
+\int_{C_2} \mathrm{d}F +
+\int_{C_3} \mathrm{d}F +
+\int_{C_4} \mathrm{d}F = \int_{0}^{1} t\,\mathrm{d}t + \int_{0}^{1} -2y\,\mathrm{d}y +
+\int_{1}^{0} (x + 1)\,\mathrm{d}x + \int_{1}^{0} -2y\,\mathrm{d}y
+\end{equation*}
+
+Kurva $C_1$: $x = t$, $y = 0$, $0 \leq t \leq 1$, $\mathrm{d}x = \mathrm{d}t$,
+$\mathrm{d}y = 0$. Integran menjadi:
+\begin{equation*}
+\mathrm{d}F = (x + y)\,\mathrm{d}x - 2y\,\mathrm{d}y = t\,\mathrm{dt}
+\end{equation*}
+sehingga:
+\begin{equation*}
+\int_{C_1} \mathrm{d}F = \int_{0}^{1} t\,\mathrm{d}t = \frac{1}{2}
+\end{equation*}
+
+Kurva $C_2$: $x = 1$, $y = t$, $0 \leq t \leq 1$, $\mathrm{d}x = 0$,
+$\mathrm{d}y = \mathrm{d}t$. Integran menjadi
+\begin{equation*}
+\mathrm{d}F = (x + y)\,\mathrm{d}x - 2y\,\mathrm{d}y = -2t\,\mathrm{dt}
+\end{equation*}
+sehingga:
+\begin{equation*}
+\int_{C_2} \mathrm{d}F = \int_{0}^{1} -2t\,\mathrm{d}t = -1
+\end{equation*}
+
+Kurva $C_3$: $x = t$, $y = 1$, $1 \geq t \geq 0$, $\mathrm{d}x = \mathrm{d}t$,
+$\mathrm{d}y = 0$. Integran menjadi:
+\begin{equation*}
+\mathrm{d}F = (x + y)\,\mathrm{d}x - 2y\,\mathrm{d}y = (t + 1)\,\mathrm{dt}
+\end{equation*}
+sehingga:
+\begin{equation*}
+\int_{C_3} \mathrm{d}F = \int_{0}^{1} (t + 1) \,\mathrm{d}t = -\frac{3}{2}
+\end{equation*}
+
+
+Kurva $C_4$: $x = 0$, $y = t$, $1 \geq t \geq 0$, $\mathrm{d}x = 0$,
+$\mathrm{d}y = \mathrm{d}t$. Integran menjadi
+\begin{equation*}
+\mathrm{d}F = (x + y)\,\mathrm{d}x - 2y\,\mathrm{d}y = -2t\,\mathrm{dt}
+\end{equation*}
+sehingga:
+\begin{equation*}
+\int_{C_4} \mathrm{d}F = \int_{1}^{0} -2t\,\mathrm{d}t = 1
+\end{equation*}
+
+Integral keseluruhan menjadi:
+\begin{equation*}
+\int_{C} \mathrm{d}F = \frac{1}{2} - 1 - \frac{3}{2} + 1 = -1
+\end{equation*}
+
+Untuk menggunakan Teorema Green, kita memerlukan $\frac{\partial v}{\partial x} = 0$
+dan $\frac{\partial u}{\partial y} = 1$ sehingga:
+\begin{equation*}
+-\iint \left(\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y} \right)
+\,\mathrm{d}x\,\mathrm{d}y = -\iint (1)\,\mathrm{d}x\,\mathrm{d}y = -1
+\end{equation*}
+Hasil ini sama dengan hasil yang diperoleh dari integral kontur sehingga
+Teorema Green terverifikasi.
+
+
+\section{Teorema Integral Cauchy}
 
 
 Tinjau integral
@@ -308,13 +398,13 @@ Integral Cauchy:
 \oint_{C} f(z)\ \mathrm{d}z = 0
 \end{equation*}
 
-Dalam bentuk teorema
-
+\begin{theorem}
 Misalkan $C$ adalah kontur tertutup sederhana yang melingkupi daerah
 $R$ di mana $f(z)$ merupakan fungsi analitik. Maka:
 \begin{equation*}
 \oint_{C}f(z)\ \mathrm{d}z = 0
 \end{equation*}
+\end{theorem}
 
 Suatu integral tak-tentu:
 \begin{equation*}
@@ -352,7 +442,7 @@ Karena $F'(z) = z^{2}$, maka:
 
 \rule[0.5ex]{1\columnwidth}{1pt}
 
-Kontur ekuivalen
+\subsection{Kontur ekuivalen}
 
 Teorema integral Cauchy memungkinkan kita untuk mengganti integral
 pada suatu kontur tertutup sederhana dengan integral lain pada suatu
