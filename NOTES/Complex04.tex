@@ -417,17 +417,23 @@ analitik.
 
 Selain itu:
 \begin{equation*}
-F'(z)=f(z)\ \ \ \ \text{pada}\ D
+F'(z) = f(z)\ \ \ \ \text{pada}\ D
 \end{equation*}
+atau $F(z)$ juga bersifat analitik.
+Pada kasus ini identitas
+\begin{align*}
+\int_{a}^{b} f(z)\,\mathrm{d}z & = \int_{z_0}^{b} f(z)\,\mathrm{d}z - \int_{z_0}^{a} f(z)\,\mathrm{d}z \\
+& = F(b) - F(a)
+\end{align*}
+yang biasa digunakan dalam kalkulus variabel real juga berlaku.
 
-\rule[0.5ex]{1\columnwidth}{1pt}
 
-Contoh
-
+\begin{contoh}
 Evaluasi integral
 \begin{equation*}
 \int_{0}^{1 + \imath}z^{2}\ \mathrm{d}z
 \end{equation*}
+\end{contoh}
 
 Misalkan:
 \begin{equation*}
@@ -435,12 +441,11 @@ F(z)=\frac{z^{3}}{3}
 \end{equation*}
 Karena $F'(z) = z^{2}$, maka:
 \begin{align*}
-\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & =F(1+\imath)-F(0)\\
+\int_{0}^{1+\imath}z^{2}\ \mathrm{d}z & = F(1 + \imath) - F(0)\\
  & =\frac{(1+\imath)^{3}}{3}-0\\
  & =-\frac{2}{3}+\frac{2}{3}\imath
 \end{align*}
 
-\rule[0.5ex]{1\columnwidth}{1pt}
 
 \subsection{Kontur ekuivalen}
 
