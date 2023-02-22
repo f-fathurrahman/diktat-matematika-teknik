@@ -295,5 +295,178 @@ f^{(n)}(z_{0})=\frac{n!}{2\pi\imath}\oint\frac{f(z)}{(z-z_{0})^{n+1}}\ \mathrm{d
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tentukan nilai dari:
+\begin_inset Formula 
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z
+\]
+
+\end_inset
+
+pada lingkaran satuan dengan pusat (a) 
+\begin_inset Formula $z=1$
+\end_inset
+
+, (b) 
+\begin_inset Formula $z=-1$
+\end_inset
+
+, dan (c) 
+\begin_inset Formula $z=\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Untuk menggunakan Rumus Integral Cauchy, 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ harus analitik pada lingkaran dan 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ berada dalam lingkaran.
+\end_layout
+
+\begin_layout Standard
+(a) Untuk lingkaran satuan pada 
+\begin_inset Formula $z=1$
+\end_inset
+
+, kita dapat menuliskan
+\begin_inset Formula 
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=\oint\frac{z^{2}/(z+1)}{z-1}\ \mathrm{d}z
+\]
+
+\end_inset
+
+sehingga
+\begin_inset Formula 
+\[
+f(z)=\frac{z^{2}}{z+1}
+\]
+
+\end_inset
+
+Fungsi ini analitik pada 
+\begin_inset Formula $z=1$
+\end_inset
+
+ dan pada lingkaran satuan.
+ Sehingga pada titik tersebut:
+\begin_inset Formula 
+\[
+f(1)=\frac{1^{2}}{1+1}=\frac{1}{2}
+\]
+
+\end_inset
+
+dan
+\begin_inset Formula 
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=2\pi\imath\left(\frac{1}{2}\right)=\pi\imath
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(b) Pada lingkaran satuan dengan pusat pada 
+\begin_inset Formula $z=-1$
+\end_inset
+
+, integral dapat dituliskan menjadi
+\begin_inset Formula 
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=\oint\frac{z^{2}/(z-1)}{z+1}\ \mathrm{d}z
+\]
+
+\end_inset
+
+dengan
+\begin_inset Formula 
+\[
+f(z)=\frac{z^{2}}{z-1}
+\]
+
+\end_inset
+
+sehingga: 
+\begin_inset Formula $f(-1)=-\frac{1}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Diperoleh:
+\begin_inset Formula 
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=2\pi\imath\left(-\frac{1}{2}\right)=-\pi\imath
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(c) Untuk lingkaran satuan berpusat pada 
+\begin_inset Formula $z=\frac{1}{2}$
+\end_inset
+
+, kita dapat menggunakan lingkaran satuan yang berpusat pada 
+\begin_inset Formula $z=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cara biasa (naif)
+\end_layout
+
+\begin_layout Standard
+Lingkaran berpusat pada 
+\begin_inset Formula $z_{0}=\frac{1}{2}$
+\end_inset
+
+, kurva 
+\begin_inset Formula $z=z_{0}+e^{\imath\theta},$
+\end_inset
+
+
+\begin_inset Formula $0\leq\theta\leq2\pi$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=\int_{0}^{2\pi}\frac{\left(\frac{1}{2}+e^{\imath\theta}\right)^{2}}{\left(\frac{1}{2}+e^{\imath\theta}\right)^{2}-1}\ \imath e^{\imath\theta}\ \mathrm{d\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
