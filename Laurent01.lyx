@@ -188,5 +188,293 @@ b_{n} & =\frac{1}{2\pi\imath}\oint_{C_{1}}f(w)(w-a)^{n-1}\ \mathrm{d}w
 Deret yang dihasilkan ini dikenal dengan nama Deret Laurent.
 \end_layout
 
+\begin_layout Standard
+Ekspresi integral untuk koefisien 
+\begin_inset Formula $a_{n}$
+\end_inset
+
+ mirip dengan rumus untuk turunan dari 
+\begin_inset Formula $f(z)$
+\end_inset
+
+, namun ini hanya superfisial, karena 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ mungkin tidak terdefinisi pada 
+\begin_inset Formula $z=a$
+\end_inset
+
+ dan 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ mungkin tidak analitik pada titik tersebut.
+ Perhatikan bahwa, jika 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ analitik pada lingkaran 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+, integran untuk koefisien 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ akan analitik pada bidang kompleks, menyebabkan seluruh koefisien 
+\begin_inset Formula $b_{n}$
+\end_inset
+
+ menjadi nol, berdasarkan Teorema Integral Cauchy.
+ Dalam hal ini, deret Laurent tereduksi menjadi deret Taylor.
+\end_layout
+
+\begin_layout Standard
+Ekspresi integral untuk koefisien deret Laurent biasanya tidak digunakan
+ secara langsung untuk menemukan koefisien.
+ Karena ekspansi deret ini unik, teknik elementer biasanya digunakan untuk
+ menemukan ekspansi deret Laurent.
+ Daerah konvergensi dapat ditemukan, dalam banyak kasus, dengan cara memanipulas
+i 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ ke dalam bentuk 
+\begin_inset Formula $1/(1-w)$
+\end_inset
+
+ sehingga 
+\begin_inset Formula $|w|<1$
+\end_inset
+
+ memberikan daerah konvergensi.
+\end_layout
+
+\begin_layout Standard
+Karena 
+\begin_inset Formula $|w|<1$
+\end_inset
+
+, kita memperoleh deret geometrik:
+\begin_inset Formula 
+\[
+\frac{1}{1-w}=1+w+w^{2}+w^{3}+\cdots
+\]
+
+\end_inset
+
+yang merupakan ekspansi deret Laurent di sekitar 
+\begin_inset Formula $w=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Tentukan ekspansi deret Taylor dari
+\begin_inset Formula 
+\[
+f(z)=\frac{1}{z^{2}-3z+2}
+\]
+
+\end_inset
+
+yang valid pada daerah-daerah berikut.
+\end_layout
+
+\begin_layout Standard
+Gambar
+\end_layout
+
+\begin_layout Standard
+(a) Pada daerah ini kita melakukan ekspansi di sekitar titik pusat.
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{z^{2}-3z+2} & =\frac{1}{(z-2)(z-1)}=\frac{1}{z-2}-\frac{1}{z-1}\\
+ & =-\frac{1}{2}\left(\frac{1}{1-z/2}\right)-\frac{1}{z}\left(\frac{1}{1-1/z}\right)
+\end{align*}
+
+\end_inset
+
+Pecahan pertama memiliki singularitas pada 
+\begin_inset Formula $z/2=1$
+\end_inset
+
+ atau 
+\begin_inset Formula $z=2$
+\end_inset
+
+, dan dapat diekspansi menjadi deret Taylor yang konvergen jika 
+\begin_inset Formula $|z|<2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Pecahan kedua memiliki singularitas pada 
+\begin_inset Formula $1/z=1$
+\end_inset
+
+ dan dapat diekspansi menjadi deret Laurent yang konvergen jika 
+\begin_inset Formula $|1/z|<1$
+\end_inset
+
+ atau 
+\begin_inset Formula $|z|>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dua pecahan tersebut dinyatakan dalam deret-deret berikut.
+\begin_inset Formula 
+\begin{align*}
+-\frac{1}{2}\left(\frac{1}{1-z/2}\right) & =-\frac{1}{2}\left[1+\frac{z}{2}+\left(\frac{z}{2}\right)^{2}+\left(\frac{z}{2}\right)^{3}+\cdots\right]\\
+ & =-\frac{1}{2}-\frac{z}{4}-\frac{z^{2}}{8}-\frac{z^{3}}{16}-\cdots
+\end{align*}
+
+\end_inset
+
+yang valid untuk 
+\begin_inset Formula $|z|<2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+-\frac{1}{z}\left(\frac{1}{1-1/z}\right) & =-\frac{1}{z}\left[1+\frac{1}{z}+\left(\frac{1}{z}\right)^{2}+\left(\frac{1}{z}\right)^{3}+\cdots\right]\\
+ & =-\frac{1}{z}-\frac{1}{z^{2}}-\frac{1}{z^{3}}-\frac{1}{z^{4}}-\cdots
+\end{align*}
+
+\end_inset
+
+yang valid untuk 
+\begin_inset Formula $|z|>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dengan menjumlahkan kedua deret tersebut diperoleh:
+\begin_inset Formula 
+\[
+\frac{1}{z^{2}-3z+2}=\cdots-\frac{1}{z^{3}}-\frac{1}{z^{2}}-\frac{1}{z}-\frac{1}{2}-\frac{z}{4}-\frac{z^{2}}{8}-\frac{z^{3}}{16}-\cdots
+\]
+
+\end_inset
+
+yang valid untuk daerah 
+\begin_inset Formula $1<|z|<2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(b) Pada daerah di luar lingkaran 
+\begin_inset Formula $|z|=2$
+\end_inset
+
+, untuk 
+\begin_inset Formula $1/(z-1)$
+\end_inset
+
+ digunakan ekspansi yang sama seperti sebelumnya
+\begin_inset Formula 
+\[
+\frac{1}{z-1}=\frac{1}{z}\left(\frac{1}{1-1/z}\right)=\frac{1}{z}+\frac{1}{z^{2}}+\frac{1}{z^{3}}+\cdots
+\]
+
+\end_inset
+
+yang valid untuk 
+\begin_inset Formula $|1/z|<1$
+\end_inset
+
+ atau 
+\begin_inset Formula $|z|>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Untuk 
+\begin_inset Formula $1/(z-2)$
+\end_inset
+
+ digunakan:
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{z-2} & =\frac{1}{z}\left(\frac{1}{1-2/z}\right)=\frac{1}{z}\left[1+\frac{2}{z}+\left(\frac{2}{z}\right)^{2}+\left(\frac{2}{z}\right)^{3}+\cdots\right]\\
+ & =\frac{1}{z}+\frac{2}{z^{2}}+\frac{4}{z^{3}}+\frac{8}{z^{4}}+\cdots
+\end{align*}
+
+\end_inset
+
+yang valid untuk 
+\begin_inset Formula $|2/z|<1$
+\end_inset
+
+ atau 
+\begin_inset Formula $|z|>2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dengan menjumlahkan keduanya diperoleh
+\begin_inset Formula 
+\[
+\frac{1}{z^{2}-3z+2}=\frac{1}{z^{2}}+\frac{3}{z^{3}}+\frac{7}{z^{4}}+\frac{15}{z^{5}}+\cdots
+\]
+
+\end_inset
+
+yang valid untuk 
+\begin_inset Formula $|z|>2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(c) Untuk mendapatkan ekspansi deret pada daerah lingkaran 
+\begin_inset Formula $0<|z-1|<1$
+\end_inset
+
+, dilakukan ekspansi di sekitar titik 
+\begin_inset Formula $z=1$
+\end_inset
+
+ dan diperoleh
+\begin_inset Formula 
+\begin{align*}
+\frac{1}{z^{2}-3z+2} & =\frac{1}{z-1}\left(-\frac{1}{2-z}\right)=\frac{1}{z-1}\left(\frac{-1}{1-(z-1)}\right)\\
+ & =\frac{-1}{z-1}\left[1+(z-1)+(z-1)^{2}+(z-1)^{3}+\cdots\right]\\
+ & =-\frac{1}{z-1}-1-(z-1)-(z-1)^{2}-\cdots
+\end{align*}
+
+\end_inset
+
+yang valid untuk 
+\begin_inset Formula $0<|z-1|<1$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
