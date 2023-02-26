@@ -232,5 +232,513 @@ Fungsi rasional hanya memiliki pole atau singularitas yang dapat dibuang
  saja sebagai jenis singularitasnya.
 \end_layout
 
+\begin_layout Standard
+Koefisien 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ dapat dihitung dari:
+\begin_inset Formula 
+\[
+b_{1}=\frac{1}{2\pi\imath}\oint_{C_{1}}f(w)\ \mathrm{d}w
+\]
+
+\end_inset
+
+Jadi integral dari suatu fungsi 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ pada suatu kurva 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ yang meliputi suatu titik singular diberikan oleh
+\begin_inset Formula 
+\[
+\oint f(z)\ \mathrm{d}z=2\pi\imath b_{1}
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ adalah koefisien dari suku 
+\begin_inset Formula $(z-a)^{-1}$
+\end_inset
+
+ pada ekspansi deret Laurent pada titik 
+\begin_inset Formula $z=a$
+\end_inset
+
+.
+ Kuantitas 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ disebut sebagai residu dari 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ pada 
+\begin_inset Formula $z=a$
+\end_inset
+
+.
+ Oleh karena itu, untuk menemukan integral dari suatu fungsi di pada suatu
+ kontur di sekitar titik singular, kita hanya perlu menemukan ekspansi deret
+ Laurent dan menggunakan Persamaan XXX.
+ Jika ada lebih dari satu singularitas, maka kita dapat membuat daerah tersebut
+ menjadi terhubung sederhana seperti pada Gambar XXX.
+ Kemudian dengan menggunakan Teorema Integral Cauchy diperoleh
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z+\oint_{C_{1}}f(z)\ \mathrm{d}z+\oint_{C_{2}}f(z)\ \mathrm{d}z+\oint_{C_{3}}f(z)\ \mathrm{d}z=0
+\]
+
+\end_inset
+
+karena 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ analitik pada semua titik di luar lingkaran kecil dan di dalam 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Jika jika membalikkan arah integrasi pada kontur di sekitar lingkaran kecil
+ diperoleh
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=\oint_{C_{1}}f(z)\ \mathrm{d}z+\oint_{C_{2}}f(z)\ \mathrm{d}z+\oint_{C_{3}}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+Dalam residu pada setiap titik, kita memperoleh Teorema Residu Cauchy:
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\ \mathrm{d}z=2\pi\imath\left[\left(b_{1}\right)_{a_{1}}+\left(b_{1}\right)_{a_{2}}+\left(b_{1}\right)_{a_{3}}\right]
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ adalah koefisien dari 
+\begin_inset Formula $(z-a)^{-1}$
+\end_inset
+
+ pada ekspansi deret Laurent pada masing-masing titik.
+\end_layout
+
+\begin_layout Standard
+Teknik lain, yang sering digunakan untuk menemukan residur pada suatu titik
+ singular adalah dengan mengalikan deret Laurent dengan 
+\begin_inset Formula $(z-a)^{m}$
+\end_inset
+
+ untuk mendapatkan
+\begin_inset Formula 
+\[
+(z-a)^{m}f(z)=b_{m}+b_{m-1}(z-a)+\cdots+b_{1}(z-a)^{m-1}+a_{0}(z-a)^{m}+a_{1}(z-a)^{m+1}+\cdots
+\]
+
+\end_inset
+
+Jika deret ini didiferensiasi sebanyak 
+\begin_inset Formula $(m-1)$
+\end_inset
+
+ kali dan substitusi 
+\begin_inset Formula $z=a$
+\end_inset
+
+ diperoleh residu
+\begin_inset Formula 
+\[
+b_{1}=\frac{1}{(m-1)!}\left\{ \frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}\left[(z-a)^{m}f(z)\right]\right\} _{z=a}
+\]
+
+\end_inset
+
+Agar teknik ini berhasil, orde dari pole harus diketahui sebelumnya.
+ Jika 
+\begin_inset Formula $m=1$
+\end_inset
+
+ maka tidak ada operasi diferensiasi yang diperlukan sehingga diperoleh
+ dari
+\begin_inset Formula 
+\[
+\lim_{z\rightarrow a}(z-a)f(z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teorema residu dapat digunakan untuk mengevaluasi integral variabel real
+ dengan bentuk tertentu.
+\end_layout
+
+\begin_layout Standard
+Misalnya, tinjau integral
+\begin_inset Formula 
+\[
+I=\int_{0}^{2\pi}g(\cos(\theta),\sin(\theta))\ \mathrm{d}\theta
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $g(\cos(\theta),\sin(\theta))$
+\end_inset
+
+ adalah fungsi rasional dari 
+\begin_inset Formula $\cos(\theta)$
+\end_inset
+
+ dan 
+\begin_inset Formula $\sin(\theta)$
+\end_inset
+
+ yang tidak memiliki singularitas pada interval 
+\begin_inset Formula $0\leq\theta\leq2\pi$
+\end_inset
+
+.
+ Dengan menggunakan substitusi
+\begin_inset Formula 
+\[
+e^{\imath\theta}=z
+\]
+
+\end_inset
+
+diperoleh
+\begin_inset Formula 
+\begin{align*}
+\cos(\theta) & =\frac{1}{2}\left(e^{\imath\theta}+e^{-\imath\theta}\right)=\frac{1}{2}\left(z+\frac{1}{z}\right)\\
+\sin(\theta) & =\frac{1}{2\imath}\left(e^{\imath\theta}-e^{-\imath\theta}\right)=\frac{1}{2\imath}\left(z-\frac{1}{z}\right)\\
+\mathrm{d}\theta & =\frac{\mathrm{d}z}{\imath e^{\imath\theta}}=\frac{\mathrm{d}z}{\imath z}
+\end{align*}
+
+\end_inset
+
+Integral sekarang menjadi
+\begin_inset Formula 
+\[
+I=\oint_{C}\frac{f(z)}{\imath z}\ \mathrm{d}z
+\]
+
+\end_inset
+
+Teorema residu dapat diaplikasikan untuk bentuk integral di atas setelah
+ 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ diperoleh.
+ Semua residu yang ada pada lingkaran satuan harus diperhitungkan.
+\end_layout
+
+\begin_layout Standard
+Jenis kedua dari integral yang dapat dihitung dengan menggunakan teorema
+ residu adalah integral
+\begin_inset Formula 
+\[
+I=\int_{-\infty}^{\infty}f(x)\ \mathrm{d}x
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ adalah fungsi rasional
+\begin_inset Formula 
+\[
+f(x)=\frac{p(x)}{q(x)}
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $q(x)$
+\end_inset
+
+ tidak memiliki real zero dan memiliki derajat sedikitnya dua lebih besar
+ daripada 
+\begin_inset Formula $p(x)$
+\end_inset
+
+.
+ Tinjau integral terkait
+\begin_inset Formula 
+\[
+I_{1}=\oint_{C}f(z)\ \mathrm{d}z
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah kontur tertutup seperti pada Gambar XXX.
+ Jika 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ adalah bagian setengah lingkaran dari kurva 
+\begin_inset Formula $C$
+\end_inset
+
+, maka 
+\begin_inset Formula 
+\[
+I_{1}=\int_{C_{1}}f(z)\ \mathrm{d}z+\int_{-R}^{R}f(x)\ \mathrm{d}x=2\pi\imath\sum_{n=1}^{N}\left(b_{1}\right)_{n}
+\]
+
+\end_inset
+
+di mana teorema residu Cauchy telah digunakan.
+ Dalam persamaan ini, 
+\begin_inset Formula $N$
+\end_inset
+
+ merupakan jumlah singularitas yang berada pada setengah bidang atas yang
+ dilingkupi oleh setengah lingkaran.
+ Sekarang, akan ditunjukkan bahwa
+\begin_inset Formula 
+\[
+\int_{C_{1}}f(z)\ \mathrm{d}z\rightarrow0
+\]
+
+\end_inset
+
+untuk 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+.
+ Dengan menggunakan Persamaan XXX dan syarat bahwa 
+\begin_inset Formula $q(z)$
+\end_inset
+
+ memiliki derajat setidaknya dua lebih besar daripada 
+\begin_inset Formula $p(z)$
+\end_inset
+
+, maka
+\begin_inset Formula 
+\[
+|f(z)|=\left|\frac{p(z)}{q(z)}\right|=\frac{|p(z)|}{|q(z)|}\sim\frac{1}{R^{2}}
+\]
+
+\end_inset
+
+maka
+\begin_inset Formula 
+\[
+\left|\int_{C_{1}}f(x)\ \mathrm{d}z\right|\leq\left|f_{\mathrm{max}}\right|\pi R\sim\frac{1}{R}
+\]
+
+\end_inset
+
+Ketika 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+, diperoleh
+\begin_inset Formula 
+\[
+\int_{C_{1}}f(z)\ \mathrm{d}z\rightarrow0
+\]
+
+\end_inset
+
+sehingga
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}f(x)\ \mathrm{d}x=2\pi\imath\sum_{n=1}^{N}\left(b_{1}\right)_{n}
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ melibatkan residu dari 
+\begin_inset Formula $f(z)$
+\end_inset
+
+ pada seluruh singularitas yang ada pada setengah bidang atas.
+\end_layout
+
+\begin_layout Standard
+Jenis ketiga dari integral yang dapat dievaluasi menggunakan teorema residu
+ adalah
+\begin_inset Formula 
+\[
+I=\int_{-\infty}^{\infty}f(x)\sin(x)\ \mathrm{d}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dan
+\begin_inset Formula 
+\[
+I=\int_{-\infty}^{\infty}f(x)\cos(x)\ \mathrm{d}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk menghitung jenis integral ini, tinjau integral kompleks
+\begin_inset Formula 
+\[
+I_{1}=\oint_{C}f(z)e^{\imath mz}\ \mathrm{d}z
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $m$
+\end_inset
+
+ adalah bilangan positif dan 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah kurva yang ditunjukkan pada Gambar XXX.
+ Jika kita membatasi pada setengah bidang atas sehingga 
+\begin_inset Formula $y\geq0$
+\end_inset
+
+, maka
+\begin_inset Formula 
+\[
+\left|e^{\imath mz}\right|=\left|e^{\imath mx}\right|\left|e^{-my}\right|=e^{-my}\leq1
+\]
+
+\end_inset
+
+sehingga
+\begin_inset Formula 
+\[
+\left|f(z)e^{\imath mz}\right|=\left|f(z)\right|\left|e^{\imath mz}\right|\leq\left|f(z)\right|
+\]
+
+\end_inset
+
+Dengan menggunakan langkah yang sama seperti pada jenis integral sebelumnya,
+ diperoleh
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}f(x)e^{\imath mx}\ \mathrm{d}x=2\pi\imath\sum_{n=1}^{N}\left(b_{1}\right)_{n}
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ melibatkan residu dari 
+\begin_inset Formula $f(z)e^{\imath mz}$
+\end_inset
+
+ pada seluruh singularitas yang ada pada setengah bidang atas.
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Hitung integral berikut di mana 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah lingkaran 
+\begin_inset Formula $|z|=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\oint_{C}\frac{\cos(z)}{z^{3}}\ \mathrm{d}z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ekspansi fungsi 
+\begin_inset Formula $\cos(z)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\cos(z)=1-\frac{z^{2}}{2!}+\frac{z^{4}}{4!}-\cdots
+\]
+
+\end_inset
+
+Integran menjadi:
+\begin_inset Formula 
+\[
+\frac{\cos(z)}{z^{3}}=\frac{1}{z^{3}}-\frac{1}{2z}+\frac{z}{4!}+\cdots
+\]
+
+\end_inset
+
+Residu adalah koefisien dari suku 
+\begin_inset Formula $1/z$
+\end_inset
+
+, sehingga
+\begin_inset Formula 
+\[
+b_{1}=-\frac{1}{2}
+\]
+
+\end_inset
+
+Nilai dari integral adalah
+\begin_inset Formula 
+\[
+\oint_{C}\frac{\cos(z)}{z^{3}}\ \mathrm{d}z=2\pi\imath\left(-\frac{1}{2}\right)=-\pi\imath
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
