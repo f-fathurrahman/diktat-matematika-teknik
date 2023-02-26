@@ -670,6 +670,18 @@ di mana
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Contoh
 \end_layout
 
@@ -733,6 +745,459 @@ Nilai dari integral adalah
 \begin_inset Formula 
 \[
 \oint_{C}\frac{\cos(z)}{z^{3}}\ \mathrm{d}z=2\pi\imath\left(-\frac{1}{2}\right)=-\pi\imath
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Hitung integral
+\begin_inset Formula 
+\[
+\oint_{C}\frac{\mathrm{d}z}{z^{2}+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Faktorisasi dari integral
+\begin_inset Formula 
+\[
+\frac{1}{z^{2}+1}=\frac{1}{(z+\imath)(z-\imath)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ada dua singularitas dalam kontur 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Residu pada tiap singularitas adalah
+\begin_inset Formula 
+\[
+\left(b_{1}\right)_{z=\imath}=\left.(z-\imath)\frac{1}{(z+\imath)(z-\imath)}\right|_{z=\imath}=\frac{1}{2\imath}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(b_{1}\right)_{z=-\imath}=\left.(z+\imath)\frac{1}{(z+\imath)(z-\imath)}\right|_{z=-\imath}=-\frac{1}{2\imath}
+\]
+
+\end_inset
+
+Nilai dari integral adalah
+\begin_inset Formula 
+\[
+\oint_{C}\frac{\mathrm{d}z}{z^{2}+1}=2\pi\imath\left(\frac{1}{2\imath}-\frac{1}{2\imath}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Hitung integral
+\begin_inset Formula 
+\[
+\oint_{C}\frac{z^{2}-2}{z(z-1)(z+4)}\ \mathrm{d}z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Di dalam kontur yang ditinjau, ada dua singularitas, satu pada 
+\begin_inset Formula $z=0$
+\end_inset
+
+ dan yang lain pada 
+\begin_inset Formula $z=1$
+\end_inset
+
+.
+ Residu pada tiap pole adalah
+\begin_inset Formula 
+\[
+\left(b_{1}\right)_{z=0}=\left.z\frac{z^{2}-2}{z(z-1)(z+4)}\right|_{z=0}=\frac{-2}{(-1)(4)}=\frac{1}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(b_{1}\right)_{z=1}=\left.(z-1)\frac{z^{2}-2}{z(z-1)(z+4)}\right|_{z=1}=\frac{1-2}{(1)(1+4)}=-\frac{1}{5}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nilai integralnya adalah
+\begin_inset Formula 
+\[
+\oint_{C}\frac{z^{2}-2}{z(z-1)(z+4)}\ \mathrm{d}z=2\pi\imath\left(\frac{1}{2}-\frac{1}{5}\right)=\frac{3\pi\imath}{5}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Hitung integral
+\begin_inset Formula 
+\[
+\oint_{C}\frac{z}{(z-1)^{3}(z+3)}\ \mathrm{d}z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk integran ini, terdapat sebuah pole dengan orde-3 di dalam kontur 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Residu pada pole tersebut adalah
+\begin_inset Formula 
+\begin{align*}
+b_{1} & =\frac{1}{2!}\frac{\mathrm{d}^{2}}{\mathrm{d}z^{2}}\left[(z-1)^{3}\frac{z}{(z-1)^{3}(z+3)}\right]_{z=1}\\
+ & =\frac{1}{2}\left(\frac{-3}{32}\right)=-\frac{3}{64}
+\end{align*}
+
+\end_inset
+
+Sehingga nilai integralnya adalah
+\begin_inset Formula 
+\[
+\oint_{C}\frac{z}{(z-1)^{3}(z+3)}\ \mathrm{d}z=2\pi\imath\left(-\frac{3}{64}\right)\approx-0.2945\imath
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Hitung nilai integral:
+\begin_inset Formula 
+\[
+\int_{0}^{2\pi}\frac{\mathrm{d}\theta}{2+\cos(\theta)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menggunakan transformasi diperoleh
+\begin_inset Formula 
+\[
+\int_{0}^{2\pi}\frac{\mathrm{d}\theta}{2+\cos(\theta)}=\oint_{C}\frac{\mathrm{d}z/\imath z}{2+\dfrac{1}{2}\left(z+\dfrac{1}{z}\right)}=-2\imath\oint_{C}\frac{\mathrm{d}z}{z^{2}+4z+1}
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $C$
+\end_inset
+
+ adalah lingkaran satuan.
+ Akar dari penyebut pada integran adalah
+\begin_inset Formula 
+\[
+z=-2\pm\sqrt{3}
+\]
+
+\end_inset
+
+atau 
+\begin_inset Formula $z_{1}=-2+\sqrt{3}\approx-0.2679$
+\end_inset
+
+ dan 
+\begin_inset Formula $z_{2}=-2-\sqrt{3}\approx-3.732$
+\end_inset
+
+.
+ Pole pertama berada pada lingkaran satuan sehingga kita harus menentukan
+ residu pada pole tersebut.
+\begin_inset Formula 
+\[
+\left(b_{1}\right)_{z_{1}}=\left.\frac{1}{z+2+\sqrt{3}}\right|_{z=z_{1}}\approx2.887
+\]
+
+\end_inset
+
+sehingga
+\begin_inset Formula 
+\[
+\int_{0}^{2\pi}\frac{\mathrm{d}\theta}{2+\cos(\theta)}=-2\imath\left(2\pi b_{1}\right)\approx3.628
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Hitung nilai integral
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tinjau fungsi variabel kompleks 
+\begin_inset Formula $f(z)=1/(1+z^{2})$
+\end_inset
+
+.
+ Dua pole berada pada titik di mana 
+\begin_inset Formula $1+z^{2}=0$
+\end_inset
+
+, yaitu 
+\begin_inset Formula $z_{1}=\imath$
+\end_inset
+
+ dan 
+\begin_inset Formula $z_{2}=-\imath$
+\end_inset
+
+.
+ Pole pertama berada di setengah bidang atas.
+ Residu pada pole tersebut adalah
+\begin_inset Formula 
+\[
+\left(b_{1}\right)_{z_{1}}=\left.(z-\imath)\frac{1}{(z-\imath)(z+\imath)}\right|_{z=\imath}=\frac{1}{2\imath}
+\]
+
+\end_inset
+
+Nilai dari integral
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}=2\pi\imath\left(\frac{1}{2\imath}\right)=\pi
+\]
+
+\end_inset
+
+Karena integran adalah fungsi genap, maka
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}=\frac{1}{2}\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}=\frac{\pi}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Hitung nilai dari integral berikut
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{\cos(x)}{1+x^{2}}\ \mathrm{d}x
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{\sin(x)}{1+x^{2}}\ \mathrm{d}x
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dalam hal ini integral kompleks yang diperlukan adalah:
+\begin_inset Formula 
+\[
+I_{1}=\oint_{C}\frac{e^{\imath z}}{1+z^{2}}\ \mathrm{d}z
+\]
+
+\end_inset
+
+Integran ini memiliki dua pole pada 
+\begin_inset Formula $z=\pm\imath$
+\end_inset
+
+, yang salah satunya berada di atas setengah bidang atas.
+ Residu pada 
+\begin_inset Formula $z=\imath$
+\end_inset
+
+ adalah
+\begin_inset Formula 
+\[
+\left(b_{1}\right)_{z=\imath}=\left.(z-\imath)\frac{e^{\imath z}}{1+z^{2}}\right|_{z=\imath}=\left.\frac{e^{\imath z}}{1+z}\right|_{z=\imath}=
+\]
+
+\end_inset
+
+yang memberikan nilai integral
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{e^{\imath x}}{1+x^{2}}\ \mathrm{d}x=2\pi\imath\left(\frac{e^{-1}}{2\imath}\right)=\frac{\pi}{e}\approx1.1557
+\]
+
+\end_inset
+
+Karena integral ini dapat dituliskan sebagai:
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{e^{\imath x}}{1+x^{2}}\ \mathrm{d}x=\int_{-\infty}^{\infty}\frac{\cos(x)}{1+x^{2}}\ \mathrm{d}x+\imath\int_{-\infty}^{\infty}\frac{\sin(x)}{1+x^{2}}\ \mathrm{d}x
+\]
+
+\end_inset
+
+maka dengan mengevaluasi nilai real dan imajiner diperoleh bahwa:
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{\cos(x)}{1+x^{2}}\ \mathrm{d}x=\frac{\pi}{e}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{\sin(x)}{1+x^{2}}\ \mathrm{d}x=0
 \]
 
 \end_inset
