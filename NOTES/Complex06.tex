@@ -1,0 +1,429 @@
+\input{PREAMBLE}
+
+% -------------------------
+\begin{document}
+
+\title{%
+{\small TF2201 Matematika Rekayasa II}\\
+Variabel Kompleks: Residu
+}
+\author{Fadjar Fathurrahman\\
+Teknik Fisika\\
+Institut Teknologi Bandung}
+\date{2023}
+\maketitle
+
+Dalam bagian ini kita akan mempelajari suatu teknik yang berguna untuk
+menghitung beberapa jenis integral dari variabel real.
+
+Misalkan $f(z)$ singular pada titik $z=a$ dan analitik pada titik
+yang lain di dalam suatu lingkaran yang berpusat pada $z=a$. Maka
+$f(z)$ dapat diekspansi ke dalam deret Laurent:
+\begin{equation*}
+f(z) = \cdots + \frac{b_{m}}{(z-a)^{m}} + \cdots + \frac{b_{2}}{(z-a)^{2}} +
+\frac{b_{1}}{z-a}+a_{0}+a_{1}(z-a)+a_{2}(z-a)^{2}+\cdots
+\end{equation*}
+
+Ada tiga kasus yang dapat muncul.
+
+Pertama, semua koefisien $b_{1},b_{2},\cdots$ bernilai nol. Maka
+$f(z)$ disebut memiliki singularitas yang dapat dibuang (\textit{removable singularity}).
+Contohnya: fungsi $\sin(z)/z$ memiliki singularitas yang dapat
+dibuang pada $z=0$.
+
+Kedua, hanya ada beberapa (terbatas) \textbf{$b_{n}$} bernilai tidak
+nol. Dengan kata lain $f(z)$ memiliki pole pada $z=a$. Jika $f(z)$ memiliki
+suatu pole, maka
+\begin{equation*}
+f(z)=\frac{b_{m}}{(z-a)^{m}}+\cdots+\frac{b_{1}}{z-a}+a_{0}+a_{1}(z-a)+\cdots
+\end{equation*}
+dengan $b_{m}\neq0$.
+Dalam kasus ini kita menyebut bahwa pole pada $z=a$ memiliki orde-$m$.
+
+Ketiga, terdapat $b_{m}$ sejumlah tak-hingga yang tidak nol, sehingga
+dikatakan bahwa $f(z)$ memiliki singularitas esensial pada $z=a$.
+Fungsi $e^{1/z}$ memiliki ekspansi deret Laurent:
+\begin{equation*}
+e^{1/z} = 1 + \frac{1}{z} + \frac{1}{2!z^{2}} + \cdots + \frac{1}{n!z^{n}}+\cdots
+\end{equation*}
+yang valid untuk semua $z$, $|z|>0$. Titik $z = 0$ adalah singularitas
+esensial dari $e^{1/z}$.
+
+Fungsi rasional hanya memiliki pole atau singularitas yang dapat dibuang
+saja sebagai jenis singularitasnya.
+
+Koefisien $b_{1}$ dapat dihitung dari:
+\begin{equation*}
+b_{1} = \frac{1}{2\pi\imath}\oint_{C_{1}}f(w)\ \mathrm{d}w
+\end{equation*}
+Jadi integral dari suatu fungsi $f(z)$ pada suatu kurva $C_{1}$
+yang meliputi suatu titik singular diberikan oleh
+\begin{equation*}
+\oint f(z)\ \mathrm{d}z=2\pi\imath b_{1}
+\label{eq:Potter_Eq_10_10_5}
+\end{equation*}
+di mana $b_{1}$ adalah koefisien dari suku $(z-a)^{-1}$ pada ekspansi
+deret Laurent pada titik $z=a$. Kuantitas $b_{1}$ disebut sebagai
+residu dari $f(z)$ pada $z=a$. Oleh karena itu, untuk menemukan
+integral dari suatu fungsi di pada suatu kontur di sekitar titik singular,
+kita hanya perlu menemukan ekspansi deret Laurent dan menggunakan
+Persamaan \ref{eq:Potter_Eq_10_10_5}.
+Jika ada lebih dari satu singularitas, maka kita dapat
+membuat daerah tersebut menjadi terhubung sederhana seperti pada Gambar
+\ref{eq:Potter_Ch10_Fig_18}.
+%
+\begin{figure}[h]
+{\centering
+\includegraphics{../images_priv/Potter_Ch10_Fig_18.png}
+\par}
+\caption{Integrasi pada suatu kurva yang meliputi beberapa titik singular.}
+\label{eq:Potter_Ch10_Fig_18}
+\end{figure}
+%
+Kemudian dengan menggunakan Teorema Integral Cauchy diperoleh
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z+\oint_{C_{1}}f(z)\ \mathrm{d}z+\oint_{C_{2}}f(z)\ \mathrm{d}z +
+\oint_{C_{3}}f(z)\ \mathrm{d}z=0
+\end{equation*}
+karena $f(z)$ analitik pada semua titik di luar lingkaran kecil dan
+di dalam $C$. Jika jika membalikkan arah integrasi pada kontur di
+sekitar lingkaran kecil diperoleh
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z=\oint_{C_{1}}f(z)\ \mathrm{d}z + 
+\oint_{C_{2}}f(z)\ \mathrm{d}z + \oint_{C_{3}}f(z)\ \mathrm{d}z
+\end{equation*}
+Dalam residu pada setiap titik, kita memperoleh Teorema Residu Cauchy:
+\begin{equation*}
+\oint_{C}f(z)\ \mathrm{d}z = 2\pi\imath\left[\left(b_{1}\right)_{a_{1}} + \left(b_{1}\right)_{a_{2}} +
+\left(b_{1}\right)_{a_{3}}\right]
+\end{equation*}
+di mana $b_{1}$ adalah koefisien dari $(z-a)^{-1}$ pada ekspansi
+deret Laurent pada masing-masing titik.
+
+Teknik lain, yang sering digunakan untuk menemukan residur pada suatu
+titik singular adalah dengan mengalikan deret Laurent dengan $(z-a)^{m}$
+untuk mendapatkan
+\begin{equation*}
+(z-a)^{m}f(z) = b_{m} + b_{m-1}(z-a) + \cdots + b_{1}(z-a)^{m-1} +
+a_{0}(z-a)^{m} + a_{1}(z-a)^{m+1} + \cdots
+\end{equation*}
+Jika deret ini didiferensiasi sebanyak $(m-1)$ kali dan substitusi
+$z=a$ diperoleh residu
+\begin{equation*}
+b_{1}=\frac{1}{(m-1)!}\left\{ \frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}\left[(z-a)^{m}f(z)\right]\right\} _{z=a}
+\end{equation*}
+Agar teknik ini berhasil, orde dari pole harus diketahui sebelumnya.
+Jika $m=1$ maka tidak ada operasi diferensiasi yang diperlukan sehingga
+diperoleh dari
+\[
+\lim_{z\rightarrow a}(z-a)f(z)
+\]
+
+Teorema residu dapat digunakan untuk mengevaluasi integral variabel
+real dengan bentuk tertentu.
+
+Misalnya, tinjau integral
+\begin{equation*}
+I = \int_{0}^{2\pi}g(\cos(\theta),\sin(\theta))\ \mathrm{d}\theta
+\end{equation*}
+di mana $g(\cos(\theta),\sin(\theta))$ adalah fungsi rasional dari
+$\cos(\theta)$ dan $\sin(\theta)$ yang tidak memiliki singularitas
+pada interval $0\leq\theta\leq2\pi$. Dengan menggunakan substitusi
+\[
+e^{\imath\theta}=z
+\]
+diperoleh
+\begin{align*}
+\cos(\theta) & =\frac{1}{2}\left(e^{\imath\theta}+e^{-\imath\theta}\right)=\frac{1}{2}\left(z+\frac{1}{z}\right)\\
+\sin(\theta) & =\frac{1}{2\imath}\left(e^{\imath\theta}-e^{-\imath\theta}\right)=\frac{1}{2\imath}\left(z-\frac{1}{z}\right)\\
+\mathrm{d}\theta & =\frac{\mathrm{d}z}{\imath e^{\imath\theta}}=\frac{\mathrm{d}z}{\imath z}
+\end{align*}
+Integral sekarang menjadi
+\[
+I=\oint_{C}\frac{f(z)}{\imath z}\ \mathrm{d}z
+\]
+Teorema residu dapat diaplikasikan untuk bentuk integral di atas setelah
+$f(z)$ diperoleh. Semua residu yang ada pada lingkaran satuan harus
+diperhitungkan.
+
+Jenis kedua dari integral yang dapat dihitung dengan menggunakan teorema
+residu adalah integral
+\[
+I=\int_{-\infty}^{\infty}f(x)\ \mathrm{d}x
+\]
+di mana $f(x)$ adalah fungsi rasional
+\[
+f(x)=\frac{p(x)}{q(x)}
+\]
+di mana $q(x)$ tidak memiliki real zero dan memiliki derajat sedikitnya
+dua lebih besar daripada $p(x)$. Tinjau integral terkait
+\begin{equation*}
+I_{1} = \oint_{C}f(z)\ \mathrm{d}z
+\end{equation*}
+di mana $C$ adalah kontur tertutup seperti pada
+Gambar \ref{fig:Potter_Ch10_Fig_20}.
+\begin{figure}[h]
+{\centering
+\includegraphics{../images_priv/Potter_Ch10_Fig_20.png}
+\par}
+\caption{Kontur}\ref{fig:Potter_Ch10_Fig_20}
+\end{figure}
+Jika $C_{1}$ adalah bagian setengah lingkaran dari kurva $C$, maka 
+\[
+I_{1} = \int_{C_{1}}f(z)\ \mathrm{d}z + \int_{-R}^{R}f(x)\ \mathrm{d}x = 2\pi\imath\sum_{n=1}^{N}\left(b_{1}\right)_{n}
+\]
+di mana teorema residu Cauchy telah digunakan. Dalam persamaan ini,
+$N$ merupakan jumlah singularitas yang berada pada setengah bidang
+atas yang dilingkupi oleh setengah lingkaran. Sekarang, akan ditunjukkan
+bahwa
+\[
+\int_{C_{1}}f(z)\ \mathrm{d}z \rightarrow 0
+\]
+untuk $R\rightarrow\infty$. Dengan menggunakan Persamaan XXX dan
+syarat bahwa $q(z)$ memiliki derajat setidaknya dua lebih besar daripada
+$p(z)$, maka
+\[
+|f(z)|=\left|\frac{p(z)}{q(z)}\right|=\frac{|p(z)|}{|q(z)|}\sim\frac{1}{R^{2}}
+\]
+maka
+\[
+\left|\int_{C_{1}}f(x)\ \mathrm{d}z\right|\leq\left|f_{\mathrm{max}}\right|\pi R\sim\frac{1}{R}
+\]
+Ketika $R\rightarrow\infty$, diperoleh
+\[
+\int_{C_{1}}f(z)\ \mathrm{d}z\rightarrow0
+\]
+sehingga
+\[
+\int_{-\infty}^{\infty}f(x)\ \mathrm{d}x=2\pi\imath\sum_{n=1}^{N}\left(b_{1}\right)_{n}
+\]
+di mana $b_{1}$ melibatkan residu dari $f(z)$ pada seluruh singularitas
+yang ada pada setengah bidang atas.
+
+Jenis ketiga dari integral yang dapat dievaluasi menggunakan teorema
+residu adalah
+\[
+I=\int_{-\infty}^{\infty}f(x)\sin(x)\ \mathrm{d}x
+\]
+dan
+\[
+I=\int_{-\infty}^{\infty}f(x)\cos(x)\ \mathrm{d}x
+\]
+
+Untuk menghitung jenis integral ini, tinjau integral kompleks
+\[
+I_{1} = \oint_{C} f(z) e^{\imath mz}\ \mathrm{d}z
+\]
+di mana $m$ adalah bilangan positif dan $C$ adalah kurva yang ditunjukkan
+pada Gambar XXX. Jika kita membatasi pada setengah bidang atas sehingga
+$y\geq0$, maka
+\[
+\left| e^{\imath mz} \right| = \left|e^{\imath mx}\right| \left| e^{-my} \right| = e^{-my} \leq 1
+\]
+sehingga
+\[
+\left|f(z)e^{\imath mz}\right|=\left|f(z)\right|\left|e^{\imath mz}\right|\leq\left|f(z)\right|
+\]
+Dengan menggunakan langkah yang sama seperti pada jenis integral sebelumnya,
+diperoleh
+\[
+\int_{-\infty}^{\infty}f(x)e^{\imath mx}\ \mathrm{d}x=2\pi\imath\sum_{n=1}^{N}\left(b_{1}\right)_{n}
+\]
+di mana $b_{1}$ melibatkan residu dari $f(z)e^{\imath mz}$ pada
+seluruh singularitas yang ada pada setengah bidang atas.
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Hitung integral berikut di mana $C$ adalah lingkaran $|z|=2$.
+
+\[
+\oint_{C}\frac{\cos(z)}{z^{3}}\ \mathrm{d}z
+\]
+
+Ekspansi fungsi $\cos(z)$:
+\[
+\cos(z)=1-\frac{z^{2}}{2!}+\frac{z^{4}}{4!}-\cdots
+\]
+Integran menjadi:
+\[
+\frac{\cos(z)}{z^{3}}=\frac{1}{z^{3}}-\frac{1}{2z}+\frac{z}{4!}+\cdots
+\]
+Residu adalah koefisien dari suku $1/z$, sehingga
+\[
+b_{1}=-\frac{1}{2}
+\]
+Nilai dari integral adalah
+\[
+\oint_{C}\frac{\cos(z)}{z^{3}}\ \mathrm{d}z=2\pi\imath\left(-\frac{1}{2}\right)=-\pi\imath
+\]
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Hitung integral
+\[
+\oint_{C}\frac{\mathrm{d}z}{z^{2}+1}
+\]
+
+Faktorisasi dari integral
+\[
+\frac{1}{z^{2}+1}=\frac{1}{(z+\imath)(z-\imath)}
+\]
+
+Ada dua singularitas dalam kontur $C$. Residu pada tiap singularitas
+adalah
+\[
+\left(b_{1}\right)_{z=\imath}=\left.(z-\imath)\frac{1}{(z+\imath)(z-\imath)}\right|_{z=\imath}=\frac{1}{2\imath}
+\]
+
+\[
+\left(b_{1}\right)_{z=-\imath}=\left.(z+\imath)\frac{1}{(z+\imath)(z-\imath)}\right|_{z=-\imath}=-\frac{1}{2\imath}
+\]
+Nilai dari integral adalah
+\[
+\oint_{C}\frac{\mathrm{d}z}{z^{2}+1}=2\pi\imath\left(\frac{1}{2\imath}-\frac{1}{2\imath}\right)=0
+\]
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Hitung integral
+\[
+\oint_{C}\frac{z^{2}-2}{z(z-1)(z+4)}\ \mathrm{d}z
+\]
+
+Di dalam kontur yang ditinjau, ada dua singularitas, satu pada $z=0$
+dan yang lain pada $z=1$. Residu pada tiap pole adalah
+\[
+\left(b_{1}\right)_{z=0}=\left.z\frac{z^{2}-2}{z(z-1)(z+4)}\right|_{z=0}=\frac{-2}{(-1)(4)}=\frac{1}{2}
+\]
+
+\[
+\left(b_{1}\right)_{z=1}=\left.(z-1)\frac{z^{2}-2}{z(z-1)(z+4)}\right|_{z=1}=\frac{1-2}{(1)(1+4)}=-\frac{1}{5}
+\]
+
+Nilai integralnya adalah
+\[
+\oint_{C}\frac{z^{2}-2}{z(z-1)(z+4)}\ \mathrm{d}z=2\pi\imath\left(\frac{1}{2}-\frac{1}{5}\right)=\frac{3\pi\imath}{5}
+\]
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Hitung integral
+\[
+\oint_{C}\frac{z}{(z-1)^{3}(z+3)}\ \mathrm{d}z
+\]
+
+Untuk integran ini, terdapat sebuah pole dengan orde-3 di dalam kontur
+$C$. Residu pada pole tersebut adalah
+\begin{align*}
+b_{1} & =\frac{1}{2!}\frac{\mathrm{d}^{2}}{\mathrm{d}z^{2}}\left[(z-1)^{3}\frac{z}{(z-1)^{3}(z+3)}\right]_{z=1}\\
+ & =\frac{1}{2}\left(\frac{-3}{32}\right)=-\frac{3}{64}
+\end{align*}
+Sehingga nilai integralnya adalah
+\[
+\oint_{C}\frac{z}{(z-1)^{3}(z+3)}\ \mathrm{d}z=2\pi\imath\left(-\frac{3}{64}\right)\approx-0.2945\imath
+\]
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Hitung nilai integral:
+\[
+\int_{0}^{2\pi}\frac{\mathrm{d}\theta}{2+\cos(\theta)}
+\]
+
+Dengan menggunakan transformasi diperoleh
+\[
+\int_{0}^{2\pi}\frac{\mathrm{d}\theta}{2+\cos(\theta)}=\oint_{C}\frac{\mathrm{d}z/\imath z}{2+\dfrac{1}{2}\left(z+\dfrac{1}{z}\right)}=-2\imath\oint_{C}\frac{\mathrm{d}z}{z^{2}+4z+1}
+\]
+di mana $C$ adalah lingkaran satuan. Akar dari penyebut pada integran
+adalah
+\[
+z=-2\pm\sqrt{3}
+\]
+atau $z_{1}=-2+\sqrt{3}\approx-0.2679$ dan $z_{2}=-2-\sqrt{3}\approx-3.732$.
+Pole pertama berada pada lingkaran satuan sehingga kita harus menentukan
+residu pada pole tersebut.
+\[
+\left(b_{1}\right)_{z_{1}}=\left.\frac{1}{z+2+\sqrt{3}}\right|_{z=z_{1}}\approx2.887
+\]
+sehingga
+\[
+\int_{0}^{2\pi}\frac{\mathrm{d}\theta}{2+\cos(\theta)}=-2\imath\left(2\pi b_{1}\right)\approx3.628
+\]
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Hitung nilai integral
+\[
+\int_{0}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}
+\]
+
+Tinjau fungsi variabel kompleks $f(z)=1/(1+z^{2})$. Dua pole berada
+pada titik di mana $1+z^{2}=0$, yaitu $z_{1}=\imath$ dan $z_{2}=-\imath$.
+Pole pertama berada di setengah bidang atas. Residu pada pole tersebut
+adalah
+\[
+\left(b_{1}\right)_{z_{1}}=\left.(z-\imath)\frac{1}{(z-\imath)(z+\imath)}\right|_{z=\imath}=\frac{1}{2\imath}
+\]
+Nilai dari integral
+\[
+\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}=2\pi\imath\left(\frac{1}{2\imath}\right)=\pi
+\]
+Karena integran adalah fungsi genap, maka
+\[
+\int_{0}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}=\frac{1}{2}\int_{-\infty}^{\infty}\frac{\mathrm{d}x}{1+x^{2}}=\frac{\pi}{2}
+\]
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Contoh
+
+Hitung nilai dari integral berikut
+\[
+\int_{-\infty}^{\infty}\frac{\cos(x)}{1+x^{2}}\ \mathrm{d}x
+\]
+\[
+\int_{-\infty}^{\infty}\frac{\sin(x)}{1+x^{2}}\ \mathrm{d}x
+\]
+
+Dalam hal ini integral kompleks yang diperlukan adalah:
+\[
+I_{1}=\oint_{C}\frac{e^{\imath z}}{1+z^{2}}\ \mathrm{d}z
+\]
+Integran ini memiliki dua pole pada $z=\pm\imath$, yang salah satunya
+berada di atas setengah bidang atas. Residu pada $z=\imath$ adalah
+\[
+\left(b_{1}\right)_{z=\imath}=\left.(z-\imath)\frac{e^{\imath z}}{1+z^{2}}\right|_{z=\imath}=\left.\frac{e^{\imath z}}{1+z}\right|_{z=\imath}=
+\]
+yang memberikan nilai integral
+\[
+\int_{-\infty}^{\infty}\frac{e^{\imath x}}{1+x^{2}}\ \mathrm{d}x=2\pi\imath\left(\frac{e^{-1}}{2\imath}\right)=\frac{\pi}{e}\approx1.1557
+\]
+Karena integral ini dapat dituliskan sebagai:
+\[
+\int_{-\infty}^{\infty}\frac{e^{\imath x}}{1+x^{2}}\ \mathrm{d}x=\int_{-\infty}^{\infty}\frac{\cos(x)}{1+x^{2}}\ \mathrm{d}x+\imath\int_{-\infty}^{\infty}\frac{\sin(x)}{1+x^{2}}\ \mathrm{d}x
+\]
+maka dengan mengevaluasi nilai real dan imajiner diperoleh bahwa:
+\[
+\int_{-\infty}^{\infty}\frac{\cos(x)}{1+x^{2}}\ \mathrm{d}x=\frac{\pi}{e}
+\]
+\[
+\int_{-\infty}^{\infty}\frac{\sin(x)}{1+x^{2}}\ \mathrm{d}x=0
+\]
+
+
+
+
+
+\end{document}

@@ -1,0 +1,392 @@
+\input{PREAMBLE}
+
+% -------------------------
+\begin{document}
+
+\title{%
+{\small TF2201 Matematika Rekayasa II}\\
+Variabel Kompleks: Ekspansi Deret
+}
+\author{Fadjar Fathurrahman\\
+Teknik Fisika\\
+Institut Teknologi Bandung}
+\date{2023}
+\maketitle
+
+
+\section{Deret Taylor}
+
+Suatu fungsi analitik dapat diekspansi ke dalam deret pangkat tak-hingga.
+Jika $f(z)$ analitik pada titik $z=a$, maka $f(z)$ dapat dinyatakan dalam suatu
+deret pangkat dari $(z-a)$.
+Untuk menunjukkan hal ini, kita akan melakukan
+ekspansi dari $(w-z)^{-1}$ sebagai berikut
+\begin{align*}
+\frac{1}{w-z} & =\frac{1}{(w-a)-(z-a)} = \frac{1}{w-a}\left[\frac{1}{1-\dfrac{z-a}{w-a}}\right]\\
+ & =\frac{1}{w-a}\left[1 + \frac{z-a}{w-a} + \left(\frac{z-a}{w-a}\right)^{2}+\cdots+\left(\frac{z-a}{w-a}\right)^{n-1}+R_{n}(z,w)\right]
+\end{align*}
+di mana
+\begin{equation*}
+R_{n}(z,w)=\frac{1}{1-\dfrac{z-a}{w-a}}\left(\frac{z-a}{w-a}\right)^{n}
+\end{equation*}
+dan kita telah menggunakan identitas
+\begin{equation}
+\frac{1}{1-r}=1+r+r^{2}+\cdots+r^{n-1}+\frac{r^{n}}{1-r}
+\end{equation}
+dengan $r = \dfrac{z-a}{w-a}$.
+
+Substitusi ekspansi ini pada Rumus Integral Cauchy
+\begin{equation*}
+f(z)=\frac{1}{2\pi\imath}\oint\frac{f(w)}{w-z}\ \mathrm{d}z
+\end{equation*}
+sehingga diperoleh
+\begin{align*}
+f(z) & = \frac{1}{2\pi\imath}\oint_{C}\frac{f(w)}{w-a}\left[1+\frac{z-a}{w-a}+\cdots+\left(\frac{z-a}{w-a}\right)^{n-1}+R_{n}(z,w)\right]\ \mathrm{d}w\\
+ & =\frac{1}{2\pi\imath}\oint_{C}\frac{f(w)}{w-a}\ \mathrm{d}w+\frac{z-a}{2\pi i}\oint_{C}\frac{f(w)}{(w-a)^{2}}\ \mathrm{d}w+\cdots+\\
+ & +\frac{(z-a)^{n-1}}{2\pi\imath}\oint_{C}\frac{f(w)}{(w-a)^{n}}\ \mathrm{d}w+\frac{(z-a)^{n}}{2\pi\imath}\oint_{C}\frac{f(w)}{(w-z)(w-a)^{n}}\ \mathrm{d}w
+\end{align*}
+%
+di mana suku sisa dapat dituliskan menjadi:
+%
+\begin{equation*}
+R_{n}(z,w)=\frac{w-a}{w-z}\left(\frac{z-a}{w-a}\right)^{n}
+\end{equation*}
+Dengan menggunakan Rumus Integral Cauchy untuk turunan fungsi, kita juga dapat menuliskan:
+\begin{equation*}
+f(z) = f(a) + \frac{1}{1!}f'(a)(z-a) + \cdots+\frac{1}{(n-1)!}f^{(n-1)}(a)(z-a)^{n-1} + 
+\frac{(z-a)^{n}}{2\pi\imath} \oint_{C} \frac{f(w)}{(w-z)(w-a)^{n}}\ \mathrm{d}w
+\end{equation*}
+
+Integral pada persamaan ini adalah suku sisa (\emph{remainder term})
+dan untuk nilai-nilai $z$, $w$, dan $a$, suku ini akan bernilai
+nol ketika $n$ menuju tak hingga.
+
+Misalkan $C$ adalah lingkaran yang berpusat pada $z=a$ dan $z$
+adalah suatu titik di dalam lingkaran $C$. Jika $f(z)$ analitik
+pada $C$ dan di dalam interiornya, yaitu $\left|z-a\right|=r$, dan
+sehingga $r<R=\left|w-a\right|$. Misalkan $M=\max\left|f(z)\right|$
+untuk $z$ pada $C$. Maka dengan teorema nilai maksimum
+%
+\begin{theorem}
+Misalkan $\left| f(z) \right| \leq M$ di sepanjang kontur $C$ dan panjang
+dari $C$ adalah $L$ maka:
+\begin{equation*}
+\left|\int_{C}f(z)\ \mathrm{d}z\right|\leq ML
+\end{equation*}
+\end{theorem}
+%
+dan $\left|w-z\right|\geq R-r$ dapat diperoleh
+\begin{equation*}
+\left|\frac{(z-a)^{n}}{2\pi\imath}\oint_{C}\frac{f(w)\ \mathrm{d}w}{(w-z)(w-a)^{n}}\right| \leq
+\frac{r^{n}}{2\pi}\frac{M}{R-r}\frac{2\pi R}{R^{n}}=M\frac{R}{R-r}\left(\frac{r}{R}\right)^{n}
+\end{equation*}
+Karena $r<R$, $(r/R)^{n} \rightarrow 0$ untuk $n \rightarrow \infty$.
+
+Dengan demikian kita telah membuktikan konvergensi dari Deret Taylor:
+\begin{equation*}
+f(z)=f(a)+f'(a)(z-a)+f''(a)\frac{z-a}{2!}+\cdots+f^{(n)}(a)\frac{z-a}{n!}+\cdots
+\end{equation*}
+
+Konvergensi ini berlaku pada lingkaran terbesar di sekitar $z=a$
+yang di dalamnya $f(z)$ bersifat analitik. Jika $\left|z-a\right|=R$
+berada di dalam lingkaran ini, maka $R$ adalah radius konvergensi
+dan deret ini akan konvergen pada himpunan terbuka $\left|z-a\right|<R$.
+Sebaliknya, deret ini akan divergen untuk $z$ yang memenuhi $\left|z-a\right|>R$.
+Konvergensi pada lingkaran, $\left|z-a\right|=R$, lebih sulit untuk
+dibuktikan, namun $f(z)$ akan memiliki titik singular di suatu titik
+pada lingkaran $\left|z-a\right|=R$ oleh definisi dari $R$.
+
+Untuk kasus daerah lingkaran di sekitar titik asal, $a=0$, diperoleh:
+\[
+f(z)=f(0)+f'(0)z+f''(z)\frac{z^{2}}{2!}+\cdots
+\]
+yang sering juga disebut sebagai Deret Maclaurin, terutama jika $z=x$
+adalah bilangan real.
+
+\begin{contoh}
+Gunakan representasi Deret Taylor dari $f(z)$ untuk menemukan ekspansi
+deret disekitar titik asal untuk (a) $f(z)=\sin(z)$, (b) $f(z)=e^{z}$,
+(c) $f(z)=1/(1-z)^{m}$.
+\end{contoh}
+
+(a) Kita perlu mencari terlebih dahulu turunan dari fungsi pada $z=0$.
+
+\begin{align*}
+f'(0) & =\cos(0)=1\\
+f''(0) & =-\sin(0)=0\\
+f'''(0) & =-\cos(0)=-1
+\end{align*}
+sehingga diperoleh deret Taylor dari $f(z)=\sin(z)$ adalah:
+\begin{align*}
+\sin(z) & =\sin(0)+1\cdot(z-0)+0\cdot\frac{(z-0)^{2}}{2!}-1\cdot\frac{(z-0)^{3}}{3!}+\cdots\\
+ & =z-\frac{z^{3}}{3!}+\frac{z^{5}}{5!}-\cdots
+\end{align*}
+Deret ini valid untuk semua $z$ karena tidak ada titik singular pada
+bidang kompleks.
+
+(b) Untuk $f(z)=e^{z}$, diperoleh:
+\begin{align*}
+f'(0) & =e^{0}=1\\
+f''(0) & =e^{0}=1\\
+f'''(0) & =e^{0}=1
+\end{align*}
+dan seterusnya.
+
+Deret Taylor dari $f(z)=e^{z}$ adalah:
+\begin{align*}
+e^{z} & =e^{0}+1\cdot z+1\cdot\frac{z^{2}}{2!}+1\cdot\frac{z^{3}}{3!}+\cdots\\
+ & =1+z+\frac{z^{2}}{2!}+\frac{z^{3}}{3!}+\cdots
+\end{align*}
+yang valid untuk seluruh $z$.
+
+(c) Turunan yang diperlukan untuk mencari ekspansi Taylor dari $f(z)=\dfrac{1}{\left(1-z\right)^{m}}$
+adalah:
+\begin{align*}
+f'(z) & =m(1-z)^{-m-1}\\
+f''(z) & =m(m+1)(1-z)^{-m-2}\\
+f'''(z) & =m(m+1)(m+2)(1-z)^{-m-3}
+\end{align*}
+dan seterusnya. Diperoleh deret Taylor sebagai berikut.
+\begin{align*}
+\frac{1}{(1-z)^{m}} & =\frac{1}{(1-0)^{m}}+m(1-0)^{-m-1}z+m(m+1)(1-0)^{-m-2}\frac{z^{2}}{2!}+\cdots\\
+ & =1+mz+m(m+1)\frac{z^{2}}{2!}+m(m+1)(m+2)\frac{z^{3}}{3!}+\cdots
+\end{align*}
+Deret ini konvergen untuk $|z|<1$ dan tidak konvergen untuk $|z|\geq1$
+karena terdapat titik singular pada $z=1$.
+
+Untuk $m=1$ kita memperoleh:
+\[
+\frac{1}{1-z}=1+z+z^{2}+z^{3}+\cdots
+\]
+
+\begin{contoh}
+Tentukan representasi deret Taylor dari $\ln(1+z)$ dengan menggunakan
+\begin{equation*}
+\frac{\mathrm{d}}{\mathrm{d}z}\ln(1+z)=\frac{1}{1+z}
+\end{equation*}
+\end{contoh}
+
+Dengan menggunakan hasil dari soal sebelumnya, diperoleh
+\[
+\frac{1}{1+z}=\frac{1}{1-(-z)}=1-z+z^{2}-z^{3}+\cdots
+\]
+Dengan menggukan integrasi
+\[
+\int\mathrm{d}\left[\ln(1+z)\right]\ \mathrm{d}z=\int\frac{1}{1+z}\ \mathrm{d}z
+\]
+sehingga diperoleh
+\[
+\ln(1+z)=\int\frac{1}{1+z}\ \mathrm{d}z=z-\frac{z^{2}}{2}+\frac{z^{3}}{3}-\frac{z^{4}}{4}+\cdots+C
+\]
+Konstanta integrasi adalah $C=0$ karena ketika $z=0$ kita harus
+memiliki $\ln(1)=0$. Sehingga ekspansi deret Taylor yang diperlukan
+adalah:
+\[
+\ln(1+z)=z-\frac{z^{2}}{2}+\frac{z^{3}}{3}-\frac{z^{4}}{4}+\cdots
+\]
+Ekspansi ini valid untuk $|z|<1$ karena terdapat singularitas pada
+$z=-1$.
+
+\begin{contoh}
+Tentukan deret Taylor dari
+\[
+f(z)=\frac{1}{z^{2}-3z+2}
+\]
+\end{contoh}
+
+Dengan menggunakan pecahan parsial:
+\[
+\frac{1}{z^{2}-3z+2}=\frac{1}{(z-2)(z-1)}=\frac{1}{z-2}-\frac{1}{z-1}
+\]
+
+Representasi deret dari suku tersebut adalah
+\[
+\frac{1}{z-1}=-\frac{1}{1-z}=-(1+z+z^{2}+z^{3}+\cdots)
+\]
+dan
+\begin{align*}
+\frac{1}{z-2} & =-\frac{1}{2}\left(\frac{1}{1-z/2}\right)=-\frac{1}{2}\left[1+\frac{z}{2}+\left(\frac{z}{2}\right)^{2}+\left(\frac{z}{2}\right)^{3}+\cdots\right]\\
+ & =-\frac{1}{2}\left[1+\frac{z}{2}+\frac{z^{2}}{4}+\frac{z^{3}}{8}+\cdots\right]
+\end{align*}
+sehingga diperoleh:
+\[
+\frac{1}{z^{2}-3z+2}=\frac{1}{2}+\frac{3}{4}z+\frac{7}{8}z^{2}+\frac{15}{16}z^{3}+\cdots
+\]
+
+
+\begin{contoh}
+Tentukan ekspansi deret Taylor dari
+\[
+f(z)=\frac{1}{z^{2}-9}
+\]
+di sekitar titik $z=1$.
+\end{contoh}
+
+Dalam pecahan parsial:
+\begin{align*}
+\frac{1}{z^{2}-9} & =\frac{1}{(z-3)(z+3)}=\frac{1}{6}\left(\frac{1}{z-3}\right)-\frac{1}{6}\left(\frac{1}{z+3}\right)\\
+ & =-\frac{1}{6}\left[\frac{1}{2-(z-1)}\right]-\frac{1}{6}\left[\frac{1}{4+(z-1)}\right]\\
+ & =-\frac{1}{12}\left[\frac{1}{1-\dfrac{z-1}{2}}\right]-\frac{1}{24}\left[\frac{1}{1-\left(-\dfrac{z-1}{4}\right)}\right]
+\end{align*}
+yang dapat diekspansi menjadi deret Taylor
+\begin{align*}
+\frac{1}{z^{2}-9}= & -\frac{1}{12}\left[1+\frac{z-1}{2}+\left(\frac{z-1}{2}\right)^{2}+\left(\frac{z-1}{2}\right)^{3}+\cdots\right]\\
+ & -\frac{1}{24}\left[1-\frac{z-1}{4}+\left(\frac{z-1}{4}\right)^{2}-\left(\frac{z-1}{4}\right)^{3}+\cdots\right]\\
+= & -\frac{1}{8}-\frac{1}{32}(z-1)-\frac{3}{128}(z-1)^{2}-\frac{5}{512}(z-1)^{3}+\cdots
+\end{align*}
+
+Singularitas terdekat adalah titik $z=3$ sehingga radius konvergensi
+adalah $2$, yaitu $|z-1|<2$.
+
+
+
+\section{Deret Laurent}
+
+Ada banyak aplikasi di mana kita ingin melakukan ekspansi suatu fungsi
+$f(z)$ menjadi suatu deret di sekitar $z=a$, yang merupakan titik
+singular. Tinjau daerah cincin (\textit{annulus}) pada Gambar \ref{fig:Potter_Ch10_Fig17}.
+Fungsi $f(z)$
+analitik pada daerah cincin, namun mungkin terdapat titik singular
+di dalam lingkaran kecil atau di luar lingkaran besar. Kemungkinan
+adanya titik singular di dalam lingkaran kecil menghalangi kita untuk
+melakukan ekspansi deret Taylor karena fungsi $f(z)$ harus analitik
+pada seluruh titik di dalam daerah interior. Kita dapat menggunakan
+Rumus Integral Cauchy untuk membagi daerah seperti pada Gambar \ref{fig:Potter_Ch10_Fig17}.
+
+\begin{figure}[h]
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_17.png}
+\par}
+\caption{Daerah cincin atau annulus yang di dalamnya terdapat titik singular.}
+\label{fig:Potter_Ch10_Fig17}
+\end{figure}
+
+Dengan menggunakan Rumus Integral Cauchy diperoleh
+\begin{align*}
+f(z) & =\frac{1}{2\pi\imath}\oint_{C'}\frac{f(w)}{w-z}\ \mathrm{d}w\\
+ & =\frac{1}{2\pi\imath}\oint_{C_{2}}\frac{f(w)}{w-z}\ \mathrm{d}w-\frac{1}{2\pi\imath}\oint_{C_{1}}\frac{f(w)}{w-z}\ \mathrm{d}w
+\end{align*}
+di mana kedua kontur $C_{1}$dan $C_{2}$ sama-sama dilalui berlawanan
+arah jarum jam. Tanda negatif diperoleh dari arah integrasi yang berlawanan
+pada $C_{1}$. Sekaran kita akan mengekspansi $(w-z)^{-1}$ pada integran
+dalam suatu bentuk yang akan terdiri dari pangkat positif dari $(z-a)$
+pada $C_{2}$ dan pangkat negatif untuk $C_{1}$. Jika tidak ada titik
+singular pada $C_{1}$, maka koefisien dari pangkat negatif akan bernilai
+nol dan Deret Taylor akan dihasilkan.
+\begin{equation}
+f(z) = \frac{1}{2\pi\imath} \oint_{C_{2}}\frac{f(w)}{w-a}\left[\frac{1}{1-\dfrac{z-a}{w-a}}\right]\ \mathrm{d}w +
+\frac{1}{2\pi\imath} \oint_{C_{1}} \frac{f(w)}{z-a} \left[\frac{1}{1-\dfrac{w-a}{z-a}}\right]\ \mathrm{d}w
+\label{eq:Potter_Eq_10_9_2}
+\end{equation}
+Dengan menggunakan argumen yang sama untuk membuktikan konvergensi
+dari Deret Taylor, dapat ditunjukkan bahwa Persamaan \ref{eq:Potter_Eq_10_9_2} memberikan
+\begin{align*}
+f(z) & =a_{0}+a_{1}(z-a)+a_{2}(z-a)^{2}+\cdots+\\
+ & +b_{1}(z-a)^{-1}+b_{2}(z-a)^{-2}+\cdots
+\end{align*}
+di mana
+\begin{align*}
+a_{n} & =\frac{1}{2\pi\imath}\oint_{C_{2}}\frac{f(w)}{(w-a)^{n+1}}\ \mathrm{d}w\\
+b_{n} & =\frac{1}{2\pi\imath}\oint_{C_{1}}f(w)(w-a)^{n-1}\ \mathrm{d}w
+\end{align*}
+Deret yang dihasilkan ini dikenal dengan nama Deret Laurent.
+
+Ekspresi integral untuk koefisien $a_{n}$ mirip dengan rumus untuk
+turunan dari $f(z)$, namun ini hanya superfisial, karena $f(z)$
+mungkin tidak terdefinisi pada $z=a$ dan $f(z)$ mungkin tidak analitik
+pada titik tersebut. Perhatikan bahwa, jika $f(z)$ analitik pada
+lingkaran $C_{1}$, integran untuk koefisien $b_{n}$ akan analitik
+pada bidang kompleks, menyebabkan seluruh koefisien $b_{n}$ menjadi
+nol, berdasarkan Teorema Integral Cauchy. Dalam hal ini, deret Laurent
+tereduksi menjadi deret Taylor.
+
+Ekspresi integral untuk koefisien deret Laurent biasanya tidak digunakan
+secara langsung untuk menemukan koefisien. Karena ekspansi deret ini
+unik, teknik elementer biasanya digunakan untuk menemukan ekspansi
+deret Laurent. Daerah konvergensi dapat ditemukan, dalam banyak kasus,
+dengan cara memanipulasi $f(z)$ ke dalam bentuk $1/(1-w)$ sehingga
+$|w|<1$ memberikan daerah konvergensi.
+
+Karena $|w| < 1$, kita memperoleh deret geometrik:
+\begin{equation*}
+\frac{1}{1-w} = 1 + w + w^{2} + w^{3} + \cdots
+\end{equation*}
+yang merupakan ekspansi deret Laurent di sekitar $w=0$.
+
+\begin{contoh}
+Tentukan ekspansi deret Laurent dari
+\[
+f(z)=\frac{1}{z^{2}-3z+2}
+\]
+yang valid pada daerah-daerah berikut.
+
+{\centering
+\includegraphics[scale=1.0]{../images_priv/Potter_Ch10_Fig_Ex_9_1.png}
+\par}
+
+\end{contoh}
+
+\textbf{Daerah (a)} Pada daerah ini kita melakukan ekspansi di sekitar titik pusat.
+\begin{align*}
+\frac{1}{z^{2}-3z+2} & =\frac{1}{(z-2)(z-1)}=\frac{1}{z-2}-\frac{1}{z-1}\\
+ & =-\frac{1}{2}\left(\frac{1}{1-z/2}\right)-\frac{1}{z}\left(\frac{1}{1-1/z}\right)
+\end{align*}
+Pecahan pertama memiliki singularitas pada $z/2=1$ atau $z=2$, dan
+dapat diekspansi menjadi deret Taylor yang konvergen jika $|z|<2$.
+
+Pecahan kedua memiliki singularitas pada $1/z=1$ dan dapat diekspansi
+menjadi deret Laurent yang konvergen jika $|1/z|<1$ atau $|z|>1$.
+
+Dua pecahan tersebut dinyatakan dalam deret-deret berikut.
+\begin{align*}
+-\frac{1}{2}\left(\frac{1}{1-z/2}\right) & =-\frac{1}{2}\left[1+\frac{z}{2}+\left(\frac{z}{2}\right)^{2}+\left(\frac{z}{2}\right)^{3}+\cdots\right]\\
+ & =-\frac{1}{2}-\frac{z}{4}-\frac{z^{2}}{8}-\frac{z^{3}}{16}-\cdots
+\end{align*}
+yang valid untuk $|z|<2$
+
+\begin{align*}
+-\frac{1}{z}\left(\frac{1}{1-1/z}\right) & =-\frac{1}{z}\left[1+\frac{1}{z}+\left(\frac{1}{z}\right)^{2}+\left(\frac{1}{z}\right)^{3}+\cdots\right]\\
+ & =-\frac{1}{z}-\frac{1}{z^{2}}-\frac{1}{z^{3}}-\frac{1}{z^{4}}-\cdots
+\end{align*}
+yang valid untuk $|z|>1$.
+
+Dengan menjumlahkan kedua deret tersebut diperoleh:
+\[
+\frac{1}{z^{2}-3z+2}=\cdots-\frac{1}{z^{3}}-\frac{1}{z^{2}}-\frac{1}{z}-\frac{1}{2}-\frac{z}{4}-\frac{z^{2}}{8}-\frac{z^{3}}{16}-\cdots
+\]
+yang valid untuk daerah $1<|z|<2$.
+
+\textbf{Daerah (b)} Pada daerah di luar lingkaran $|z|=2$, untuk $1/(z-1)$ digunakan
+ekspansi yang sama seperti sebelumnya
+\[
+\frac{1}{z-1}=\frac{1}{z}\left(\frac{1}{1-1/z}\right)=\frac{1}{z}+\frac{1}{z^{2}}+\frac{1}{z^{3}}+\cdots
+\]
+yang valid untuk $|1/z|<1$ atau $|z|>1$.
+
+Untuk $1/(z-2)$ digunakan:
+\begin{align*}
+\frac{1}{z-2} & =\frac{1}{z}\left(\frac{1}{1-2/z}\right)=\frac{1}{z}\left[1+\frac{2}{z}+\left(\frac{2}{z}\right)^{2}+\left(\frac{2}{z}\right)^{3}+\cdots\right]\\
+ & =\frac{1}{z}+\frac{2}{z^{2}}+\frac{4}{z^{3}}+\frac{8}{z^{4}}+\cdots
+\end{align*}
+yang valid untuk $|2/z|<1$ atau $|z|>2$.
+
+Dengan menjumlahkan keduanya diperoleh
+\[
+\frac{1}{z^{2}-3z+2}=\frac{1}{z^{2}}+\frac{3}{z^{3}}+\frac{7}{z^{4}}+\frac{15}{z^{5}}+\cdots
+\]
+yang valid untuk $|z|>2$.
+
+\textbf{Daerah (c)} Untuk mendapatkan ekspansi deret pada daerah lingkaran $0<|z-1|<1$,
+dilakukan ekspansi di sekitar titik $z=1$ dan diperoleh
+\begin{align*}
+\frac{1}{z^{2}-3z+2} & =\frac{1}{z-1}\left(-\frac{1}{2-z}\right)=\frac{1}{z-1}\left(\frac{-1}{1-(z-1)}\right)\\
+ & =\frac{-1}{z-1}\left[1+(z-1)+(z-1)^{2}+(z-1)^{3}+\cdots\right]\\
+ & =-\frac{1}{z-1}-1-(z-1)-(z-1)^{2}-\cdots
+\end{align*}
+yang valid untuk $0<|z-1|<1$.
+
+
+
+
+
+\end{document}
