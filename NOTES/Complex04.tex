@@ -493,6 +493,146 @@ Dari konstruksi di atas, kita melihat bahwa $C_{2}$ ekuivalen dengan
 $C_{1}$ karena dua integral pada $C_{3}$ saling menghilangkan.
 
 
+\section{Rumus Integral Cauchy}
+
+% Preview body
+
+Tinjau integral:
+\[
+\oint_{C}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z
+\]
+di mana $C$ adalah kontur tertutup sederhana yang mendefisinikan
+domain $D$ sebagai interior. Titik $z_{0}$ berada di dalam $D$
+dan $f(z)$ diasumsikan analitik pada $D$ dan $C$. Karena integran
+ini memiliki titik singular pada $z_{0}$, Teorema Integral Cauchy
+tidak dapat digunakan secara langsung. Akan tetapi:
+\[
+\oint_{C}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z=\oint_{\text{circle}}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z
+\]
+dengan lingkaran $\textit{circle}$ ditunjukkan pada Gambar 10.14.
+Parameterisasi dari lingkaran kecil ini memberikan:
+\begin{align*}
+\oint_{\text{circle}}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z & =\int_{0}^{2\pi}\frac{f(z_{0}+\epsilon e^{\imath\theta})}{\epsilon e^{\imath\theta}}\ \epsilon e^{\imath\theta}\ \imath\ \mathrm{d}\theta\\
+ & =\imath\int_{0}^{2\pi}f(z_{0}+\epsilon e^{\imath\theta})\ \mathrm{d}\theta
+\end{align*}
+Diperoleh:
+\[
+\oint_{C}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z=\imath\int_{0}^{2\pi}f(z_{0}+\epsilon e^{\imath\theta})\ \mathrm{d}\theta
+\]
+Dengan $\epsilon\rightarrow0$, kita memiliki $f(z_{0}+\epsilon e^{\imath\theta})\rightarrow f(z_{0})$,
+sehingga
+\[
+\imath\int_{0}^{2\pi}f(z_{0}+\epsilon e^{\imath\theta})\ \mathrm{d}\theta=\imath\int_{0}^{2\pi}f(z_{0})\ \mathrm{d}\theta=\imath f(z_{0})\int_{0}^{2\pi}\ \mathrm{d}\theta=\imath f(z_{0})2\pi
+\]
+atau:
+\[
+\oint_{C}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z=2\pi\imath f(z_{0})
+\]
+Persamaan ini adalah Rumus Integral Cauchy, yang biasanya dituliskan
+sebagai:
+\[
+f(z_{0})=\frac{1}{2\pi\imath}\oint_{C}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z
+\]
+
+Rumus ini dapat dibuktikan dengan meninjau:
+\[
+\left|\int_{0}^{2\pi}\left[f(z_{0}+\epsilon e^{\imath\theta})-f(z_{0})\right]\ \mathrm{d}\theta\right|\leq M(2\pi)
+\]
+dengan
+\[
+M=\max\left|f(z_{0}+\epsilon e^{\imath\theta})-f(z_{0})\right|
+\]
+pada suatu lingkaran kecil $z-z_{0}=\epsilon e^{\imath\theta}$. Karen
+$f(z)$ analitik, $f(z)$ juga kontinu dan $M\rightarrow0$ ketika
+$\epsilon\rightarrow0$, artinya pertidaksamaan XXX sebenarnya memberikan
+persamaan:
+\[
+\int_{0}^{2\pi}\left[f(z_{0}+\epsilon e^{\imath\theta})-f(z_{0})\right]\ \mathrm{d}\theta=0
+\]
+dan Persamaan XXX terpenuhi.
+
+Turunan dari $f(z)$ pada $z_{0}$ dapat diperoleh dengan menggunakan
+Rumus Integral Cauchy pada definisi dari turunan:
+\[
+f'(z_{0})=\lim_{\Delta z_{0}\rightarrow0}\frac{f(z_{0}+\Delta z_{0})-f(z_{0})}{\Delta z_{0}}
+\]
+
+sehingga diperoleh:
+\begin{align*}
+f'(z_{0}) & =\lim_{\Delta z_{0}\rightarrow0}\frac{1}{\Delta z_{0}}\left[\frac{1}{2\pi\imath}\oint_{C}\frac{f(z)}{z-(z_{0}+\Delta z_{0})}\ \mathrm{d}z-\frac{1}{2\pi\imath}\oint_{C}\frac{f(z)}{z-z_{0}}\ \mathrm{d}z\right]\\
+ & =\lim_{\Delta z_{0}\rightarrow0}\frac{1}{\Delta z_{0}}\left[\frac{1}{2\pi\imath}\oint_{C}f(z)\left(\frac{1}{z-z_{0}-\Delta z_{0}}-\frac{1}{z-z_{0}}\right)\ \mathrm{d}z\right]\\
+ & =\lim_{\Delta z_{0}\rightarrow0}\frac{1}{\Delta z_{0}}\left[\frac{\Delta z_{0}}{2\pi\imath}\oint\frac{f(z)}{(z-z_{0}-\Delta z_{0})(z-z_{0})}\ \mathrm{d}z\right]\\
+ & =\frac{1}{2\pi\imath}\oint_{C}\frac{f(z)}{(z-z_{0})^{2}}\ \mathrm{d}z
+\end{align*}
+
+Dengan menggunakan cara yang sama dapat diperoleh:
+\[
+f''(z_{0})=\frac{2!}{2\pi\imath}\oint_{C}\frac{f(z)}{(z-z_{0})^{3}}\ \mathrm{d}z
+\]
+
+Secara umum:
+\[
+f^{(n)}(z_{0})=\frac{n!}{2\pi\imath}\oint\frac{f(z)}{(z-z_{0})^{n+1}}\ \mathrm{d}z
+\]
+
+\rule[0.5ex]{1\columnwidth}{1pt}
+
+Tentukan nilai dari:
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z
+\]
+pada lingkaran satuan dengan pusat (a) $z=1$, (b) $z=-1$, dan (c)
+$z=\frac{1}{2}$.
+
+Untuk menggunakan Rumus Integral Cauchy, $f(z)$ harus analitik pada
+lingkaran dan $z_{0}$ berada dalam lingkaran.
+
+(a) Untuk lingkaran satuan pada $z=1$, kita dapat menuliskan
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=\oint\frac{z^{2}/(z+1)}{z-1}\ \mathrm{d}z
+\]
+sehingga
+\[
+f(z)=\frac{z^{2}}{z+1}
+\]
+Fungsi ini analitik pada $z=1$ dan pada lingkaran satuan. Sehingga
+pada titik tersebut:
+\[
+f(1)=\frac{1^{2}}{1+1}=\frac{1}{2}
+\]
+dan
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=2\pi\imath\left(\frac{1}{2}\right)=\pi\imath
+\]
+
+(b) Pada lingkaran satuan dengan pusat pada $z=-1$, integral dapat
+dituliskan menjadi
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=\oint\frac{z^{2}/(z-1)}{z+1}\ \mathrm{d}z
+\]
+dengan
+\[
+f(z)=\frac{z^{2}}{z-1}
+\]
+sehingga: $f(-1)=-\frac{1}{2}$.
+
+Diperoleh:
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=2\pi\imath\left(-\frac{1}{2}\right)=-\pi\imath
+\]
+
+(c) Untuk lingkaran satuan berpusat pada $z=\frac{1}{2}$, kita dapat
+menggunakan lingkaran satuan yang berpusat pada $z=1$
+
+Cara biasa (naif)
+
+Lingkaran berpusat pada $z_{0}=\frac{1}{2}$, kurva $z=z_{0}+e^{\imath\theta},$$0\leq\theta\leq2\pi$.
+\[
+\oint\frac{z^{2}}{z^{2}-1}\ \mathrm{d}z=\int_{0}^{2\pi}\frac{\left(\frac{1}{2}+e^{\imath\theta}\right)^{2}}{\left(\frac{1}{2}+e^{\imath\theta}\right)^{2}-1}\ \imath e^{\imath\theta}\ \mathrm{d\theta}
+\]
+
+
+
 
 
 
