@@ -1,12 +1,12 @@
-\documentclass[11pt,english]{article}
+\documentclass[10pt,english]{article}
 
 \usepackage[a4paper]{geometry}
-
 \geometry{verbose,tmargin=2.0cm,bmargin=2.0cm,lmargin=2.0cm,rmargin=2.0cm}
 
 \setlength{\parskip}{\smallskipamount}
 \setlength{\parindent}{0pt}
 
+\usepackage{mathptmx}
 \usepackage{amsmath}
 \usepackage{esint}
 \usepackage{babel}
@@ -18,6 +18,8 @@
 
 \begin{document}
 
+\thispagestyle{empty}
+
 {\centering
 Institut Teknologi Bandung
 
@@ -27,45 +29,47 @@ Program Studi Teknik Fisika
 
 TF2201 Matematika Rekayasa II
 
-6 Maret 2023 (08.00-10.00)
+6 Maret 2023 (08.00-10.00 WIB)
 \par}
 
 
 \begin{enumerate}
 %
-\item Hitung atau cari nilai yang memenuhi persamaan berikut.
+\item (IK 1b, bobot 20) Hitung atau cari nilai yang memenuhi persamaan berikut.
   \begin{enumerate}
-  \item $(3+4\imath)^{1/4}$ dalam bentuk Cartesian dan polar serta sketsa
+  \item $(3 + 4\imath)^{1/4}$ dalam bentuk Cartesian dan polar serta sketsa
   hasilnya pada bidang kompleks
-  \item $(3+4\imath)^{(1-\imath)}$
+  \item $(3 + 4\imath)^{(1-\imath)}$
   \item $\ln(-5+12\imath)$
-  \item $\sin(z)=2$ (gunakan $\sin^{-1}z=-\mathrm{i}\ln\left[\mathrm{i}z+\left(1-z^{2}\right)^{1/2}\right]$)
+  \item $\sin(z)=2$ (gunakan $\sin^{-1}(z) = -\imath \ln\left[\imath z+\left(1-z^{2}\right)^{1/2}\right]$)
   \end{enumerate}
 %
-\item Tentukan apakah fungsi-fungsi berikut ini analitik atau tidak dengan
+\item (IK 1b, bobot 30) Tentukan apakah fungsi-fungsi berikut ini analitik atau tidak dengan
 menggunakan Persamaan Cauchy-Riemann. Jika analitik, jelaskan mengenai
 daerah analitiknya.
   \begin{enumerate}
   \item $\dfrac{z}{z+4}$
   \item $e^{z-1}$
   \item $z^{3}$
-  \item $z^{*}z$ ($z*$ menyatakan kompleks konjugat dari $z$)
+  \item $z^{*}z$ ($z^{*}$ menyatakan konjugat kompleks dari $z$)
   \end{enumerate}
 %
-\item Hitung integral garis atau kontur berikut.
+\item (IK 1b, bobot 30) Hitung integral garis atau kontur berikut.
   \begin{enumerate}
-  \item $$\int_{(0,0)}^{(0,2)}z^{*}z^{2}\ \mathrm{d}z$$
+  \item $$\int_{(0,0)}^{(0,2)} z^{2} \ \mathrm{d}z$$
   pada kurva sepanjang
   sepanjang sumbu-$x$ ke titik (2,0) kemudian diikuti dengan busur
-  lingkaran dari (2,0) ke (0,2).
-  \item $$\oint_{C} \dfrac{2e^{z}}{z-2}\ \mathrm{d}z$$
+  lingkaran dari (2,0) ke (0,2). Bandingkan hasilnya jika kurva yang diambil
+  adalah sepanjang sumbu-$y$, dari (0,0) ke (0,2) dan integrasi secara langsung (dengan
+  menemukan antiderivatif dari integran).
+  \item $$\oint_{C} \dfrac{z^2}{z - 2} \ \mathrm{d}z$$
   dengan $C$ adalah
-  lingkaran berpusat di (1,0) dan jari-jari 2.
+  lingkaran berpusat di (1,0) dan jari-jari 2. Jelaskan mengenai metode yang Anda gunakan.
   \end{enumerate}
 %
-\item Hitung integral
+\item (IK 1b, bobot 20) Hitung integral
 \[
-\oint\frac{z}{z^{2}+4z-3}\ \mathrm{d}z
+\oint\frac{z}{z^{2} + 4z +3}\ \mathrm{d}z
 \]
 pada kontur berikut ini.
 \begin{enumerate}
