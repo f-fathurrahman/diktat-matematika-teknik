@@ -205,15 +205,21 @@ konstanta atau fungsi dari waktu.
 \begin{frame}{Sistem Invarian-Waktu (\textit{time-invariant}) dan
   Varian-Waktu (\textit{time-varying})}
 
+\fontsize{10}{9}\selectfont
+
 Sistem yang parameternya tidak berubah terhadap waktu dikatakan sebagai sistem
 invarian-waktu (parameter konstan). Untuk sistem jenis ini, jika input tertunda
 $T$ detik, maka output dari sistem ini juga sama, namun juga tertunda sebesar $T$ detik.
-Untuk sistem varian-waktu (\textit{time-varying}), hal ini tidak berlaku.
-Contoh sitem varian-waktu: $y(t) = e^{-t} x(t)$.
 
 {\centering
 \includegraphics[height=0.4\textheight]{images_priv/Lathi_Fig_1_29.png}
 \par}
+
+Sistem yang dijelaskan oleh Pers. \eqref{eq:Lathi-1-25} termasuk sistem linear jika
+koefisien $a_i$ dan $b_i$ adalah konstanta.
+
+Untuk sistem varian-waktu (\textit{time-varying}), hal ini tidak berlaku.
+Contoh sistem varian-waktu: $y(t) = e^{-t} x(t)$.
 
 \end{frame}
 
@@ -228,9 +234,51 @@ Contoh sitem varian-waktu: $y(t) = e^{-t} x(t)$.
 \end{frame}
 
 
-\begin{frame}{Sistem invarian-waktu}
+\begin{frame}{Contoh soal: sistem invarian-waktu}
 
-Sistem yang dijelaskan oleh Pers. \eqref{eq:Lathi-1-25} termasuk sistem linear jika
-koefisien $a_i$ dan $b_i$ adalah konstanta.
+Tentukan apakah sistem yang dijelaskan dengan persamaan berikut invarian-waktu
+atau tidak:
+\begin{enumerate}[label=(\alph*)]
+\item $y(t) = x(t) \, u(t)$ di mana $u(t)$ adalah fungsi \textit{unit step}
+\item $y(t) = \dfrac{\mathrm{d}}{\mathrm{d}t} x(t)$
+\end{enumerate}
 
 \end{frame}
+
+
+\begin{frame}{Contoh soal: sistem invarian-waktu}
+
+Untuk sistem yang dijelaskan dengan Pers. $y(t) = x(t) \, u(t)$
+di mana $u(t)$ adalah fungsi \textit{unit step}
+
+Pada kasus ini, output $y(t)$ akan sama dengan input untuk $t \geq 0$ dan untuk nilai $t$ yang lain
+output akan bernilai 0.
+
+Misalkan $x_1(t) = \delta(t+1)$, sehingga diperoleh $y_{1}(t) = \delta(t+1) u(t) = 0$.
+
+Namun untuk $x_2(t) = x_{1}(t-2) = \delta(t-1)$, diperoleh $y_{2}(t) = \delta(t-1) u(t) = \delta(t-1)$
+
+Apakah $y_2(t)$ sama dengan $y_1(t-2)$ ?
+
+\end{frame}
+
+
+\begin{frame}{Contoh soal: sistem invarian-waktu}
+
+Untuk sistem yang dijelaskan dengan Pers. $y(t) = \dfrac{\mathrm{d}}{\mathrm{d}t} x(t)$
+
+Untuk input $x_{1}(t)$, diperoleh:
+\begin{equation*}
+y_{1}(t) = \frac{\mathrm{d}}{\mathrm{d}t} x_{1}(t)
+\end{equation*}
+
+Untuk input $x_{2}(t) = x_{1}(t - T)$, dengan $T$ adalah suatu konstanta, diperoleh:
+\begin{align*}
+y_{2}(t) & = \frac{\mathrm{d}}{\mathrm{d}t} x_{2}(t) \\
+         & = \frac{\mathrm{d}}{\mathrm{d}t} x_{1}(t-T)
+\end{align*}
+
+Apakah $y_{2}(t) = y_{1}(t-T)$ ?
+
+\end{frame}
+
