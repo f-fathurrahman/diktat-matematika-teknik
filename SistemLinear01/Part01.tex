@@ -282,3 +282,90 @@ Apakah $y_{2}(t) = y_{1}(t-T)$ ?
 
 \end{frame}
 
+
+\begin{frame}{Sistem seketika (\textit{instantaneous}) dan dinamik}
+
+Output dari sistem pada waktu $t$ secara umum bergantung pada keseluruhan input
+sebelumnya. Meskipun demikian, pada suatu jenis sistem khusus, output pada
+waktu sembarang waktu $t$ hanya bergantung pada inputnya pada saat itu juga,
+misalnya pada rangkaian listrik resistif.
+Sistem ini dikenal sebagai sistem seketika (\textit{instantaneous})
+atau sistem tanpa memori (\textit{memoryless}).
+
+Sistem selain sistem seketika adalah sistem dinamik atau sistem dengan memory.
+Suatu sistem dinamik yang outputnya pada saat $t$ ditentukan oleh input selama
+$T$ detik sebelumnya (input sejak $t-T$) dikatakan sebagai sistem dengan
+memori hingga sebesar $T$.
+
+Rangkaian listrik yang melibatkan elemen induktif dan kapasitif secara umum
+memiliki memori tak hingga, karena output dari sistem tersebut ditentukan
+oleh keseluruhan waktu lampau $(-\infty,t)$.
+
+\end{frame}
+
+
+\begin{frame}{Sistem kausal dan nonkausal}
+
+Sistem kausal (dikenal juga sebagai sistem non-antisipatif atau fisis) adalah
+sistem dengan ouput pada waktu $t_0$ hanya bergantung pada nilai dari input
+pada $t \leq t_0$, atau output dari sistem kausal hanya bergantung pada nilai
+input sekarang dan masa lalu, dan bukan pada input pada masa depan.
+  
+\end{frame}
+
+
+\begin{frame}{Sistem waktu-kontinu dan waktu-diskrit}
+
+Sinyal yang didefinisikan pada rentang waktu yang kontinu adalah sinyal
+waktu-kontinu, biasanya dilambangkan dengan $x(t)$, $y(t)$, dan
+lainnya.
+
+Sinyal yang didefinisikan pada rentang waktu diskrit adalah
+sinyal waktu-diskrit, biasanya dilambangkan dengan $x[t]$, $y[t]$,
+dan lainnya.
+
+Sistem yang input dan outputnya adalah sinyal waktu-kontinu adalah
+sistem waktu-kontinu.
+
+Sistem yang input dan outputnya adalah sinyal waktu-diskrit adalah
+sistem waktu-diskrit. Komputer digital adalah contoh dari sistem waktu-diskrit.
+\end{frame}
+
+
+
+\begin{frame}{Sistem waktu-kontinu dan waktu-diskrit}
+
+Secara praktis, sinyal waktu-diskrit dapat muncul sebagai hasil dari
+pencuplikan (\textit{sampling}) dari sinyal waktu kontinu. Misalnya jika
+pencuplikan dilakukan pada waktu diskrit dengan
+$t_0, t_1, t_2, \ldots$ dengan jarak seragam:
+$$
+t_{k+1} - t_{k} = T, \quad \text{untuk seluruh } k
+$$
+Pada kasus tersebut, sinyal waktu diskrit direpresentasikan sebagai
+sampel dari sinyal kontinu $x(t)$, $y(t)$ yang dapat dituliskan
+$x(nT)$, $y(nT)$ atau $x[n] = $, $y[n]$ dengan $n$ adalah bilangan bulat.
+
+Sinyal diskrit juga dapat muncul dari sistem yang memang terjadi
+pada waktu diskrit, misalnya pada studi populasi, saham, model pendapatan nasinal,
+dan sebagainya.
+
+\end{frame}
+
+
+\begin{frame}
+
+{\centering
+\includegraphics[height=0.6\textheight]{images_priv/Lathi_Fig_1_31.png}
+\par}
+
+\end{frame}
+
+
+\begin{frame}
+
+{\centering
+\includegraphics[height=0.7\textheight]{images_priv/Lathi_Fig_1_32.png}
+\par}
+  
+\end{frame}
