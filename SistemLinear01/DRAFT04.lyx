@@ -1,0 +1,276 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Sinyal adalah sekumpulan data atau informasi.
+ Contoh: sinyal telepon, sinyal televisi, harga saham, hasil penjualan perbulan
+ dari suatu perusahaan, sinyal listrik AC, dan sebagainya.
+ Pada contoh-contoh ini, variabel independen adalah waktu.
+ Sinyal tidak hanya didefinisikan untuk kuantitas yang memiliki variabel
+ independen waktu, namun juga ruang, misalnya citra, distribusi muatan.
+\end_layout
+
+\begin_layout Standard
+Sinyal dapat diproses oleh suatu objek yang bernama sistem.
+ Sistem dapat melakukan modifikasi pada sinyal atau mengekstrak informasi
+ tambahan dari sinyal.
+\end_layout
+
+\begin_layout Standard
+Ukuran sinyal
+\end_layout
+
+\begin_layout Standard
+Energi dari suatu sinyal 
+\begin_inset Formula $x(t)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+E_{x}=\int_{-\infty}^{\infty}\left|x(t)\right|^{2}\,\mathrm{d}t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Daya dari suatu sinyal 
+\begin_inset Formula $x(t)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+P_{x}=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\left|x(t)\right|^{2}\,\mathrm{d}t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beberapa operasi dasar pada sinyal
+\end_layout
+
+\begin_layout Standard
+Time-shifting
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\phi(t+T) & =x(t)\\
+\phi(t) & =x(t-T)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Time-scaling
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\phi\left(\frac{t}{2}\right) & =x(t)\\
+\phi(t) & =x(2t)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Time-reversal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\phi(t)=x(-t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Operasi dasar di atas dapat digabungkan menjadi operasi lain.
+\end_layout
+
+\begin_layout Standard
+Klasifikasi sinyal:
+\end_layout
+
+\begin_layout Standard
+waktu-kontinu dan waktu-diskrit
+\end_layout
+
+\begin_layout Standard
+analog dan digital
+\end_layout
+
+\begin_layout Standard
+periodik dan aperiodik
+\end_layout
+
+\begin_layout Standard
+energi dan daya
+\end_layout
+
+\begin_layout Standard
+deterministik dan probabilistik
+\end_layout
+
+\begin_layout Standard
+Beberapa model sinyal
+\end_layout
+
+\begin_layout Standard
+Unit step
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(t)=\begin{cases}
+1 & t\geq0\\
+0 & t<0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Impuls satuan
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta(t)=0,\quad t\leq0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\delta(t)\,\mathrm{d}t=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Perkalian fungsi dengan impuls satuan:
+\begin_inset Formula 
+\[
+\phi(t)\delta(t)=\phi(0)\delta(t)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\phi(t)\delta(t-T)=\phi(T)\delta(t-T)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
