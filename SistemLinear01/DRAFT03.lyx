@@ -77,16 +77,30 @@
 
 \begin_body
 
-\begin_layout Standard
+\begin_layout Subsection*
 Analisis domain waktu
 \end_layout
 
 \begin_layout Standard
-Sistem diferensial linear
+Secara umu, kita akan membahas sistem linear yang dijelaskan dengan persamaan
+ diferensial linear berikut:
+\begin_inset Formula 
+\[
+\left(D^{N}+a_{1}D^{N-1}+\cdots+a_{N-1}D+a_{N}\right)y(t)=\left(b_{N-M}D^{M}+b_{N-M+1}D^{M-1}+\cdots+b_{N-1}D+b_{N}\right)x(t)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\left(D^{N}+a_{1}D^{N-1}+\cdots+a_{N-1}D+a_{N}\right)y(t)=\left(b_{N-M}D^{M}+b_{N-M+1}D^{M-1}+\cdots+b_{N-1}D+b_{N}\right)x(t)$
+dengan:
+\begin_inset Formula 
+\[
+D^{N}\equiv\frac{\mathrm{d}^{N}}{\mathrm{d}t^{N}}
+\]
+
 \end_inset
 
 
@@ -135,8 +149,8 @@ Kasus
  dan turunan dan sinyal yang berubah cepat akan bernilai besar.
 \end_layout
 
-\begin_layout Standard
-Respon input-nol (zero-input response): output dari sistem ketika input
+\begin_layout Itemize
+Respon input-nol (zero-input response, ZIR): output dari sistem ketika input
  
 \begin_inset Formula $x(t)=0$
 \end_inset
@@ -144,9 +158,25 @@ Respon input-nol (zero-input response): output dari sistem ketika input
 
 \end_layout
 
+\begin_layout Itemize
+Respon keadaan-nol (zero-state response, ZSR): output dari sistem ketika
+ keadaan awal nol.
+\end_layout
+
 \begin_layout Standard
-Respon keadaan-nol (zero-state response): output dari sistem ketika keadaan
- awal nol.
+Pada kuliah lain (matematika 2, kalkulus 2):
+\end_layout
+
+\begin_layout Itemize
+solusi homogen, komplementer
+\end_layout
+
+\begin_layout Itemize
+solusi khusus, forced solution
+\end_layout
+
+\begin_layout Subsection*
+Respon input-nol dari sistem
 \end_layout
 
 \begin_layout Standard
@@ -173,6 +203,17 @@ Solusi dari persamaan ini dapat diperoleh secara sistematik.
 Kita akan menggunakan penalaran secara heuristik untuk mendapatkan solusi
  dari Pers.
  ini.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+D^{2}y_{0}(t)+a_{1}Dy_{0}(t)+a_{N}y_{0}(t)=0
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -223,7 +264,15 @@ y_{0}(t)=ce^{\lambda t}
 
 \end_inset
 
-adalah solusi.
+adalah solusi, dengan 
+\begin_inset Formula $c$
+\end_inset
+
+ dan 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ adalah konstanta (bisa real atau kompleks).
 \end_layout
 
 \begin_layout Standard
@@ -238,11 +287,10 @@ D^{N}y_{0}(t) & =c\lambda^{N}e^{\lambda t}
 
 \end_inset
 
-Dengan mensubstitusikan hasil ini ke Pers.
- XXX diperoleh:
+Dengan mensubstitusikan hasil ini ke pers diferensial linear diperoleh:
 \begin_inset Formula 
 \[
-c\left(\lambda^{N}+a_{a}\lambda^{N-1}+\cdots+a_{N-1}\lambda+a_{N}\right)e^{\lambda t}=0
+c\left(\lambda^{N}+a_{1}\lambda^{N-1}+\cdots+a_{N-1}\lambda+a_{N}\right)e^{\lambda t}=0
 \]
 
 \end_inset
@@ -250,7 +298,7 @@ c\left(\lambda^{N}+a_{a}\lambda^{N-1}+\cdots+a_{N-1}\lambda+a_{N}\right)e^{\lamb
 Agar diperoleh solusi nontrivial dari persamaan ini, harus dipenuhi:
 \begin_inset Formula 
 \[
-\lambda^{N}+a_{a}\lambda^{N-1}+\cdots+a_{N-1}\lambda+a_{N}=0
+\lambda^{N}+a_{1}\lambda^{N-1}+\cdots+a_{N-1}\lambda+a_{N}=0
 \]
 
 \end_inset
@@ -271,11 +319,209 @@ Dengan menyatakan
 \begin_inset Formula $Q(\lambda)$
 \end_inset
 
- dalam bentuk terfaktorisasi:
+ dalam bentuk terfaktorisasi, diperoleh:
 \begin_inset Formula 
 \[
 Q(\lambda)=(\lambda-\lambda_{1})(\lambda-\lambda_{2})\cdots(\lambda-\lambda_{N})=0
 \]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\lambda$
+\end_inset
+
+ terdiri dari 
+\begin_inset Formula $N$
+\end_inset
+
+ solusi: 
+\begin_inset Formula $\lambda_{1},\lambda_{2},\ldots,\text{\ensuremath{\lambda_{N}}}$
+\end_inset
+
+ dengan mengasumsikan bahwa seluruh 
+\begin_inset Formula $\lambda_{i}$
+\end_inset
+
+ adalah berbeda.
+\end_layout
+
+\begin_layout Standard
+Oleh karena itu, solusi dari persamaan diferensial 
+\begin_inset Formula $Q(D)y_{0}(t)=0$
+\end_inset
+
+ adalah 
+\begin_inset Formula $c_{i}e^{\lambda_{i}t}$
+\end_inset
+
+, ...
+ dengan 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{N}$
+\end_inset
+
+ adalah konstanta.
+\end_layout
+
+\begin_layout Standard
+Solusi umumnya adalah penjumlahan dari seluruh solusi tersebut:
+\begin_inset Formula 
+\[
+y_{0}(t)=c_{1}e^{\lambda_{1}t}+c_{2}e^{\lambda_{2}t}+\cdots+c_{N}e^{\lambda_{N}t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q(\lambda)$
+\end_inset
+
+ disebut sebagai polinomial karakteristik
+\end_layout
+
+\begin_layout Standard
+Persamaan 
+\begin_inset Formula $Q(\lambda)=0$
+\end_inset
+
+ adalah persamaan karakteristik.
+\end_layout
+
+\begin_layout Standard
+Solusi dari persamaan karakteristik adalah akar karakteristik dari sistem.
+ Istilah lain yang juga sering digunakan: nilai karakteristik, nilai eigen
+ (eigenvalue), frekuensi natural.
+\end_layout
+
+\begin_layout Standard
+Fungsi 
+\begin_inset Formula $e^{\lambda_{i}t}$
+\end_inset
+
+ juga sering disebut sebagai mode karakteristik (atau mode natural) dari
+ sistem.
+\end_layout
+
+\begin_layout Subsection*
+Akar berulang
+\end_layout
+
+\begin_layout Standard
+Misalnya:
+\begin_inset Formula 
+\[
+(D-\lambda)^{2}y_{0}(t)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menggunakan substitusi, dapat ditunjukkan bahwa solusi umumnya adalah:
+\begin_inset Formula 
+\[
+y_{0}(t)=\left(c_{1}+c_{2}t\right)e^{\lambda t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk akar berulang sebanyak 
+\begin_inset Formula $r$
+\end_inset
+
+ kali:
+\begin_inset Formula 
+\[
+(D-\lambda)^{r}y_{0}(t)=0
+\]
+
+\end_inset
+
+solusi umumnya adalah:
+\begin_inset Formula 
+\[
+y_{0}(t)=\left(c_{1}+c_{2}t+c_{3}t^{2}+\cdots+c_{r}t^{r-1}\right)e^{\lambda t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Akar kompleks
+\end_layout
+
+\begin_layout Standard
+Akar kompleks muncul dalam bentuk konjugat, jika 
+\begin_inset Formula $\alpha+\imath\beta$
+\end_inset
+
+ adalah akar karakteristik, maka 
+\begin_inset Formula $\alpha-\imath\beta$
+\end_inset
+
+ juga merupakan akar karakteristik.
+ Solusi umum menjadi:
+\begin_inset Formula 
+\[
+y_{0}(t)=c_{1}e^{(\alpha+\imath\beta)t}+c_{2}e^{(\alpha-\imath\beta)t}
+\]
+
+\end_inset
+
+Untuk sistem real, respon 
+\begin_inset Formula $y_{0}(t)$
+\end_inset
+
+ juga harus real.
+ Hal ini hanya mungkin terjadi jika 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ adalah kompleks konjugat.
+ Misalkan:
+\begin_inset Formula 
+\begin{align*}
+c_{1} & =\frac{c}{2}e^{\imath\theta}\\
+c_{2} & =\frac{c}{2}e^{-\imath\theta}
+\end{align*}
+
+\end_inset
+
+dengan 
+\begin_inset Formula $c$
+\end_inset
+
+ dan 
+\begin_inset Formula $\theta$
+\end_inset
+
+ adalah bilangan real.
+ Dapat dituliskan:
+\begin_inset Formula 
+\begin{align*}
+y(t) & =\frac{c}{2}e^{\imath\theta}e^{\alpha t}e^{\imath\beta t}+\frac{c}{2}e^{-\imath\theta}e^{\alpha t}e^{-\imath\beta t}\\
+ & =\frac{c}{2}e^{\alpha t}\left[e^{\imath(\beta t+\theta)}+e^{-\imath(\beta t+\theta)}\right]\\
+ & =\frac{c}{2}e^{\alpha t}2\cos\left(\beta t+\theta\right)\\
+ & =ce^{\alpha t}\cos\left(\beta t+\theta\right)
+\end{align*}
 
 \end_inset
 
