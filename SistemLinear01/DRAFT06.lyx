@@ -1,0 +1,340 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+2.4 Respon sistem pada input eksternal (Zero-State Response)
+\end_layout
+
+\begin_layout Standard
+ZSR adalah respon sistem, 
+\begin_inset Formula $y(t)$
+\end_inset
+
+, pada suatu input 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ ketika sistem berada pada keadaan nol (zero-state), yaitu ketika seluruh
+ kondisi awal adalah nol.
+\end_layout
+
+\begin_layout Standard
+Kita akan mengasumsikan bahwa sistem yang akan dibaah berada pada keadaan
+ nol.
+ Pada keadaan tersebut, ZSR akan menjadi respon total dari sistem.
+\end_layout
+
+\begin_layout Standard
+Sifat superposisi akan digunakan.
+ 
+\end_layout
+
+\begin_layout Standard
+Misalkan suatu pulsa 
+\begin_inset Formula $p(t)$
+\end_inset
+
+ dengan tinggi satu dan lebar 
+\begin_inset Formula $\Delta\tau$
+\end_inset
+
+, dimulai pada 
+\begin_inset Formula $t=0$
+\end_inset
+
+, seperti pada Gambar berikut.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images_priv/Lathi_Fig_2_3a.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gambar berikut menunjukkan suatu input 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ sebagain penjumlahan dari suatu pulsa 
+\begin_inset Formula $p(t)$
+\end_inset
+
+ yang telah tergeser dan dengan 
+\begin_inset Formula $\Delta\tau$
+\end_inset
+
+ yang kecil.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images_priv/Lathi_Fig_2_3b.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pulsa yang dimulai pada 
+\begin_inset Formula $t=n\Delta\tau$
+\end_inset
+
+ pada Gambar di atas memiliki tinggi 
+\begin_inset Formula $x(n\Delta t)$
+\end_inset
+
+ dan dapat dinyatakan dengan
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x(n\Delta\tau)\,p(t-n\Delta\tau)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sekarang, 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ adalah penjumlahan dari seluruh pulsa tersebut:
+\begin_inset Formula 
+\[
+x(t)=\lim_{\Delta\tau\rightarrow0}\sum_{\tau}x(n\Delta\tau)\,p(t-n\Delta\tau)=\lim_{\Delta\tau\rightarrow0}\sum_{\tau}\left[\frac{x(n\Delta\tau)}{\Delta\tau}\right]\,p(t-n\Delta\tau)\,\Delta\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suku
+\begin_inset Formula 
+\[
+\left[\frac{x(n\Delta\tau)}{\Delta\tau}\right]\,p(t-n\Delta\tau)
+\]
+
+\end_inset
+
+menyatakan sebuah pulsa 
+\begin_inset Formula $p(t-n\Delta\tau)$
+\end_inset
+
+ dengan tinggi 
+\begin_inset Formula $\left[\dfrac{x(n\Delta\tau)}{\Delta\tau}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pada limit 
+\begin_inset Formula $\Delta\tau\rightarrow0$
+\end_inset
+
+, tinggi dari 
+\begin_inset Quotes eld
+\end_inset
+
+pita
+\begin_inset Quotes erd
+\end_inset
+
+ ini akan mendekati tak hingga, namun luas daerahnya masih tetap 
+\begin_inset Formula $x(n\Delta\tau)$
+\end_inset
+
+.
+ Oleh karena itu, pita ini mendekati sinyal impuls:
+\begin_inset Formula 
+\[
+x(t)=\lim_{\Delta\tau\rightarrow0}\sum_{\tau}x(n\Delta\tau)\,\delta(t-n\Delta\tau)\,\Delta\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk menentukan respon dari input 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ tinjau pasangan input-output berikut:
+\begin_inset Formula 
+\[
+\text{input \ensuremath{\Rightarrow\text{output}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\delta(t)\Rightarrow h(t)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\delta(t-n\Delta\tau)\Rightarrow h(t-n\Delta\tau)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[x(n\Delta\tau)\,\Delta\tau\right]\delta(t-n\Delta\tau)\Rightarrow\left[x(n\Delta\tau)\,\Delta\tau\right]h(t-n\Delta\tau)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underbrace{\lim_{\Delta\tau\rightarrow0}\sum_{\tau}\left[x(n\Delta\tau)\right]\delta(t-n\Delta\tau)\,\Delta\tau}_{x(t)}\Rightarrow\underbrace{\lim_{\Delta\tau\rightarrow0}\sum_{\tau}\left[x(n\Delta\tau)\right]h(t-n\Delta\tau)\,\Delta\tau}_{y(t)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diperoleh:
+\begin_inset Formula 
+\begin{align*}
+y(t) & =\lim_{\Delta\tau\rightarrow0}\sum_{\tau}\left[x(n\Delta\tau)\right]h(t-n\Delta\tau)\,\Delta\tau\\
+ & =\int_{-\infty}^{\infty}x(\tau)\,h(t-\tau)\,\mathrm{d}\tau
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kita telah mendapatkan respon 
+\begin_inset Formula $y(t)$
+\end_inset
+
+ untuk input sembarang 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ dalam suatu ekspresi yang melibatkan respon impulse satuan 
+\begin_inset Formula $h(t)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hasil ini menunjukkan bahwa, dengan mengetahui 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ kita dapat menentukan respon 
+\begin_inset Formula $y(t)$
+\end_inset
+
+ untuk sembarang input 
+\begin_inset Formula $x(t)$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
