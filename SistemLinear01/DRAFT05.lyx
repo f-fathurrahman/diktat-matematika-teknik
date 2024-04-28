@@ -345,6 +345,149 @@ Akar-karakteristik: (kompleks)
 \end_layout
 
 \begin_layout Standard
+Bentuk solusi umum (
+\begin_inset Formula $\alpha=-2$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=6$
+\end_inset
+
+):
+\begin_inset Formula 
+\[
+y_{0}(t)=ce^{-2t}\cos(6t+\theta)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ada dua parameter tidak diketahui, yaitu 
+\begin_inset Formula $c$
+\end_inset
+
+ dan 
+\begin_inset Formula $\theta$
+\end_inset
+
+, yang harus dicari dengan menggunakan syarat awal.
+\end_layout
+
+\begin_layout Standard
+Turunan:
+\begin_inset Formula 
+\[
+\dot{y}_{0}(t)=-2ce^{-2t}\cos(6t+\theta)+(ce^{-2t})\left(-6\sin(6t+\theta)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Syarat awal 
+\begin_inset Formula $y_{0}(t=0)=2$
+\end_inset
+
+ memberikan:
+\begin_inset Formula 
+\[
+2=c\cos(\theta)
+\]
+
+\end_inset
+
+Syaray awal 
+\begin_inset Formula $\dot{y}_{0}(t=0)=16.78$
+\end_inset
+
+ memberikan
+\begin_inset Formula 
+\begin{align*}
+16.78 & =-2c\cos(\theta)-6c\sin(\theta)\\
+16.78 & =-2(2)-6c\sin(\theta)\\
+-3.463 & =c\sin(\theta)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dari persamaan-persamaan tersebut dapat diperoleh:
+\begin_inset Formula 
+\begin{align*}
+2^{2} & =c^{2}\cos^{2}(\theta)\\
+(-3.463)^{2} & =c^{2}\sin^{2}(\theta)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menjumlahkan kedua persamaan tersebut diperoleh:
+\begin_inset Formula 
+\[
+c^{2}\left(\cos^{2}(\theta)+\sin^{2}(\theta)\right)=16
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sehingga
+\begin_inset Formula 
+\[
+c=4
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dan dari:
+\begin_inset Formula 
+\[
+\tan(\theta)=\frac{-3.463}{2}
+\]
+
+\end_inset
+
+diperoleh:
+\begin_inset Formula 
+\[
+\theta=-\frac{\pi}{3}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Akhirnya diperoleh:
+\begin_inset Formula 
+\[
+y_{0}(t)=4e^{-2t}\cos\left(6t-\frac{\pi}{3}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 x
 \end_layout
 
