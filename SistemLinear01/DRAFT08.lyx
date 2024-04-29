@@ -700,6 +700,193 @@ h(t) & =\left[D\left(e^{-t}-e^{-2t}\right)\right]u(t)\\
 \end_layout
 
 \begin_layout Standard
+Contoh
+\end_layout
+
+\begin_layout Standard
+Menggunakan simplified impulse-matching, tentukan respon impuls 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ untuk suatu sistem yang diberikan oleh:
+\begin_inset Formula 
+\[
+\left(D^{2}+5D+6\right)y(t)=(D+1)x(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Respon impuls:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(t)=b_{0}\delta(t)+\left[P(D)y_{n}(t)\right]u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}(t)=c_{1}e^{-2t}+c_{2}e^{-3t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{n}(t)=-2c_{1}e^{-2t}-3c_{2}e^{-3t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dengan syarat awal (ada dua syarat awal karena 
+\begin_inset Formula $Q(D)$
+\end_inset
+
+ memiliki orde-2):
+\begin_inset Formula 
+\[
+y_{n}(t=0)=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{y_{n}(t=0)=1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan menggunakan 
+\begin_inset Formula $y_{n}(t)$
+\end_inset
+
+ dan 
+\begin_inset Formula $\dot{y}_{n}(t)$
+\end_inset
+
+ diperoleh:
+\begin_inset Formula 
+\[
+y_{n}(0)=0=c_{1}+c_{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{y}_{n}(0)=1=-2c_{1}-3c_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substitusi 
+\begin_inset Formula $c_{1}=-c_{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+-2(-c_{2})-3c_{2} & =1\\
+-c_{2} & =1\\
+c_{2} & =-1
+\end{align*}
+
+\end_inset
+
+dan 
+\begin_inset Formula $c_{1}=-c_{2}=1$
+\end_inset
+
+.
+ Diperoleh:
+\begin_inset Formula 
+\[
+y_{n}(t)=e^{-2t}-e^{-3t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Operator 
+\begin_inset Formula $P(D)$
+\end_inset
+
+ adalah:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(D)=D+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplikasikan 
+\begin_inset Formula $P(D)$
+\end_inset
+
+ pada 
+\begin_inset Formula $y_{n}(t)$
+\end_inset
+
+ diperoleh:
+\begin_inset Formula 
+\begin{align*}
+P(D)y_{n}(t) & =(D+1)\left(e^{-2t}-e^{-3t}\right)\\
+ & =D\left[e^{-2t}-e^{-3t}\right]+e^{-2t}-e^{-3t}\\
+ & =-2e^{-2t}+3e^{-3t}+e^{-2t}-e^{-3t}\\
+ & =-e^{-2t}+2e^{-3t}
+\end{align*}
+
+\end_inset
+
+Akhirnya diperoleh respon impuls:
+\begin_inset Formula 
+\[
+h(t)=\left(-e^{-2t}+2e^{-3t}\right)u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 x
 \end_layout
 
