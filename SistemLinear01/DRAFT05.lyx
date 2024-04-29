@@ -194,7 +194,7 @@ Syarat awal:
 \end_layout
 
 \begin_layout Standard
-Da
+Dari persamaan tersebut diperoleh:
 \end_layout
 
 \begin_layout Standard
@@ -305,12 +305,32 @@ y_{0}(t)=\left(c_{1}+c_{2}t\right)e^{-3t}
 \end_layout
 
 \begin_layout Standard
-Gunakan syarat awal unutk mencari 
+Gunakan syarat awal untuk mencari 
 \begin_inset Formula $c_{1}$
 \end_inset
 
 dan 
 \begin_inset Formula $c_{2}$
+\end_inset
+
+: diperoleh 
+\begin_inset Formula $c_{1}=3$
+\end_inset
+
+ dan 
+\begin_inset Formula $c_{2}=-2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sehingga diperoleh ZIR:
+\begin_inset Formula 
+\[
+y_{0}(t)=\left(3-2t\right)e^{-3t}
+\]
+
 \end_inset
 
 

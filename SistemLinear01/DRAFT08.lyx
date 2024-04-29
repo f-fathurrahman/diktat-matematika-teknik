@@ -1,0 +1,731 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+2.3 Respon impuls satuan, 
+\begin_inset Formula $h(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk sistem praktis, diasumsikan 
+\begin_inset Formula $M\leq N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(t)=\text{suku-suku mode karakteristik}\qquad\text{untuk }t\geq0^{+}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(t)=A_{0}\delta(t)+\text{suku-suku mode karakteristik}\qquad\text{untuk }t\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q(D)\,h(t)=P(D)\,\delta(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Impulse matching:
+\end_layout
+
+\begin_layout Standard
+Untuk kasus 
+\begin_inset Formula $M=N$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(D^{N}+a_{1}D^{N-1}+\cdots+a_{N-1}D+a_{N}\right)h(t)=\left(b_{0}D^{N}+b_{1}D^{N-1}+\cdots+b_{N-1}D+b_{N}\right)\delta(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ruas kiri:
+\begin_inset Formula 
+\[
+\left(D^{N}+a_{1}D^{N-1}+\cdots+a_{N-1}D+a_{N}\right)\left(A_{0}\delta(t)+\text{suku-suku mode karakteristik}\right)=A_{0}D^{N}\delta(t)+a_{1}A_{0}D^{N-1}\delta(t)+A_{0}\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ruas kanan:
+\begin_inset Formula 
+\[
+\left(b_{0}D^{N}+b_{1}D^{N-1}+\cdots+b_{N-1}D+b_{N}\right)\delta(t)=b_{0}D^{N}\delta(t)+\ldots
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diperoleh 
+\begin_inset Formula $A_{0}=b_{0}$
+\end_inset
+
+ untuk 
+\begin_inset Formula $M=N$
+\end_inset
+
+.
+ Sedangkan untuk 
+\begin_inset Formula $M<N$
+\end_inset
+
+, diperoleh 
+\begin_inset Formula $A_{0}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh:
+\end_layout
+
+\begin_layout Standard
+Tentukan respon impuls 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ untuk suatu sistem yang diberikan oleh:
+\begin_inset Formula 
+\[
+\left(D^{2}+5D+6\right)y(t)=(D+1)x(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Karena 
+\begin_inset Formula $M>N$
+\end_inset
+
+, maka 
+\begin_inset Formula $A_{0}=0$
+\end_inset
+
+.
+ Sehingga:
+\begin_inset Formula 
+\[
+h(t)=\text{suku-suku mode karakteristik}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Persamaan karakteristik:
+\begin_inset Formula 
+\begin{align*}
+\lambda^{2}+5\lambda+6 & =0\\
+(\lambda+2)(\lambda+3) & =0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sehingga diperoleh akar-akar karakteristik: 
+\begin_inset Formula $\lambda_{1}=-2$
+\end_inset
+
+ dan 
+\begin_inset Formula $\lambda_{2}=-3$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h(t)=\left(c_{1}e^{-2t}+c_{2}e^{-3t}\right)u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Turunan dari 
+\begin_inset Formula $h(t)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\dot{h}(t)=\left(-2c_{1}e^{-2t}-3c_{2}e^{-3t}\right)u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Menggunakan metode impulse-matching:
+\begin_inset Formula 
+\begin{align*}
+\left(D^{2}+5D+6\right)h(t) & =(D+1)\delta(t)\\
+D^{2}h(t)+5Dh(t)+6h(t) & =D\delta(t)+\delta(t)\\
+\ddot{h}(t)+5\dot{h}(t)+6h(t) & =\dot{\delta}(t)+\delta(t)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Syarat awal?
+\end_layout
+
+\begin_layout Standard
+Penentuan syarat awal untuk 
+\begin_inset Formula $h(t)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Syarat awal untuk:
+\begin_inset Formula 
+\[
+h(0^{-})=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{h}(0^{-})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplikasi dari sinyal impuls akan memberikan kondisi awal baru pada 
+\begin_inset Formula $t=0^{+}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Misalkan:
+\begin_inset Formula 
+\[
+h(0^{+})=K_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{h}(0^{+})=K_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kondisi awal ini memberikan suku impuls pada 
+\begin_inset Formula $h(0)$
+\end_inset
+
+ dan 
+\begin_inset Formula $\dot{h}(0)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\dot{h}(0)=K_{1}\delta(t)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\ddot{h}(0)=K_{1}\dot{\delta}(t)+K_{2}\delta(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Substitusi ke pers.
+ berikut untuk 
+\begin_inset Formula $t=0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\ddot{h}(t)+5\dot{h}(t)+6h(t)=\dot{\delta}(t)+\delta(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(K_{1}\dot{\delta}(t)+K_{2}\delta(t)\right)+5\left(K_{1}\delta(t)\right)+6h(0)=\dot{\delta}(t)+\delta(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{1}\dot{\delta}(t)+\left(K_{2}+5K_{1}\right)\delta(t)+6h(0)=\dot{\delta}(t)+\delta(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{1}=1
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+K_{2}+5K_{1}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K_{2}=1-5K_{1}=-4
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Akhirnya diperoleh syarat awal:
+\begin_inset Formula 
+\[
+h(0^{+})=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{h}(0^{+})=-4
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pers:, subst.
+ 
+\begin_inset Formula $t=0^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(t)=\left(c_{1}e^{-2t}+c_{2}e^{-3t}\right)u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1=c_{1}+c_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Turunan dari 
+\begin_inset Formula $h(t)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\dot{h}(t)=\left(-2c_{1}e^{-2t}-3c_{2}e^{-3t}\right)u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-4=-2c_{1}-3c_{2}
+\]
+
+\end_inset
+
+Diperoleh 
+\begin_inset Formula $c_{1}=-1$
+\end_inset
+
+ dan 
+\begin_inset Formula $c_{2}=2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Respon impuls:
+\begin_inset Formula 
+\[
+h(t)=\left(-e^{-2t}+2e^{-3t}\right)u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Simplified impulse matching method
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(t)=b_{0}\delta(t)+\left[P(D)y_{n}(t)\right]u(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $y_{n}(t)$
+\end_inset
+
+ adalah kombinasi linear dari mode karakteristik, dengan syarat awal:
+\begin_inset Formula 
+\[
+y_{n}(0)=\dot{y}_{n}(0)=\ddot{y}(n)=\cdots=y_{n}^{(N-2)}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{n}^{(N-1)}(0)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Contoh: cari respon impuls dari sistem:
+\begin_inset Formula 
+\[
+\left(D^{2}+3D+2\right)y(t)=Dx(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pers.
+ karakteristik:
+\begin_inset Formula 
+\[
+\lambda^{2}+3\lambda+2=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\lambda+1)(\lambda+2)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}(t)=c_{1}e^{-t}+c_{2}e^{-2t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Syarat awal:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{n}(t)=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\dot{y}_{n}(t)=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diperoleh: 
+\begin_inset Formula $c_{1}=1$
+\end_inset
+
+ dan 
+\begin_inset Formula $c_{2}=-1$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{n}(t)=e^{-t}-e^{-2t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+h(t) & =\left[D\left(e^{-t}-e^{-2t}\right)\right]u(t)\\
+ & =\left(-e^{-t}+2e^{-2t}\right)u(t)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\begin_layout Standard
+x
+\end_layout
+
+\end_body
+\end_document
