@@ -204,5 +204,132 @@ x_{1}(t-T_{1})*x_{2}(t-T_{2})=c(t-T_{1}-T_{2})
 
 \end_layout
 
+\begin_layout Standard
+Bukti.
+ Diberikan:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}(t)*x_{2}(t)=\int_{-\infty}^{\infty}x_{1}(\tau)\,x_{2}(t-\tau)\,\mathrm{d}\tau=c(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Geser 
+\begin_inset Formula $x_{2}(t)$
+\end_inset
+
+ menjadi 
+\begin_inset Formula $x_{2}(t-T)$
+\end_inset
+
+ diperoleh:
+\begin_inset Formula 
+\begin{align*}
+x_{1}(t)*x_{2}(t-T) & =\int_{-\infty}^{\infty}x_{1}(\tau)\,x_{2}(t-T-\tau)\,\mathrm{d}\tau\\
+ & =c(t-T)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Konvolusi dengan suatu sinyal impuls
+\end_layout
+
+\begin_layout Standard
+Konvolusi dari suatu fungsi 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ dengan suatu impuls akan menghasilkan fungsi 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ itu sendiri.
+\begin_inset Formula 
+\[
+x(t)*\delta(t)=\int_{-\infty}^{\infty}x(\tau)\,\delta(t-\tau)\,\mathrm{d}\tau
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Karena 
+\begin_inset Formula $\delta(t-\tau)$
+\end_inset
+
+ adalah suatu impuls yang berlokasi pada 
+\begin_inset Formula $\tau=t$
+\end_inset
+
+, menurut sifat sampling dari impuls integral ini tidak lain adalah nilai
+ dari 
+\begin_inset Formula $x(\tau)$
+\end_inset
+
+ pada 
+\begin_inset Formula $\tau=t$
+\end_inset
+
+, yaitu 
+\begin_inset Formula $x(t)$
+\end_inset
+
+.
+ Sehingga:
+\begin_inset Formula 
+\[
+x(t)*\delta(t)=x(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sifat durasi atau lebar
+\end_layout
+
+\begin_layout Standard
+Jika durasi dari 
+\begin_inset Formula $x_{1}(t)$
+\end_inset
+
+ dan 
+\begin_inset Formula $x_{2}(t)$
+\end_inset
+
+ adalah finit (terbatas), yang diberikan oleh 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+, secara berturut-turut, maka durasi atau lebar dari 
+\begin_inset Formula $x_{1}(t)*x_{2}(t)$
+\end_inset
+
+ adalah 
+\begin_inset Formula $T_{1}+T_{2}$
+\end_inset
+
+.
+\end_layout
+
 \end_body
 \end_document
