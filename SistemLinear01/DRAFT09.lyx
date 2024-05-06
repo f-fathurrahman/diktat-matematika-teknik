@@ -102,6 +102,10 @@ x(t)=e^{-t}u(t)
 \end_layout
 
 \begin_layout Standard
+Jawab
+\end_layout
+
+\begin_layout Standard
 Dengan menggunakan konvolusi, untuk 
 \begin_inset Formula $t\geq0$
 \end_inset
