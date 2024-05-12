@@ -82,8 +82,8 @@ Contoh soal (Lathi, Linear Systems)
 \end_layout
 
 \begin_layout Standard
-Tentukan ZIR dari sistem LTIC (linear time-invariant continue) yang dijelaskan
- dengan persamaan:
+Tentukan ZIR dari sistem LTIC (linear time-invariant continuous) yang dijelaskan
+ dengan persamaan diferensial berikut:
 \end_layout
 
 \begin_layout Itemize
@@ -505,30 +505,6 @@ y_{0}(t)=4e^{-2t}\cos\left(6t-\frac{\pi}{3}\right)
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-x
-\end_layout
-
-\begin_layout Standard
-x
 \end_layout
 
 \end_body
